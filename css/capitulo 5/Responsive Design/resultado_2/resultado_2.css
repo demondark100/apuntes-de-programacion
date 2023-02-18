@@ -1,0 +1,29 @@
+.content_media{
+    background-color: #000;
+    color: #ffff;
+}
+
+@media screen and (min-width: 400px) and (max-width: 700px){
+    .content_media{
+        background-color: #ffdede;
+        color: #000;
+    }
+}
+@media screen and (min-width: 700px) and (max-width: 900px){
+    .content_media{
+        background-color: #fffb06;
+        color: #000;
+    }
+}
+@media screen and (min-width: 900px) and (max-width: 1100px){
+    .content_media{
+        background-color: #ff2424;
+        color: #ffffff;
+    }
+}
+@media screen and (min-width: 1100px){
+    .content_media{
+        background-color: #00f;
+        color: #fff;
+    }
+}

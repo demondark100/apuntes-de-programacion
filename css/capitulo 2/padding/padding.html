@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="padding.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>padding</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+
+    <main>
+        <div class="teoria">
+            <h1>padding</h1>
+            <p>
+                el padding en una caja/elemento es el espacio interno que podemos dejar en una caja ahora una imagen para entender mejor como funciona el padding.
+            </p>
+            <img class="imagen_padding" src="https://lh6.ggpht.com/-lN8-wB8_dBc/Tl-DgEaap0I/AAAAAAAAJZY/B7AkhYYiN6A/image3.png?imgmax=800" alt="imagen padding" title="padding">
+            <p>
+                la propiedad padding tiene las siguientes propiedades: <br> <br>
+                "padding-top; 15px;" = cuanto espacio queremos en la parte de arriba. <br>
+                "padding-right: 15px;" = cuanto espacio queremos en la parte derecha. <br>
+                "padding-bottom: 15px;" = cuanto espacio queremos en la parte de abajo. <br>
+                "padding-left: 15px;" = cuanto espacio queremos en la parte izquierda. <br> <br>
+                ejemplo:
+            </p>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion0 cood">
+<div class="content__">
+    <div class="arriba">
+        <div>arriba</div>
+    </div>
+    <div class="derecha">
+        <div>derecha</div>
+    </div>
+    <div class="abajo">
+        <div>abajo</div>
+    </div>
+    <div class="izquierda">
+        <div>izquierda</div>
+    </div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion1 cood">
+.content__{
+    width: 100%;
+}
+.arriba{
+    display: block;
+    width: 35%;
+    height: 35%;
+    background-color: green;
+    padding-top: 15px;
+    margin: auto;
+}
+.derecha{
+    display: block;
+    width: 35%;
+    height: 35%;
+    background-color: green;
+    padding-right: 15px;
+    margin: auto;
+}
+.abajo{
+    display: block;
+    width: 35%;
+    height: 35%;
+    background-color: green;
+    padding-bottom: 15px;
+    margin: auto;
+}
+.izquierda{
+    display: block;
+    width: 35%;
+    height: 35%;
+    background-color: green;
+    padding-left: 15px;
+    margin: auto;
+}
+
+
+/* despues veremos como funciona "margin". */
+
+
+.arriba div{
+    background-color: blue;
+    color: wheat;
+}
+.derecha div{
+    background-color: blue;
+    color: wheat;
+}
+.abajo div{
+    background-color: blue;
+    color: wheat;
+}
+.izquierda div{
+    background-color: blue;
+    color: wheat;
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <div class="content__">
+                    <div class="arriba">
+                        <div>arriba</div>
+                    </div>
+                    <div class="derecha">
+                        <div>derecha</div>
+                    </div>
+                    <div class="abajo">
+                        <div>abajo</div>
+                    </div>
+                    <div class="izquierda">
+                        <div>izquierda</div>
+                    </div>
+                </div>
+            </div>
+            <p>
+                el padding siempre se debe poner en el contenedor padre t para entender mejor el padding es el espacio que hay entre el borde de la caja y el contenido pero desde adentro.
+            </p>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion2 cood">
+<div class="contenedor_div">
+    <div>contenido</div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion3 cood">
+.contenedor_div{
+    background-color: red;
+    padding: 15px;
+}
+.contenedor_div div {
+    background-color: blue;
+    color: white;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                con tan solo poner "padding: 15px;" estamos dicinedo que deje espacio (arriba,derecha,abajo,izquierda).
+            </p>
+            <div class="webside">
+                <div class="contenedor_div">
+                    <div>contenido</div>
+                </div>
+            </div>
+            <p>
+                ahora veremos resumir de mejor manera a la propiedad padding. <br>
+                ejemplo.
+            </p>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion4 cood">
+<div class="content_a_a">
+    <div>contenido</div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                    <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion5 cood">
+.content_a_a{
+    padding: 15px 0;
+    background-color: red;
+}
+.content_a_a div{
+    background-color: blue;
+    color: white;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                si solo ponemos dos valores el primero hara referencia a (arriba y abajo) y el segundo hara referencia a (derecha e izquierda). <br>
+                en este caso hemos dicho que (arriba y abajo) tengan un padding de 15px y que (derecha e izquierda) no tengan padding.
+            </p>
+            <div class="webside">
+                <div class="content_a_a">
+                    <div>contenido</div>
+                </div>
+            </div>
+
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t6 texto_copiado">texto copiado</p>
+                    <i class="copiar6 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion6 cood">
+<div class="content_d_i">
+    <div>contenido</div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t7 texto_copiado">texto copiado</p>
+                    <i class="copiar7 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion7 cood">
+.content_d_i{
+    background-color: red;
+    padding: 0 15px;
+}
+.content_d_i div{
+    background-color: blue;
+    color: wheat;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                siguiendo la regla de que el primer parametro es (arriba y abajo) y el segundo es (derecha e izquierda): <br>
+                hemos dicho que en (arriba y abajo) no tengan padding y que (derecha e izquierda) si tengan padding de 15px.
+            </p>
+            <div class="webside">
+                <div class="content_d_i">
+                    <div>contenido</div>
+                </div>
+            </div>
+
+            <p>
+                ahora si en la propiedad padding ponemos cuatro parametros. <br>
+                "padding: 16px 12px 8px 6px;" <br>
+                primer parametro = arriba. <br>
+                segundo parametro = derecha. <br>
+                tercer parametro = abajo. <br>
+                cuarto parametro = izquierda. <br> <br>
+                ejemplo
+            </p>
+
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t8 texto_copiado">texto copiado</p>
+                    <i class="copiar8 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion8 cood">
+<div class="resumen_p">
+    <div>contenido</div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t9 texto_copiado">texto copiado</p>
+                    <i class="copiar9 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion9 cood">
+.resumen_p{
+    padding: 16px 12px 8px 6px;
+    background-color: red;
+}
+.resumen_p div{
+    background-color: blue;
+    color: white;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                en este caso. <br>
+                arriba = 16px. <br>
+                derecha = 12px. <br>
+                abajo = 8px. <br>
+                izquierda = 6px.
+            </p>
+            <div class="webside">
+                <div class="resumen_p">
+                    <div>contenido</div>
+                </div>
+            </div>
+
+                </code>
+            </div>
+
+        </div>
+    </main>
+
+
+
+        <footer>
+            <div class="footer_div">
+                <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+            </div>
+        </footer>
+    
+    
+        <script src="padding.js"></script>
+    </body>
+</html>

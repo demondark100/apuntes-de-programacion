@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="animaciones.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>animaciones</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+
+    <main>
+        <div class="teoria">
+            <h1>Animaciones</h1>
+            <p>
+                esto es similar a transition pero lleva otras reglas. <br> <br>
+                para trabajar con animaciones se debe trabajar con: <br>
+                "@keyframes".
+            </p>
+
+            <h2>pseudocodigo</h2>
+<textarea class="codificacion cood">
+@keyframes nombre de animacion {
+
+}
+</textarea>
+            <p>
+                para poder hacer las animaciones tenemos dos forma de trabajar que seria con (from y to) y porcentajes.
+            </p>
+            <h2>from y to</h2>
+            <p>
+                from: son las propiedades al comenzar la animacion. <br>
+                to: son las propiedades al finalizar la animacion.
+            </p>
+<textarea class="codificacion cood">
+@keyframes Animacion {
+    from{
+        hacer esta animacion al inicio
+    }
+    to{
+        hacer esta animacion al final
+    }
+}
+</textarea>
+            <h2>porcentajes</h2>
+            <p>
+                0%: son las propiedades que tiene una caja al comenzar. <br>
+                100%: las propiedades que tiene una caja al finalizar. <br>
+                la ventaja que tiene los porcentajes es que se pueden dar animaciones en cualquier parte del momento por ejemplo: <br>
+                al 20% que se haga esta animacion. <br>
+                al 78% se haga esta animacion. 
+            </p>
+<textarea class="codificacion cood">
+@keyframes Animacion {
+    0%{
+        hacer esta animacion al inicio
+    }
+    55%{
+        hacer otra animacion en este momento
+    }
+    100%{
+        hacer esta animacion al final
+    }
+}</textarea>
+
+            <h2>animation-name</h2>
+            <p>
+                esta propiedad es para ponerle el nombre al elemento que queremos que tenga esa animacion.
+            </p>
+            <h2>pseudocodigo</h2>
+<textarea class="codificacion cood">
+.elemento{
+    animation-name: nombre de la animacion;
+}
+@keyframes nombre de la animacion{
+    hacer animacion
+}
+</textarea>
+<textarea class="codificacion cood">
+.elemento{
+    animation-name: mover;
+}
+@keyframes mover{
+    from{
+        background-color: #000;
+    }
+    to{
+        background-color: #fff;
+    }
+}
+</textarea>
+
+
+
+            <h2>animation-duration</h2>
+            <p>
+                esta propiead es similar a transition-duration.
+            </p>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion0 cood">
+<div class="duration_content">
+    <div class="duration_content_div">
+
+    </div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion1 cood">
+.duration_content{
+    width: 100%;
+    height: 50%;
+    background-color: #9eb6ff;
+    padding: 20px;
+}
+.duration_content_div{
+    width: 110px;
+    height: 110px;
+    border: 2px solid #000;
+    background-color: inherit;
+    position: relative;
+
+    animation-name: mover_caja;
+    animation-duration: 2s;
+}
+
+@keyframes mover_caja {
+    from{
+        left: 0;
+        background-color: #000;
+    }
+    to{
+        left: 100%;
+        background-color: #fff;
+    }
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <div class="duration_content">
+                    <div class="duration_content_div">
+                
+                    </div>
+                </div>
+            </div>
+
+
+            <h2>animation-timing-function</h2>
+            <p>
+                esto tiene las mismas propiedades que "transition-timing-function" y funciona igual que transition.
+            </p>
+
+
+            <h2>animation-iteration-count</h2>
+            <p>
+                esto es para indicarle cuantas veces se hara la animacion. <br> <br>
+                aqui podemos ponerle cuantas veces queremos que se repita la animacio o si queremos que se haga de forma infinita. <br> <br>
+                animation-iteration-count: 3; <br>
+                animation-iteration-count: infinite;
+            </p>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion2 cood">
+<div class="iteracion_content">
+    <div class="iteracion_content_div">
+
+    </div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion3 cood">
+.iteracion_content{
+    width: 100%;
+    height: 50%;
+    background-color: #9eb6ff;
+}
+.iteracion_content_div{
+    top: 15px;
+    width: 110px;
+    height: 110px;
+    border: 2px solid #000;
+    background-color: inherit;
+    position: relative;
+
+    animation-name: iteracion;
+    animation-duration: 1s;
+    animation-iteration-count: 3;
+}
+
+@keyframes iteracion {
+    from{
+        left: 0;
+        background-color: #000;
+    }
+    to{
+        left: 100%;
+        background-color: #fff;
+    }
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <div class="iteracion_content">
+                    <div class="iteracion_content_div">
+                
+                    </div>
+                </div>
+            </div>
+
+
+            <h2>animation-direction</h2>
+            <p>
+                esto es para indicarle a que direccion queremos que se haga la animacion o como queremos que se comporte. <br>
+                esto tiene las siguientes propiedades: <br>
+                normal: esta propiedad viene por defecto. <br>
+                reverse: esta propiedad hace la animacion pero en reversa. <br>
+                alternate: es como un ir y volver es como la mescla de norma y reverse. <br>
+                alternate-reverse: es igual que alternate pero empieza del otro lado osea como si fuese en reversa. 
+            </p>
+            <h2>reverse</h2>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion4 cood">
+<div class="reverse_content">
+    <div class="reverse_content_div">
+
+    </div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                    <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion5 cood">
+.reverse_content{
+    width: 100%;
+    height: 50%;
+    background-color: #9eb6ff;
+}
+.reverse_content_div{
+    top: 15px;
+    width: 110px;
+    height: 110px;
+    border: 2px solid #000;
+    background-color: inherit;
+    position: relative;
+
+    animation-name: reverse;
+    animation-duration: 1s;
+    animation-iteration-count: 3;
+    animation-direction: reverse;
+}
+
+@keyframes reverse {
+    from{
+        left: 0;
+        background-color: #000;
+    }
+    to{
+        left: 100%;
+        background-color: #fff;
+    }
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <div class="reverse_content">
+                    <div class="reverse_content_div">
+                
+                    </div>
+                </div>
+            </div>
+            <h2>alternate</h2>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t6 texto_copiado">texto copiado</p>
+                    <i class="copiar6 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion6 cood">
+<div class="alternate_content">
+    <div class="alternate_content_div">
+
+    </div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t7 texto_copiado">texto copiado</p>
+                    <i class="copiar7 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion7 cood">
+.alternate_content{
+    width: 100%;
+    height: 50%;
+    background-color: #9eb6ff;
+}
+.alternate_content_div{
+    top: 15px;
+    width: 110px;
+    height: 110px;
+    border: 2px solid #000;
+    background-color: inherit;
+    position: relative;
+
+    animation-name: reverse;
+    animation-duration: 1s;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+}
+
+@keyframes reverse {
+    from{
+        left: 0;
+        background-color: #000;
+    }
+    to{
+        left: 100%;
+        background-color: #fff;
+    }
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <div class="alternate_content">
+                    <div class="alternate_content_div">
+                
+                    </div>
+                </div>
+            </div>
+            <h2>alternate-reverse</h2>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t8 texto_copiado">texto copiado</p>
+                    <i class="copiar8 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion8 cood">
+<div class="alternate_reverse_content">
+    <div class="alternate_reverse_content_div">
+
+    </div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t9 texto_copiado">texto copiado</p>
+                    <i class="copiar9 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion9 cood">
+.alternate_reverse_content{
+    width: 100%;
+    height: 50%;
+    background-color: #9eb6ff;
+}
+.alternate_reverse_content_div{
+    top: 15px;
+    width: 110px;
+    height: 110px;
+    border: 2px solid #000;
+    background-color: inherit;
+    position: relative;
+
+    animation-name: reverse;
+    animation-duration: 1s;
+    animation-iteration-count: 3;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes reverse {
+    from{
+        left: 0;
+        background-color: #000;
+    }
+    to{
+        left: 100%;
+        background-color: #fff;
+    }
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <div class="alternate_reverse_content">
+                    <div class="alternate_reverse_content_div">
+                
+                    </div>
+                </div>
+            </div>
+
+
+            <h2>animation-fill-mode</h2>
+            <p>
+                esta propiedad define como se quedara al final la animacion. <br>
+                esta tiene las siguientes propiedades. <br> <br>
+
+                none: esto hace que la animacion vuelva a la normalidad. <br>
+                forwards: esta hace que la animacion se quede como finaliza. <br>
+                both: arranca con la propiedad que le indicamos al inicion de la animacion.
+            </p>
+
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t10 texto_copiado">texto copiado</p>
+                    <i class="copiar10 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion10 cood">
+<!-- none -->
+
+<div class="none_content">
+    <div class="none_hijo">
+
+    </div>
+</div>
+
+<!-- forwards -->
+
+<div class="forwards_content">
+    <div class="forwards_hijo">
+
+    </div>
+</div>
+
+<!-- both -->
+
+<div class="both_content">
+    <div class="both_hijo">
+
+    </div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t11 texto_copiado">texto copiado</p>
+                    <i class="copiar11 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion11 cood">
+/* none */
+
+.none_content{
+    width: 100%;
+    height: 25%;
+    background-color: #9eb6ff;
+    margin-bottom: 15px;
+}
+.none_hijo{
+    top: 15px;
+    width: 110px;
+    height: 110px;
+    border: 2px solid #000;
+    background-color: inherit;
+    position: relative;
+
+    animation-name: none_a;
+    animation-duration: 1s;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+
+    animation-fill-mode: none;
+}
+
+@keyframes none_a {
+    from{
+        left: 0;
+        background-color: #000;
+    }
+    to{
+        left: 100%;
+        background-color: #fff;
+    }
+}
+
+
+
+/* forwards */
+
+.forwards_content{
+    width: 100%;
+    height: 25%;
+    background-color: #9eb6ff;
+    margin-bottom: 15px;
+}
+.forwards_hijo{
+    top: 15px;
+    width: 110px;
+    height: 110px;
+    border: 2px solid #000;
+    background-color: inherit;
+    position: relative;
+
+    animation-name: forwards_a;
+    animation-duration: 1s;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+
+    animation-fill-mode: forwards;
+}
+
+@keyframes forwards_a {
+    from{
+        left: 0;
+        background-color: #000;
+    }
+    to{
+        left: 70%;
+        background-color: #fff;
+    }
+}
+
+
+/* both */
+
+.both_content{
+    width: 100%;
+    height: 25%;
+    background-color: #9eb6ff;
+    margin-bottom: 15px;
+}
+.both_hijo{
+    top: 15px;
+    width: 110px;
+    height: 110px;
+    border: 2px solid #000;
+    background-color: inherit;
+    position: relative;
+
+    animation-name: both_a;
+    animation-duration: 1s;
+    animation-iteration-count: 3;
+    animation-direction: normal;
+
+    animation-fill-mode: both;
+}
+
+@keyframes both_a {
+    from{
+        left: 0;
+        background-color: #000;
+    }
+    to{
+        left: 70%;
+        background-color: #fff;
+    }
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <div class="none_content">
+                    <div class="none_hijo">
+                
+                    </div>
+                </div>
+                <div class="forwards_content">
+                    <div class="forwards_hijo">
+                
+                    </div>
+                </div>
+                <div class="both_content">
+                    <div class="both_hijo">
+                
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+        <footer>
+            <div class="footer_div">
+                <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+            </div>
+        </footer>
+    
+    
+        <script src="animaciones.js"></script>
+    </body>
+</html>

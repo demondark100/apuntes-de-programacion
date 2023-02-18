@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="filter.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>filter</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+    <main>
+        <div class="teoria">
+            <h1>filter</h1>
+            <p>
+                como bien dice el nombre esta propiedad nos permitira dar filtros a nuestros elementos html mayormente se notas mas en imagenes. <br>
+                este tiene muchas propiedades. <br> <br>
+
+                none: esta viene por defecto. <br><br>
+
+                blur(cuanto quieres desenfocar): esta propiedad nos sirve para desenfocar una imagen. <br><br>
+
+                brightness(0 o 1): esto sera cuanto brillo va a tener la imagen (0 nada de brillo) (1 brillo normal) y puede ir escalando por ejemplo hasta el 10. <br><br>
+
+                contrast(0 o 1): esto se comporta de forma similar al brillo pero esta vez es con el contraste. <br><br>
+
+                drop-shadow(2px 5px 15px #000): esto es para darle sombras a una imagen transparente. <br><br>
+
+                grayscale(1 defecto): esto es para que la imagen se ponga de color gris. <br><br>
+
+                invert(0% o 100%): es para invertir los colores de una imagen. <br><br>
+
+                saturate(0 o 1): esta propiedad hace que los colores se saturen osea que los colores vaya a sus colores mas fuertes 0 es que la imagen ira a colores grises y uno la saturacion este puede ir aumentando.
+                
+            </p>
+
+
+
+            <h2 class="title_content">elige una waifu(obligatorio)</h2>
+            <div class="content_imgs">
+                <div class="elegir_imagen">
+                    <button class="btn_img imagen1">Power</button>
+                    <button class="btn_img imagen2">Makima</button>
+                    <button class="btn_img imagen3">Kobeni</button>
+                </div>
+                <div class="imageness">
+                    <img class="img_over img_over1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzTKpw7h7p-f8b_RJUog_FAyMKNo47bDsFhQ&usqp=CAU" alt="Power" title="Power">
+                    <img class="img_over img_over2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuBdtH-uahSIuHSsm7kC4V_CgGly0q_-WJ0A&usqp=CAU" alt="Makima" title="Makima">
+                    <img class="img_over img_over3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLa1GxgMuHHD6zPuoCn0isJYZAZw-fs4xm_A&usqp=CAU" alt="Kobeni" title="Kobeni">
+                </div>
+            </div>
+
+
+            <h2>blur</h2>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion0 cood">
+<div class="blur_content">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRdKpbBM80eYjoAibY7l3c3tEBtLYFahzshQ&usqp=CAU" alt="imagen">
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion1 cood">
+.blur_content img{
+    width: 40%;
+    filter: blur(5px);
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside w_body">
+                <div class="blur_content">
+                    <img alt="escoje una imagen" class="mostrar_img imagen__0">
+                </div>
+            </div>
+
+
+            <h2>brightness</h2>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion2 cood">
+<div class="brightness_content">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRdKpbBM80eYjoAibY7l3c3tEBtLYFahzshQ&usqp=CAU" alt="imagen">
+</div>
+<div class="brightness_content2">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRdKpbBM80eYjoAibY7l3c3tEBtLYFahzshQ&usqp=CAU" alt="imagen">
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion3 cood">
+.brightness_content img{
+    width: 40%;
+    filter: brightness(2);
+}
+.brightness_content2 img{
+    display: block;
+    margin-top: 8px;
+    width: 40%;
+    filter: brightness(.7);
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside w_body">
+                <div class="brightness_content">
+                    <img alt="escoje una imagen" class="mostrar_img imagen__1">
+                </div>
+                <div class="brightness_content2">
+                    <img alt="escoje una imagen" class="mostrar_img imagen__2">
+                </div>
+            </div>
+
+
+            <h2>contrast</h2>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion4 cood">
+<div class="contrast_content">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRdKpbBM80eYjoAibY7l3c3tEBtLYFahzshQ&usqp=CAU" alt="imagen">
+</div>
+<div class="contrast_content2">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRdKpbBM80eYjoAibY7l3c3tEBtLYFahzshQ&usqp=CAU" alt="imagen">
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                    <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion5 cood">
+.contrast_content img{
+    width: 40%;
+    filter: contrast(2);
+}
+.contrast_content2 img{
+    display: block;
+    margin-top: 5px;
+    width: 40%;
+    filter: contrast(.5);
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside w_body">
+                <div class="contrast_content">
+                    <img alt="escoje una imagen" class="mostrar_img imagen__3">
+                </div>
+                <div class="contrast_content2">
+                    <img alt="escoje una imagen" class="mostrar_img imagen__4">
+                </div>
+            </div>
+
+
+            <h2>grayscale</h2>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t6 texto_copiado">texto copiado</p>
+                    <i class="copiar6 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion6 cood">
+<div class="grayscale_content1">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRdKpbBM80eYjoAibY7l3c3tEBtLYFahzshQ&usqp=CAU" alt="imagen">
+</div>
+<div class="grayscale_content2">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRdKpbBM80eYjoAibY7l3c3tEBtLYFahzshQ&usqp=CAU" alt="imagen">
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t7 texto_copiado">texto copiado</p>
+                    <i class="copiar7 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion7 cood">
+.grayscale_content1 img{
+    width: 40%;
+    filter: grayscale(.4);
+}
+.grayscale_content2 img{
+    display: block;
+    margin-top: 5px;
+    width: 40%;
+    filter: grayscale(2);
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside w_body">
+                <div class="grayscale_content1">
+                    <img alt="escoje una imagen" class="mostrar_img imagen__5">
+                </div>
+                <div class="grayscale_content2">
+                    <img alt="escoje una imagen" class="mostrar_img imagen__6">
+                </div>
+            </div>
+
+
+            <h2>invert</h2>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t8 texto_copiado">texto copiado</p>
+                    <i class="copiar8 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion8 cood">
+<div class="invert_content1">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRdKpbBM80eYjoAibY7l3c3tEBtLYFahzshQ&usqp=CAU" alt="imagen">
+</div>
+<div class="invert_content2">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRdKpbBM80eYjoAibY7l3c3tEBtLYFahzshQ&usqp=CAU" alt="imagen">
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t9 texto_copiado">texto copiado</p>
+                    <i class="copiar9 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion9 cood">
+.invert_content1 img{
+    width: 40%;
+    filter: invert(15%);
+}
+.invert_content2 img{
+    display: block;
+    margin-top: 5px;
+    width: 40%;
+    filter: invert(100%);
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside w_body">
+                <div class="invert_content1">
+                    <img alt="escoje una imagen" class="mostrar_img imagen__7">
+                </div>
+                <div class="invert_content2">
+                    <img alt="escoje una imagen" class="mostrar_img imagen__8">
+                </div>
+            </div>
+
+
+            <h2>saturate</h2>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t10 texto_copiado">texto copiado</p>
+                    <i class="copiar10 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion10 cood">
+<div class="saturate_content1">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRdKpbBM80eYjoAibY7l3c3tEBtLYFahzshQ&usqp=CAU" alt="imagen">
+</div>
+<div class="saturate_content2">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRdKpbBM80eYjoAibY7l3c3tEBtLYFahzshQ&usqp=CAU" alt="imagen">
+</div>
+<div class="saturate_content3">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRdKpbBM80eYjoAibY7l3c3tEBtLYFahzshQ&usqp=CAU" alt="imagen">
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t11 texto_copiado">texto copiado</p>
+                    <i class="copiar11 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion11 cood">
+.saturate_content1 img{
+    width: 40%;
+    filter: saturate(0);
+}
+.saturate_content2 img{
+    display: block;
+    margin-top: 5px;
+    width: 40%;
+    filter: saturate(1);
+}
+.saturate_content3 img{
+    display: block;
+    margin-top: 5px;
+    width: 40%;
+    filter: saturate(2);
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside w_body">
+                <div class="saturate_content1">
+                    <img alt="escoje una imagen" class="mostrar_img imagen__9">
+                </div>
+                <div class="saturate_content2">
+                    <img alt="escoje una imagen" class="mostrar_img imagen__10">
+                </div>
+                <div class="saturate_content3">
+                    <img alt="escoje una imagen" class="mostrar_img imagen__11">
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+        <footer>
+            <div class="footer_div">
+                <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+            </div>
+        </footer>
+    
+    
+        <script src="filter.js"></script>
+    </body>
+</html>

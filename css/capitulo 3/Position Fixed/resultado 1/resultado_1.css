@@ -1,0 +1,12 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.menu{
+    background-color: red;
+    opacity: 0.4;
+    position: fixed;
+    width: 100%;
+    color: white;
+}

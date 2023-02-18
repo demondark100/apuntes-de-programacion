@@ -1,0 +1,11 @@
+.content_cajas{
+    display: flex;
+    flex-flow: row-reverse wrap;
+}
+.content_cajas div{
+    background-color: #000;
+    color: #fff;
+    width: 200px;
+    height: 200px;
+    margin: 15px;
+}

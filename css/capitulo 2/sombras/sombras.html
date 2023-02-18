@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="sombras.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>sombras</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+
+    <main>
+        <div class="teoria">
+            <h1>sombras</h1>
+            <p>
+                esta propiedad es similar a <a href="../bordes/bordes.html">border</a> pero en vez de darle bordes a las cajas les damos una sombra. ejemplo.
+            </p>
+
+            <div class="webside">
+                <div class="sombra_1">
+                    cajita feliz :D
+                </div>
+            </div>
+
+            <p>
+                la propiedad box-shadow se compone por: <br>
+                box-shadow: eje x / lados , eje y / arriba y abajo , desenfoque , borde , color;
+            </p>
+
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion0 cood">
+<div class="caja_combreada">
+    caja sombreada :D
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion1 cood">
+.caja_combreada{
+    width: 55%;
+    background-color: black;
+    color: white;
+    box-shadow: -8px 8px 15px 8px cadetblue;
+    margin: auto;
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <div class="caja_combreada">
+                    caja sombreada :D
+                </div>
+            </div>
+
+            <p class="text_combra">
+                los textos tambien pueden tener sombras al igual que las cajas la diferencia es que no tienen la propiedad de borde al igual que las cajas. <br> <br>
+                text-shadow: eje x / lados , eje y / arriba y abajo , desenfoque , color.
+            </p>
+
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion2 cood">
+<p class="sombra_de_texto">
+    un texto feliz :D
+</p>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion3 cood">
+.sombra_de_texto{
+    background-color: black;
+    color: white;
+    height: 45px;
+    width: 55%;
+    margin: auto;
+    text-shadow: 5px 5px 15px white;
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <p class="sombra_de_texto">
+                    un texto feliz :D
+                </p>
+            </div>
+
+
+
+        </div>
+    </main>
+
+
+
+        <footer>
+            <div class="footer_div">
+                <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+            </div>
+        </footer>
+    
+    
+        <script src="sombras.js"></script>
+    </body>
+</html>

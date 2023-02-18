@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="hooks.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>hooks</title>
+  </head>
+<body>
+  <header>
+    <div class="header_content">
+      <div class="logo_container">
+        <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+      </div>
+      <div class="nav_container">
+        <i class="fa-solid fa-bars menu"></i>
+      </div>    
+      </div>
+      <div class="nav_content">
+        <nav class="header_nav">
+          <ul class="menu_nav">
+            <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+            <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+            <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+            <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+          </ul>
+        </nav>
+      </div>    
+  </header>
+
+
+
+  <main>
+    <div class="teoria">
+      <h1>hooks</h1>
+      <p>
+        los hooks son una version mejorada de los componentes de clase por asi decirlo ya que volvemos a las funciones , y es muy parecida a las bases de javaScript y ademas escribimos menos codigo ya que se reduce demasiado con las funciones.
+      </p>
+
+      <p>
+        empecemos sabiendo como es la sintaxis aunque ya la usamos muuuuchas veces.
+      </p>
+
+      <h2>estructura</h2>
+      <div class="code_content">
+        <code>
+<textarea readonly class="codificacion cood">
+importar React de "react";
+importar {usarEstado} de "react";
+
+funcion nombre(parametro){
+  retornar(
+    <div>
+      
+    </div>
+  )
+}
+</textarea>
+        </code>
+      </div>
+
+
+      <h2>estado</h2>
+      <p>
+        en los componentes de clase teniamos a los estados para actualizarlos aqui en los hooks es mas sencillo aun pero la sintaxis es distinta ya que estamos trabajando con funciones ya no con objetos.
+      </p>
+      <h2>sintaxis</h2>
+      <div class="code_content">
+        <code>
+<textarea readonly class="codificacion cood">
+importar React de "react";
+importar {usarEstado} de "react";
+
+  funcion Estado(){
+  constante {estado , accederEstado} = usarEstado(valorQueQueremosTrabajar)
+
+  // 1. estado: en estado ira el estado que sacara la copia para actualizar la interfaz.
+  // 2. accederEstado: sera la funcion que actualizara la funcion que actualizara la interfaz.
+  // 3. usarEstado: en el parametro se pone cualquier valor con el que trabajaremos , puede ser string , numero , etc.
+}
+</textarea>
+        </code>
+      </div>
+
+      <h2>hacer contador con hooks</h2>
+
+      <h2>codigo sin comentarios</h2>
+      <div class="code_content">
+        <code>
+          <div class="content_copy">
+             <p class="t0 texto_copiado">texto copiado</p>
+            <i class="copiar0 fa-solid fa-copy"></i>
+          </div>
+<textarea readonly class="codificacion codificacion0 cood">
+import React from "react";
+import { useState } from "react";
+
+
+function Hooks(){
+  const [estado,setContador] = useState(0);
+  
+  const sumar=()=>setContador(estado + 1);
+  const restar=()=>setContador(estado - 1);
+
+  return(
+    <div>
+      <h5>contador con hooks</h5>
+      <p>{estado}</p>
+      <nav>
+        <button onClick={sumar}>+</button>
+        <button onClick={restar}>-</button>
+      </nav>
+    </div>
+  )
+}
+
+export default Hooks;
+</textarea>
+        </code>
+      </div>
+
+      
+             <h2>codigo explicado</h2>
+            <div class="code_content">
+              <code>
+                <div class="content_copy">
+                   <p class="t1 texto_copiado">texto copiado</p>
+                  <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion1 cood">
+
+// importamos react y useState para trabajar con la interfaz. 
+
+import React from "react";
+import { useState } from "react";
+
+
+// creamos la funcion hooks
+
+function Hooks(){
+
+  // destructuramos dos variables para useState y asi poder trabajar con los estados. 
+
+  const [estado,setContador] = useState(0);
+  
+  // creamos dos metodos sumar y restar.
+  
+  // ambas funciones acceden al estado y lo suman. 
+
+  const sumar=()=>setContador(estado + 1);
+  const restar=()=>setContador(estado - 1);
+
+  // retornamos todo en la interfaz.
+
+  return(
+
+    // en el elemento "p" ponemos el estado donde se acualizara el numero segun sea.
+    
+    // en ambos botones ponemos el onclick y les damos les decimos que ejecuten las funciones respectivas.
+
+    <div>
+      <h5>contador con hooks</h5>
+      <p>{estado}</p>
+      <nav>
+        <button onClick={sumar}>+</button>
+        <button onClick={restar}>-</button>
+      </nav>
+    </div>
+  )
+}
+
+// exportamos esta funcion.
+
+export default Hooks;
+</textarea>
+              </code>
+            </div>
+            <div class="webside">
+              <div id="contenedor">
+                <p id="numero">0</p>
+                <nav>
+                  <button id="sumar">+</button>
+                  <button id="restar">-</button>
+                </nav>
+              </div>
+            </div>
+
+    </div>
+  </main>
+
+
+
+  <footer>
+    <div class="footer_div">
+      <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+    </div>
+  </footer>
+
+
+    <script src="hooks.js"></script>
+  </body>
+</html>

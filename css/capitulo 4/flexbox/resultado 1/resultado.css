@@ -1,0 +1,15 @@
+.contenido_flex{
+    display: flex;
+    padding: 10px;
+}
+
+.parrafo1{
+    background-color: #c5bee6;
+    padding: 12px;
+    margin: 8px;
+}
+.parrafo2{
+    background-color: #34b66a;
+    padding: 12px;
+    margin: 8px;
+}

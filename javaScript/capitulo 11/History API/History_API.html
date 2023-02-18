@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="History_API.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>History API</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+<main>
+    <div class="teoria">
+        <h1>History API</h1>
+        <p>
+            con el objeto "History" trabajaremos con el historial una api muy util.
+        </p>
+        <div class="code_content">
+            <code>
+                console.log(history.__proto__);
+                <p>con esto veremos el protoripo de este objeto.</p>
+            </code>
+        </div>
+        <div class="code_content">
+            <h2>back</h2>
+            <code>
+                history.back()
+            </code>
+            <p>esto nos devolvera a una pagina atras.</p>
+        </div>
+
+        <div class="code_content">
+            <h2>forward</h2>
+            <code>
+                history.forward()
+                <p>con esto iremos un sitio mas adelante de donde estamos.</p>
+            </code>
+        </div>
+
+        <div class="code_content">
+            <h2>length</h2>
+            <code>
+                history.length()
+                <p>con esto veremos el tamaño del historial.</p>
+            </code>
+        </div>
+        
+        <div class="code_content">
+            <h2>go</h2>
+            <code>
+                history.go()
+                <p>con esto recargaremos la pagina.</p>
+                history.go(-1)
+                <p>con esto recargaremos la pagina anterior a la que estamos.</p>
+                history.go(1)
+                <p>con esto recargaremos la pagina despues en la que estamos.</p>
+            </code>
+        </div>
+
+        <div class="code_content">
+            <h2>pushState</h2>
+            <p>estas son entradas de historial por ejemplo si abrimos un sitio y modificamos la entrada como en el codigo y abres el historias se abrira esa entrada de historial.</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion0 cood">
+console.log(location.href);            
+
+//fijate en la url que te dejara href
+history.pushState( 
+    {nombre: "historial"},
+    "pueba historial",
+    "?prueba"
+); 
+console.log(location.href);
+//ahora nos daremos cuenta que el link de href cambio.
+</textarea>
+            </code>
+        </div>
+        <div class="code_content">
+            <h2>state</h2>
+            <code>
+                console.log(history.state);
+                <p>con esto veremos el nombre que pusimos en este caso "historial"</p>
+            </code>
+        </div>
+        <div class="code_content">
+            <h2>popstate</h2>
+            <code>
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion1 cood">
+addEventListener("popstate",(e)=>{ 
+    console.log(e.state)
+})                            
+</textarea>
+                <p>esto es como el state solo que nos evitaremos poner cada rato "history.state" a la hora de movernos en el historial.</p>
+            </code>
+        </div>
+        <div class="code_content">
+            <h2>replaceState</h2>
+            <code>
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion2 cood">
+history.replaceState( 
+    {nombre: "historial"},
+    "pueba historial",
+    "?prueba"
+);                  
+</textarea>
+                <p>esto es lo mismo que "pushState" solo que no deja entradas en el historial.</p>
+            </code>
+        </div>
+    </div>
+</main>
+
+
+
+<footer>
+    <div class="footer_div">
+        <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+    </div>
+</footer>
+
+
+<script src="History_API.js"></script>
+</body>
+</html>

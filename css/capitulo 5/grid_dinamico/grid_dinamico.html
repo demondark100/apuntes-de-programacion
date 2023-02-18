@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="grid_dinamico.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>grid dinamico</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <main>
+        <div class="teoria">
+            <h1>grid dinamico</h1>
+            <p>
+                con esto podemos posiscionar de mejor forma los elementos , manejar su comportamento a los elementos/grishas.
+            </p>
+
+            <h1>min-content / max-content</h1>
+            <p>
+                estas propiedades ajustan los elementos en el contenedor minimo o maximo , estas propiedades generalmente se suelen poner en repeat.
+            </p>
+
+            <h2>min content</h2>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion0 cood">
+<div class="min_content">
+    <div>
+        a
+    </div>
+    <div>
+        a
+    </div>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit assumenda quam numquam illo quia. Veritatis temporibus explicabo eius nostrum, neque corrupti, a vitae quasi sunt quibusdam libero quidem eveniet nam.
+    </div>
+    <div>
+        a
+    </div>
+    <div>
+        a
+    </div>
+    <div>
+        a
+    </div>
+    <div>
+        a
+    </div>
+    <div>
+        a
+    </div>
+    <div>
+        a
+    </div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion1 cood">
+.min_content{
+    display: grid;
+    grid-template-columns: repeat(3,min-content);
+    grid-template-rows: repeat(3,1fr);
+    background-color: #60615f;
+}
+.min_content div{
+    border: 2px solid #000;
+    background-color: #00000066;
+    color: #fff;
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <div class="min_content">
+                    <div>
+                        a
+                    </div>
+                    <div>
+                        a
+                    </div>
+                    <div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit assumenda quam numquam illo quia. Veritatis temporibus explicabo eius nostrum, neque corrupti, a vitae quasi sunt quibusdam libero quidem eveniet nam.
+                    </div>
+                    <div>
+                        a
+                    </div>
+                    <div>
+                        a
+                    </div>
+                    <div>
+                        a
+                    </div>
+                    <div>
+                        a
+                    </div>
+                    <div>
+                        a
+                    </div>
+                    <div>
+                        a
+                    </div>
+                </div>
+            </div>
+
+            
+            <h2>max content</h2>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion2 cood">
+<div class="max_content">
+    <div>
+        a
+    </div>
+    <div>
+        a
+    </div>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit assumenda quam numquam illo quia. Veritatis temporibus explicabo eius nostrum, neque corrupti, a vitae quasi sunt quibusdam libero quidem eveniet nam.
+    </div>
+    <div>
+        a
+    </div>
+    <div>
+        a
+    </div>
+    <div>
+        a
+    </div>
+    <div>
+        a
+    </div>
+    <div>
+        a
+    </div>
+    <div>
+        a
+    </div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion3 cood">
+.max_content{
+    display: grid;
+    grid-template-columns: repeat(3,max-content);
+    grid-template-rows: repeat(3,120px);
+    background-color: #60615f;
+}
+.max_content div{
+    border: 2px solid #000;
+    background-color: #00000066;
+    color: #fff;
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <div class="max_content">
+                    <div>
+                        a
+                    </div>
+                    <div>
+                        a
+                    </div>
+                    <div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit assumenda quam numquam illo quia. Veritatis temporibus explicabo eius nostrum, neque corrupti, a vitae quasi sunt quibusdam libero quidem eveniet nam.
+                    </div>
+                    <div>
+                        a
+                    </div>
+                    <div>
+                        a
+                    </div>
+                    <div>
+                        a
+                    </div>
+                    <div>
+                        a
+                    </div>
+                    <div>
+                        a
+                    </div>
+                    <div>
+                        a
+                    </div>
+                </div>                
+            </div>
+
+            <h2>min-max</h2>
+            <p>
+                con esta propiedad definiremos cuanto queremos que sea el maximo y el minimo de las celdas. <br>
+                pseudocodigo: <br>
+                minmax(cuanto queremos que sea el minimo , cuanto queremos que sea el maximo);
+                minmax(120px,400px);
+            </p>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion4 cood">
+<div class="min_max">
+    <div>
+        a
+    </div>
+    <div>
+        a
+    </div>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit assumenda quam numquam illo quia. Veritatis temporibus explicabo eius nostrum, neque corrupti, a vitae quasi sunt quibusdam libero quidem eveniet nam.
+    </div>
+    <div>
+        a
+    </div>
+    <div>
+        a
+    </div>
+    <div>
+        a
+    </div>
+    <div>
+        a
+    </div>
+    <div>
+        a
+    </div>
+    <div>
+        a
+    </div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                    <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion5 cood">
+.min_max{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(80px,200px));
+    grid-template-rows: repeat(3,1fr);
+    background-color: #60615f;
+}
+.min_max div{
+    border: 2px solid #000;
+    background-color: #00000066;
+    color: #fff;
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <div class="min_max">
+                    <div>
+                        a
+                    </div>
+                    <div>
+                        a
+                    </div>
+                    <div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit assumenda quam numquam illo quia. Veritatis temporibus explicabo eius nostrum, neque corrupti, a vitae quasi sunt quibusdam libero quidem eveniet nam.
+                    </div>
+                    <div>
+                        a
+                    </div>
+                    <div>
+                        a
+                    </div>
+                    <div>
+                        a
+                    </div>
+                    <div>
+                        a
+                    </div>
+                    <div>
+                        a
+                    </div>
+                    <div>
+                        a
+                    </div>
+                </div>                
+            </div>
+
+
+            <h2>auto-fill</h2>
+            <p>
+                esta propiedad se encarga de mover de forma dinamica las celdas una a lado de otra o posisionandolas abajo puedes darte cuenta con su comportamiento.
+            </p>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t6 texto_copiado">texto copiado</p>
+                    <i class="copiar6 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion6 cood">
+<div class="auto_fill">
+    <div>
+        a
+    </div>
+    <div>
+        a
+    </div>
+    <div>
+        a
+    </div>
+    <div>
+        a
+    </div>
+    <div>
+        a
+    </div>
+    <div>
+        a
+    </div>
+    <div>
+        a
+    </div>
+    <div>
+        a
+    </div>
+    <div>
+        a
+    </div>
+    <div>
+        a
+    </div>
+    <div>
+        a
+    </div>
+    <div>
+        a
+    </div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t7 texto_copiado">texto copiado</p>
+                    <i class="copiar7 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion7 cood">
+.auto_fill{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(80px,1fr));
+    grid-template-rows: repeat(3,1fr);
+    background-color: #60615f;
+}
+.auto_fill div{
+    border: 2px solid #000;
+    background-color: #00000066;
+    color: #fff;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                como te das cuenta a medida que se haga mas grande o pequeña la resolucion ira posisionando de forma dinamica los elementos.
+            </p>
+            <div class="webside">
+                <div class="auto_fill">
+                    <div>
+                        a
+                    </div>
+                    <div>
+                        a
+                    </div>
+                    <div>
+                        a
+                    </div>
+                    <div>
+                        a
+                    </div>
+                    <div>
+                        a
+                    </div>
+                    <div>
+                        a
+                    </div>
+                    <div>
+                        a
+                    </div>
+                    <div>
+                        a
+                    </div>
+                    <div>
+                        a
+                    </div>
+                    <div>
+                        a
+                    </div>
+                    <div>
+                        a
+                    </div>
+                    <div>
+                        a
+                    </div>
+                </div>
+            </div>
+
+
+
+            <h2>auto-fit</h2>
+            <p>
+                este a diferencia de auto-fill hace que los elementos se agranden pero al igual que auto-fill trabaja de forma dinamica.
+            </p>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t8 texto_copiado">texto copiado</p>
+                    <i class="copiar8 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion8 cood">
+<div class="auto_fit">
+    <div>
+        a
+    </div>
+    <div>
+        a
+    </div>
+    <div>
+        a
+    </div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t9 texto_copiado">texto copiado</p>
+                    <i class="copiar9 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion9 cood">
+.auto_fit{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(80px,1fr));
+    grid-template-rows: repeat(3,1fr);
+    background-color: #60615f;
+}
+.auto_fit div{
+    border: 2px solid #000;
+    background-color: #00000066;
+    color: #fff;
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <div class="auto_fit">
+                    <div>
+                        a
+                    </div>
+                    <div>
+                        a
+                    </div>
+                    <div>
+                        a
+                    </div>
+                </div>
+            </div>
+
+            <a class="siguiente" href="../alineacion en grid/alineacion_g.html">alineacion en grid=></a>
+
+
+        </div>
+    </main>
+
+        <footer>
+            <div class="footer_div">
+                <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+            </div>
+        </footer>
+    
+    
+        <script src="grid_dinamico.js"></script>
+    </body>
+</html>

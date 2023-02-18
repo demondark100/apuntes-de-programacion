@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize_bucles.css">
+    <link rel="stylesheet" href="bucles.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>bucles</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+
+    <main>
+        <div class="teoria">
+            <h1>bucles</h1>
+            <p>
+                con los bucles podremos recorrer arreglos o 
+                tambien hacer algo de una forma repetida.
+            </p>
+            <p>
+                con "++" ira incrementado un numero de 1 en 1.
+            </p>
+
+            <div class="code_content">
+                <code>
+                    <h2>bucle while:</h2>
+                    <p>pseudocodigo 1:</p>
+<textarea readonly class="codificacion cood">
+crear variable = valor; 
+bucle( condicional ) { 
+    variable++;
+    recorrer arreglo o hacer algo.
+};
+bucle mientras.
+</textarea>
+                </code>
+            </div>
+
+            <div class="code_content">
+                <code> 
+                    <h2>bucle for:</h2>
+                    <p>pseudocodigo 2: </p>
+<textarea readonly class="codificacion cood">
+bucle ( crear variable = valor ; condicional ; variable++ ) { 
+    recorrer arreglo o hacer algo.
+}
+bucle para.
+</textarea>
+                </code>
+            </div>
+
+            <div class="code_content">
+                <code>
+                    <h2>bicle in:</h2>
+                    <p>pseudocodigo 3:</p>
+<textarea readonly class="codificacion cood">
+bucle ( recorrer bucle y mostrar posisiones ) { 
+    hacer algo.
+};
+bucle for in.
+</textarea>
+                </code>
+            </div>
+
+            <div class="code_content">
+                <code>
+                    <h2>bucle of:</h2>
+                    <p>pseudocodigo:</p>
+<textarea readonly class="codificacion cood">
+bucle ( recorrer bucle y mostrar el contenido ) { 
+    hacer algo.
+}
+bucle for of.
+</textarea>
+                </code>
+            </div>
+
+            <p>
+                ahora con javaScript.
+            </p>
+
+            <h2>javaScript while/mientras:</h2>
+            <div class="code_content">
+                <code>
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion0 cood">
+let i = 0; 
+while(i < 5){ 
+    i++;
+    console.log("se ejecuto este bucle");
+}
+</textarea>
+                    <p>un ejemplo mas.</p>
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion1 cood">
+let i = 0;
+let pregunta = ""; 
+while(i < 1){
+    pregunta = prompt("cual es el mejor amigo de bob esponja?");
+    if (pregunta == "patricio" ||
+        pregunta == "Patricio") {
+        i = 1;
+        alert("correcto");
+    } else{
+        alert("incorrecto")
+    }
+}
+//este bucle se ejecutara hasta que el usuario diga patricio o Patricio.
+</textarea>
+                </code>
+            </div>
+
+            <h2>javaScript for/para:</h2>
+            <div class="code_content">
+                <code>
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion2 cood">
+for(let i = 0; i < 5; i++){
+    console.log("se ejecuto el bloque for");
+}
+</textarea>
+                    <p>un ejemplo mas.</p>
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion3 cood">
+let numeros,pares,impares,negativos,positivos;
+pares = 0;
+impares = 0;
+positivos = 0;
+negativos = 0;
+
+for (let i = 1; i <= 10; i++) {
+    numeros = prompt(`escriba el numero ${i}`);
+    if (numeros % 2 == 0) {
+        pares += 1;
+    } else{
+        impares += 1;
+    }
+    if (numeros > 0) {
+        positivos += 1;
+    } else{
+        negativos += 1;
+    }
+}
+console.log(`
+    el total de numeros pares es ${pares} , 
+    el total de numeros impares es ${impares} , 
+    el total de numeros positivos es ${positivos} , 
+    el total de numeros negativos es ${negativos}.
+`);
+
+//aqui veremos cuantos numeros son positivos,negativos,pares,impares.
+</textarea>
+                </code>
+            </div>
+
+            <h2>javaScript bucle in:</h2>
+            <div class="code_content">
+                <code>
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion4 cood">
+let arreglo = [ 
+    "user1",
+    "user2",
+    "user3",
+    "user4" 
+]; 
+for(let arr in arreglo){ 
+    console.log(arr);
+};
+//resultado:
+//0
+//1
+//2
+//3
+</textarea>
+                </code>
+            </div>
+
+            <h2>javaScript bucle of:</h2>
+            <div class="code_content">
+                <code>
+                <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                    <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion5 cood">
+let arreglo = [ 
+    "user1",
+    "user2",
+    "user3",
+    "user4"
+]; 
+for(let arr of arreglo){ 
+    console.log(arr);
+};
+//resultado:
+//user1
+//user2
+//user3
+//user4
+</textarea>
+                </code>
+            </div>
+        </div>
+    </main>
+
+
+
+    <footer>
+        <div class="footer_div">
+            <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+        </div>
+    </footer>
+    
+    
+    <script src="bucles.js"></script>
+</body>
+</html>

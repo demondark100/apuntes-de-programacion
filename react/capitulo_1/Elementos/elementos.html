@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="elementos.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>renderizado Elementos</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+
+    <main>
+        <div class="teoria">
+            <h1>renderizado Elementos</h1>
+            <p>
+                nosotros podemos renderizar arreglos pero a la hora de ejecutar habra una pequeña advertencia de que necesita un "key" que seria un equivalente al "id" en html esto es para poder buscar de mejor forma en la virtual dom.
+            </p>
+
+
+            <h2>key</h2>
+            <div class="code_content">
+                <code>
+                    <div class="content_copy">
+                        <p class="t0 texto_copiado">texto copiado</p>
+                        <i class="copiar0 fa-solid fa-copy"></i>
+                    </div>
+                    
+<textarea readonly class="codificacion codificacion0 cood">
+import React from "react";
+import {Component} from "react";
+
+export class RenderizarE extends Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      seasions: ["spring","summer","fall","winter"]
+    }
+  }
+
+  render(){
+    return(
+      <div>
+        <h3>seasions</h3>
+        <ol>
+          {
+            this.state.seasions.map((id,indice)=>(
+              <li key={indice}>{id}</li>
+            ))
+          }
+        </ol>
+      </div>
+    )
+  }
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+              si a este codigo le quitamos el "key" veras que hay una advertencia en la consola indicando que para renderizar de mejor manera se necesita un key pero usar el indice como "key" no es muy recomendable pero por ahora esta bien mas adelante usaremos una libreria para poner una key unica para cada elemento.
+            </p>
+            <div class="webside">
+              <h3>seasions</h3>
+              <ol>
+                <li>spring</li>
+                <li>summer</li>
+                <li>fall</li>
+                <li>winter</li>
+              </ol>
+            </div>
+
+            <h2>explicando codigo</h2>
+            <ol>
+              <li>creamos un objeto con una variable llamada "seasion"("estaciones").</li>
+              <li>luego usamos el metodo map para recorrer el arreglo de forma dinamica.</li>
+              <li>usamos una key para poder renderizar los elementos.</li>
+            </ol>
+
+            <h2>simulacion API</h2>
+            <p>
+              ahora vamos a renderizar un objeto json para simular una API.
+            </p>
+            <h2>json</h2>
+            <p>crearemos un archivo jsoon con eel nombre "data".</p>
+            <div class="code_content">
+                <code>
+                    <div class="content_copy">
+                        <p class="t1 texto_copiado">texto copiado</p>
+                        <i class="copiar1 fa-solid fa-copy"></i>
+                    </div>
+                    
+<textarea readonly class="codificacion codificacion1 cood">
+{
+  "frameworks": [
+    {
+      "id": 1,
+      "name": "react",
+      "web": "https://reactjs.org"
+    },
+    {
+      "id": 2,
+      "name": "Angular",
+      "web": "https://angular.io"
+    },
+    {
+      "id": 3,
+      "name": "Vue",
+      "web": "https://vuejs.org/"
+    },
+    {
+      "id": 4,
+      "name": "Polymer",
+      "web": "https://polymer-library.polymer-project.org/"
+    },
+    {
+      "id": 5,
+      "name": "Svelte",
+      "web": "https://svelte.dev/"
+    }
+  ]
+}
+</textarea>
+                </code>
+            </div>
+
+
+            <h2>cmpooonente</h2>
+            <div class="code_content">
+                <code>
+                    <div class="content_copy">
+                        <p class="t2 texto_copiado">texto copiado</p>
+                        <i class="copiar2 fa-solid fa-copy"></i>
+                    </div>
+                    
+<textarea readonly class="codificacion codificacion2 cood">
+import React from "react";
+import {Component} from "react";
+
+import data from "./ruta"
+
+
+function ListIntem(props){
+  return(
+    <li>
+      <a href={props.el.web} target="_blank">{props.el.name}</a>
+    </li>
+  )
+}
+
+export class RenderE extends Component{
+
+  render(){
+    return(
+      <div>
+        <h3>frameworks</h3>
+        <ul>
+          {
+            data.frameworks.map(el=>(
+              <ListIntem key={el.id} el={el}/>
+            ))
+          }
+        </ul>
+      </div>
+    )
+  }
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+              <h2>frameworks</h2>
+              <ul>
+                <li><a target="_blank" href="https://reactjs.org">react</a></li>
+                <li><a target="_blank" href="https://angular.io">Angular</a></li>
+                <li><a target="_blank" href="https://vuejs.org/">Vue</a></li>
+                <li><a target="_blank" href="https://polymer-library.polymer-project.org/">Polymer</a></li>
+                <li><a target="_blank" href="https://svelte.dev/">Svelte</a></li>
+              </ul>
+            </div>
+
+            <h2>explicando codigo</h2>
+            <ol>
+              <li>importamos el archivo json-</li>
+              <li>creamos una funcion que agregye los enlaces del json de forma dinamica</li>
+              <li>ponelos un ul para recorrer de forma dinamica con map al archivo json</li>
+              <li>llamamos a la funcion/componente para darle el key las id que pusimos en nuestro archivo json</li>
+              <li>luego le ponemos el un atributo que sera el elemento-</li>
+            </ul>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer_div">
+          <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+        </div>
+    </footer>
+
+
+    <script src="elementos.js"></script>
+</body>
+</html>

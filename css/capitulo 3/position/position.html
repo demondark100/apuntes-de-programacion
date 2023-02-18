@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="position.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>position relative</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+    <main>
+        <div class="teoria">
+            <h1>position relative</h1>
+            <p>
+                esta propiedad nos permite posisionar elementos , al usar la propiedad position un elemento adquiere nuevas propiedades como: <br>
+                top , right , bottom , left , z-index. 
+            </p>
+            <p>
+                lo que sucede con position relative es que la caja conservara su espacio en el sitio web.
+            </p>
+
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion0 cood">
+<div class="relative_1">
+    caja 1
+</div>
+<div class="relative_2">
+    caja 2
+</div>
+<div class="relative_3">
+    caja 3
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion1 cood">
+.relative_1 , .relative_2 , .relative_3 {
+    width: 25%;
+    height: 125px;
+    color: wheat;
+    margin: auto;
+}
+.relative_1{
+    background-color: red;
+    position: relative;
+}
+.relative_2{
+    background-color: blue;
+    position: relative;
+    top: 25px;
+}
+.relative_3{
+    background-color: green;
+    position: relative;
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <div class="relative_1">
+                    caja 1
+                </div>
+                <div class="relative_2">
+                    caja 2
+                </div>
+                <div class="relative_3">
+                    caja 3
+                </div>
+            </div>
+
+            <p>
+                a la hora de trabajar con position lo normal es trabajar solo con top y left ejemplo.
+            </p>
+
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion2 cood">
+<div class="mover_caja">
+    cajita.
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion3 cood">
+.mover_caja{
+    margin: auto;
+    background-color: lightblue;
+    color: black;
+    width: 25%;
+    height: 125px;
+    position: relative;
+    top: -10px;
+    left: -85px;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                si te fijas en vez de poner "right: 85px;" solo pusimos "left: -85px;" y que en vez de poner "bottom: 10px;" pusimos "top: -10px;" esto es debido a que top y left tienen una gerarquia mayor a bottom y right por asi decirlo.
+            </p>
+            <div class="webside">
+                <div class="mover_caja">
+                    cajita.
+                </div>
+            </div>
+
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion4 cood">
+<div class="caja">
+    caja.
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                    <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion5 cood">
+.caja{
+    background-color: red;
+    color: white;
+    width: 25%;
+    height: 150px;
+    position: relative;
+    bottom: 50px;
+    top: 15px;
+    left: 55px;
+    right: 200px;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                si te das cuenta no hace caso a bottom y tampoco a right debido a que top y left son los mas importantes.
+            </p>
+            <div class="webside">
+                <div class="caja">
+                    caja.
+                </div>
+            </div>
+
+            <a class="siguiente" href="../position_absolute/position_a.html">position absolute =></a>
+
+        </div>
+    </main>
+    
+    
+    
+        <footer>
+            <div class="footer_div">
+                <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+            </div>
+        </footer>
+    
+    
+        <script src="position.js"></script>
+    </body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize_cadenas.css">
+    <link rel="stylesheet" href="metodos_cad.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>funciones</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+    <main>
+        <div class="teoria">
+            <h1>metodos de cadena</h1>
+            <p>hay muchos metodos que nos facilitaran las cosas.</p>
+            <b>iniciamos:</b>
+            <div class="code_content">
+                <code>
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion0 cood">
+let cadena1 = "hola mundo";
+cadena1.startsWith("h");
+
+//resultado: true 
+
+let cadena2 = "hola mundo";
+cadena2.startsWith("a");
+
+//resultado: false;
+</textarea>
+                    <p>
+                        esto nos servira para saber si una cadena inicia con un caracter en especifico
+                    </p>
+                </code>
+            </div>
+
+            <div class="code_content">
+                <code>
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion1 cood">
+let cadena1 = "mundo";
+cadena1.endsWith("o"); 
+
+//resultado: true 
+
+let cadena2 = "mundo";
+cadena2.endsWith("e"); 
+
+//resultado: false 
+</textarea>
+                    <p>
+                        esto nos servira para saber si una cadena finaliza con algun caracter en especifico.
+                    </p>
+                </code>
+            </div>
+
+            <div class="code_content">
+                <code>
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion2 cood">
+let cadena1 = "hola mundo XD";
+cadena1.includes("l");
+
+//resultado: true
+
+let cadena2 = "hola mundo XD";
+cadena2.includes("z");
+
+//resultado: false
+</textarea>
+                    <p>
+                        esto nos servira para saber si una cadena contiene un caracter en especifico a diferencia de las dos primeras a este no le importara la posision.
+                    </p>
+                </code>
+            </div>
+
+            <div class="code_content">
+                <code>
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion3 cood">
+let cadena = "hola mundo";
+cadena.indexOf("a");
+//resultado: 3
+</textarea>
+                    <p>
+                        esto nos mostrara la posision de un caracter en especifico
+                    </p>
+                </code>
+            </div>
+
+            <div class="code_content">
+                <code>
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion4 cood">
+let cadena = "vivir es vida";
+cadena.lastIndexOf("v");
+//resultado: 9 
+</textarea>
+                    <p>
+                        esto nos servira para saber la ultima posision de un caracter en especifico.
+                    </p>
+                </code>
+            </div>
+
+            <div class="code_content">
+                <code>
+                <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                    <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion5 cood">
+let cadena = "no se encontrara un caracter.";
+if (cadena.indexOf("@") == -1) {
+    console.log("el caracter @ no existe")
+} else{
+    console.log(cadena.indexOf("6"))
+}
+</textarea>
+                </code>
+                <p>
+                    si la posision del caracter que queremos no existe sera -1.
+                </p>
+            </div>
+
+            <div class="code_content">
+                <p>pseudocodigo:</p>
+                <code>
+<textarea readonly class="codificacion cood">
+variable.metodo ( 
+    parametro 1 longitud de cadena ,
+    parametro 2 cadena que queremos poner
+);
+</textarea>
+                    <p>javaScript:</p>
+                <div class="content_copy">
+                    <p class="t6 texto_copiado">texto copiado</p>
+                    <i class="copiar6 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion6 cood">
+let cadena = "123";
+let nuevaCadena = cadena.padStart(4,0);
+console.log(nuevaCadena)
+// resultado: 0123
+</textarea>
+                    <p>
+                        esto nos servira para rellenar una cadena al imicio
+                    </p>
+                </code> 
+            </div>
+
+            <div class="code_content">
+                <code>
+                    <p>pseudocodigo:</p>
+<textarea readonly class="codificacion cood">
+variable.metodo ( 
+    parametro 1 longitud , 
+    parametro 2 cadena que queremos poner al final
+); 
+</textarea>
+                <p>javaScript:</p>
+                <div class="content_copy">
+                    <p class="t7 texto_copiado">texto copiado</p>
+                    <i class="copiar7 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion7 cood">
+let cadena = "123"; 
+let nuevaCadena = cadena.padEnd(4,4);
+console.log(nuevaCadena);
+// resultado: "1234";
+</textarea>
+                    <p>
+                        esto nos servira para rellenar una cadena al final.
+                    </p>
+                </code>
+            </div>
+
+            <div class="code_content">
+                <code>
+                <div class="content_copy">
+                    <p class="t8 texto_copiado">texto copiado</p>
+                    <i class="copiar8 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion8 cood">
+let cadena = "hola";
+cadena.repeat(3);
+//resultado: "hola","hola","hola"
+</textarea>
+                    <p>
+                        esto nos servira para que el contenido de una cadena de texto se repita cuantas veces queramos
+                    </p>
+                </code>
+            </div>
+            
+            <div class="code_content">
+                <code>
+                <div class="content_copy">
+                    <p class="t9 texto_copiado">texto copiado</p>
+                    <i class="copiar9 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion9 cood">
+let cadena = "hola mundo";
+cadena.split(" ");
+//resultado: ["hola","mundo"]
+</textarea>
+                    <p>
+                        esto nos servira para separar una cadena y se convertira en un arreglo
+                    </p>
+                </code>
+            </div>
+            
+            <div class="code_content">
+                <p>pseudocodigo:</p>
+                <code>
+<textarea readonly class="codificacion cood">
+crear_variable = variable.metodo ( 
+    parametro 1 desde donde inicia , 
+    parametro 2 hasta donde finaliza y no cuenta el ultimo numero 
+);
+                    </textarea>
+                    <p>javaScript:</p>
+                <div class="content_copy">
+                    <p class="t10 texto_copiado">texto copiado</p>
+                    <i class="copiar10 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion10 cood">
+let cadena = "hola mundo";
+let subCadena = cadena.substring(5,10);
+console.log(subCadena);
+//resultado: "mundo"
+</textarea>
+                    <p>
+                        esto nos servira para crear una subcadena a diferencia de los otros metodos esto si necesita una variable de respaldo para que pueda guardar la nueva cadena de texto.
+                    </p>
+                </code>
+            </div>
+
+            <div class="code_content">
+                <code>
+                <div class="content_copy">
+                    <p class="t11 texto_copiado">texto copiado</p>
+                    <i class="copiar11 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion11 cood">
+let cadena1 = "hola mundo";
+console.log(cadena1.toUpperCase());
+
+let cadena2 = "HOLA MUNDO";
+console.log(cadena2.toLowerCase())
+</textarea>
+                    <p>
+                        esto nos servira para convertir una cadena de texto a mayuscula o minuscula
+                    </p>
+                    <p>
+                        con "toUpperCase" convertiremos la cadena a mayuscula.  <br>
+                        con "toLoweCase" convertiremos una cadena a minuscula. 
+                    </p>
+                </code>
+            </div>
+
+            <div class="code_content">
+                <code>
+                <div class="content_copy">
+                    <p class="t12 texto_copiado">texto copiado</p>
+                    <i class="copiar12 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion12 cood">
+let cadena = 123;
+cadena.toString();
+//resultado: "123"
+</textarea>
+                </code>
+                <p>
+                    esto nos servira para convertir cualquier dato a una cadena de texto
+                </p>
+            </div>
+
+            <div class="code_content">
+                <code>
+                <div class="content_copy">
+                    <p class="t13 texto_copiado">texto copiado</p>
+                    <i class="copiar13 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion13 cood">
+let cadena = " hola mundo ";
+cadena.trim();
+//resultado: "hola mundo"
+</textarea>
+                    <p>
+                        esto nos servira para quitar los espacios al principio y al final de una cadena de texto.
+                    </p>
+                    <p>
+                        con "trimStart()" quitamos los espacios del principio de una cadena. <br>
+                        con "trimEnd()" quitamos el espacio al final de una cadena.
+                    </p>
+                </code>
+            </div>
+        </div>
+    </main>
+
+
+<footer>
+    <div class="footer_div">
+        <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+    </div>
+</footer>
+
+
+<script src="metodos_cad.js"></>
+</body>
+</html>

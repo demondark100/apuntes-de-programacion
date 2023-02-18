@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="grid_auto.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>grid auto</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+
+    <main>
+        <div class="teoria">
+            <h1>grid auto</h1>
+            <p>
+                con estas propiedades vamos a programar el grid implicito ,  si te fijaste bien en los ejemplos del <a href="../grid_implicito_explicito/grid_i_e.html">grid implicito</a> se creaban filas de forma automatica. <br> <br>
+                pseudocodigo: <br>
+                grid-auto-columns: solo se ponen las medidas; <br>
+                grid-auto-rows: solo se ponen las medidas; <br>
+                por si te preguntas en estas propiedades no funciona <a href="../repeat/repeat.html">repeat</a> ya que no es necesario en los parametros de estas propiedades solo se debe poner la medida que queremos que se apliquen a cada nueva columna que se cree.
+            </p>
+
+            <h2>sin grid auto</h2>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion0 cood">
+<div class="sin_auto">
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion1 cood">
+.sin_auto{
+    border: 5px  solid #87d10f;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,120px);
+}
+.sin_auto div{
+    border: 2px solid #000;
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <div class="sin_auto">
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                </div>
+            </div>
+
+            <h2>con grid auto</h2>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion2 cood">
+<div class="con_auto">
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion3 cood">
+.con_auto{
+    border: 5px  solid #87d10f;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,120px);
+    grid-auto-rows: 120px;
+}
+.con_auto div{
+    border: 2px solid #000;
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <div class="con_auto">
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                </div>                
+            </div>
+
+            <h2>grid-auto-flow</h2>
+            <p>
+                como te diste cuenta las nuevas celdas se crearon de forma automatica como filas pero podemos cambiar ese comportamiento con. <br>
+                grid-auto-flow: column / row; <br>
+                ejemplo:
+            </p>
+
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion4 cood">
+<div class="grid_flow">
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                    <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion5 cood">
+.grid_flow{
+    display: grid;
+    grid-template-columns: repeat(3,120px);
+    grid-template-rows: repeat(3,120px);
+    grid-auto-flow: column;
+    grid-auto-columns: 120px;
+}
+.grid_flow div{
+    border: 2px solid #000;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                como te das cuenta ahora se crean como columnas y no como filas como antes.
+            </p>
+            <div class="webside">
+                <div class="grid_flow">
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                </div>
+                
+            </div>
+
+
+
+            <h2>dense</h2>
+            <p>
+                esta propiedad se usa en caso de que haya un espacio sin usar esto detectara cual es ese campo sin rellenar y pondra la celda mas cercana para reemplazar ese espacio.
+            </p>
+            
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t6 texto_copiado">texto copiado</p>
+                    <i class="copiar6 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion6 cood">
+<div class="grid_flow_dense">
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+    <div>
+        :v
+    </div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t7 texto_copiado">texto copiado</p>
+                    <i class="copiar7 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion7 cood">
+.grid_flow_dense{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    border: 4px solid #000;
+    background-color: #4d635e;
+    grid-auto-flow: dense;
+}
+.grid_flow_dense div{
+    border: 2px solid #000;
+    background-color: #211a1a88;
+    color: #fff;
+}
+.grid_flow_dense div:nth-child(1){
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+.grid_flow_dense div:nth-child(2){
+    grid-column: 4/5;
+    grid-row: 4/5;
+}
+.grid_flow_dense div:nth-child(3){
+    grid-column: 3/4;
+    grid-row: 1/3;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                en este caso no encontro ningun elemento que quepa en el espacio pero si ubiera lo pondria de forma automatica puedes jugar con grid para hacer que dense funcione.
+            </p>
+            <div class="webside">
+                <div class="grid_flow_dense">
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                    <div>
+                        :v
+                    </div>
+                </div>                
+            </div>
+
+            <a class="siguiente" href="../grid_dinamico/grid_dinamico.html">grid dinamico=></a>
+
+        </div>
+    </main>
+
+        <footer>
+            <div class="footer_div">
+                <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+            </div>
+        </footer>
+    
+    
+        <script src="grid_auto.js"></script>
+    </body>
+</html>

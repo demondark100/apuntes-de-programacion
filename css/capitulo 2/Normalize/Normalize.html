@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="Normalize_.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>Normalize</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+
+    <main>
+        <div class="teoria">
+            <h1>Normalize</h1>
+            <p>
+                para empezar los navegadores siempre traen un estilo por defecto por ejemplo si escribimos algo te daras cuenta que las letras son de color negro debido a que asi lo quizo el navegador.<br>
+                ahora observa esto.
+            </p>
+
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion0 cood">
+<h3>un titulo feliz :D</h3>
+<p>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad cupiditate tempora deleniti minima quidem sequi, rerum eos libero repudiandae. Praesentium neque quod earum id nesciunt ipsa consequatur inventore consectetur quibusdam?
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint dolores quibusdam ducimus, cumque in, consequuntur a necessitatibus distinctio qui corporis officiis amet assumenda quae eligendi? Fugiat mollitia deleniti doloremque perspiciatis.
+</p>
+</textarea>
+                </code>
+            </div>
+            <p>
+                como te das cuenta hay como un espacio al rededor del contenido esto es debido a que el navegador lo puso asi por defecto.
+            </p>
+            <div class="webside">
+                <div class="content_ejemplo">
+                    <h3>un titulo feliz :D</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad cupiditate tempora deleniti minima quidem sequi, rerum eos libero repudiandae. Praesentium neque quod earum id nesciunt ipsa consequatur inventore consectetur quibusdam?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint dolores quibusdam ducimus, cumque in, consequuntur a necessitatibus distinctio qui corporis officiis amet assumenda quae eligendi? Fugiat mollitia deleniti doloremque perspiciatis.
+                    </p>
+                </div>
+            </div>
+
+            <h2>normalize</h2>
+            <p>
+                normalize se encargara de reiniciar todos los estilos que vienen por defecto del navegador para que nostros podamos estilizar de la forma que queramos. <br> <br>
+                <a href="https://necolas.github.io/normalize.css/" target="blank">click aqui</a>  para descargar/usar normalize.css.
+            </p>
+            <ol>
+                <li>click donde dice download.</li>
+                <li>click derecho.</li>
+                <li>click en guardar como.</li>
+                <li>enlazar el archivo normalize en el sitio web se enlaza de la misma forma que css.</li>
+            </ol>
+
+            <p>
+                luego debemos entrar a "normalize.css" y cambiar algunas propiedades.
+            </p>
+            <ol>
+                <li>en la parte de arriba poner un selector universal "*" y poner "box-sizing: border-box;" esto es para que las cajas tengan el tamaño exacto que nosotros le digamos osea que le quitamos el estilos por defecto del navegador.</li>
+                <li>buscar la propiedad img y poner "max.width: 100%;" esto es para que en los mobiles las imagenes aparezcan al 100%.</li>
+            </ol>
+            <h2>*</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion2 cood">
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+</textarea>
+                </code>
+            </div>
+            <h2>img</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion3 cood">
+img{
+    border-style: none;
+    max-width: 100%;
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <div class="content_ejemplo_1">
+                    <h3>un titulo feliz :D</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad cupiditate tempora deleniti minima quidem sequi, rerum eos libero repudiandae. Praesentium neque quod earum id nesciunt ipsa consequatur inventore consectetur quibusdam?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint dolores quibusdam ducimus, cumque in, consequuntur a necessitatibus distinctio qui corporis officiis amet assumenda quae eligendi? Fugiat mollitia deleniti doloremque perspiciatis.
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+
+
+
+        <footer>
+            <div class="footer_div">
+                <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+            </div>
+        </footer>
+    
+    
+        <script src="Normalize.js"></script>
+    </body>
+</html>

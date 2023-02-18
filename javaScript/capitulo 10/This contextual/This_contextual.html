@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="This_contextual.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>This contextual</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+
+
+
+<main>
+    <div class="teoria">
+        <h1>This contextual</h1>
+        <p>
+            "this" hace referencia al objeto por ejemplo si declaramos "this" fuera de cualquier objeto. 
+        </p>
+        <div class="code_content">
+            <code>
+                console.log(this);
+            </code>
+        <p>
+            entonces this hara referencia al objeto window que es el objeto principal.
+        </p>
+        </div>
+
+        <p>
+            esto es como decir:
+        </p>
+
+        <div class="code_content">
+            <code>
+                console.log(window);
+            </code>
+        </div>
+
+        <p>
+            tanto window como this nos mostrara lo mismo.
+        </p>
+
+        <h2>
+            ejemplo mas claro
+        </h2>
+
+        <div class="code_content">
+            <h2>
+                error:
+            </h2>
+            <code>
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion0 cood">
+//"use strict"; 
+//primero ejecuta esto sin "use strict" luego descomenta la linea que dice "use strict"
+
+
+// window.nombre = prompt("nombre"); 
+//this.nombre = prompt("nombre"); 
+// this y window son lo mismo por eso ambas opciones de arriba son validas.
+
+function mostrar(){ 
+    console.log(`hola ${this.nombre}`)
+} 
+mostrar() 
+//resultado: "hola nombre de usuario"                  
+</textarea>
+            </code>
+            <p>
+                este this hace referencia al objeto window de afuera pero es erroneo ya qye this debe hacer referencia a un objeto por eso si usamos "use strict" esto directamente no se ejecutara.
+            </p>
+        </div>
+
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion1 cood">
+"use strict"; 
+function mostrar(){ 
+    console.log(`hola ${this.nombre}`)
+} 
+    
+const objeto = { 
+    nombre: prompt("nombre"),
+    mostrar
+} 
+    
+objeto.mostrar()                 
+</textarea>
+            </code>
+            <p>
+                esto es correcto porque la funcion esta haciendo referencia al objeto que tiene como estencion nombre.
+            </p>
+        </div>
+        
+    </div>
+</main>
+
+
+
+
+<footer>
+    <div class="footer_div">
+        <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+    </div>
+</footer>
+
+
+<script src="This_contextual.js"></script>
+</body>
+</html>

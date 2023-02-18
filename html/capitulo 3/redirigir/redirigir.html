@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="redirigir.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>redirigir.</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+
+    <main>
+        <div class="teoria">
+            <h1>protocolo local y https</h1>
+            <p>
+                con la etiqueta "a" podemos enviar a otros sitios web pero tambien podemos enviar a sitios locales que tengamos en nuestra pc
+            </p>
+
+            <h2>redireccionar a otro sitio</h2>
+            <p>vamos a redirecciona a youtube.</p>
+            <div class="code_content">
+                <code>
+                    <div class="content_copy">
+                        <p class="t0 texto_copiado">texto copiado</p>
+                        <i class="copiar0 fa-solid fa-copy"></i>
+                    </div>
+<textarea readonly class="codificacion codificacion0 cood">
+<p>
+    <a href="https://youtube.com">
+        click aqui
+    </a> 
+    para ir a youtube.
+</p>
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <p>
+                    <a target="blank" href="https://youtube.com">
+                        click aqui
+                    </a> 
+                    para ir a youtube.
+                </p>
+            </div>
+
+            <h2>redireccion local</h2>
+            <p>aqui vamos a hacer un ejemplo del como puede ser la redireccion local.</p>
+            <div class="code_content">
+                <code>
+                    <div class="content_copy">
+                        <p class="t1 texto_copiado">texto copiado</p>
+                        <i class="copiar1 fa-solid fa-copy"></i>
+                    </div>
+<textarea readonly class="codificacion codificacion1 cood">
+<p>
+    <a href="otro_sitio index.html">
+        click aqui.
+    </a>
+    para ir a mi otro sitio web.
+</p>
+
+<!-- si queremos acceder a una carpeta necesitamos de "/" -->
+
+<p>
+    <a href="carpeta/otro_sitio index.html">
+        click aqui.
+    </a>
+    para ir al otro sitio web.
+</p>
+
+<!-- si queremos retroceder de nuestra posision se usa "../" -->
+
+<p>
+    <a href="../../otro_sitio index.html">
+        click aqui.
+    </a>
+    para ir al otro sitio web.
+</p>
+</textarea>
+                </code>
+            </div>
+
+            <h2>ejercicio 1</h2>
+            <p>ahora haremos un ejecicio</p>
+            <p>
+                0: que no se te olvide poner todo esto en el body y tampoco te olvides de crear la estructura html en ambas paginas. <br>
+                1: crear una carpeta llamada "paginas carpeta". <br>
+                2: vrear un archivo llamado "pagina1.html" y luego abrirla.<br>
+                3: crear un archivo llamado "pagina2.html" <br>
+            </p>
+            <h2>pagina 1</h2>
+            <div class="code_content">
+                <code>
+                    <div class="content_copy">
+                        <p class="t2 texto_copiado">texto copiado</p>
+                        <i class="copiar2 fa-solid fa-copy"></i>
+                    </div>
+<textarea readonly class="codificacion codificacion2 cood">
+<b>esta es la pagina 1.</b>
+<p>
+    <a href="pagina2.html">
+        click aqui.
+    </a>
+    para ir a la pagina 2.
+</p>
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <b>esta es la pagina 1.</b>
+                <p>
+                    <a href="#">
+                        click aqui.
+                    </a>
+                    para ir a la pagina 2.
+                </p>
+            </div>
+            <h2>pagina 2</h2>
+            <div class="code_content">
+                <code>
+                    <div class="content_copy">
+                        <p class="t3 texto_copiado">texto copiado</p>
+                        <i class="copiar3 fa-solid fa-copy"></i>
+                    </div>
+<textarea readonly class="codificacion codificacion3 cood">
+<b>esta es la pagina 2.</b>
+<p>
+    <a href="pagina1.html">
+        click aqui
+    </a>
+    para volver a la pagina 1.
+</p>
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <b>esta es la pagina 2.</b>
+                <p>
+                    <a href="pagina1.html">
+                        click aqui
+                    </a>
+                    para volver a la pagina 1.
+                </p>
+            </div>
+
+            <h2>ejercicio 2</h2>
+            <p>
+                0: no olvides crear la estructura de html. <br>
+                1: crear una carpeta llamada "paginas carpeta". <br>
+                2: crear un archivo llamado "pagina1.html" y luego abrirla.<br>
+                3: dentro de la carpeta "paginas carpeta" crear una carpeta llamada "carpeta 2". <br>
+                4: crear un archivo llamado "pagina2.html" dentro de la carpeta "carpeta 2" <br>
+            </p>
+            <p>
+                aqui iremos de una carpeta a otra y volveremos a la carpeta anterior
+            </p>
+            <h2>pagina 1</h2>
+            <div class="code_content">
+                <code>
+                    <div class="content_copy">
+                        <p class="t4 texto_copiado">texto copiado</p>
+                        <i class="copiar4 fa-solid fa-copy"></i>
+                    </div>
+<textarea readonly class="codificacion codificacion4 cood">
+<b>esta es la pagina 1</b>
+<p>
+    <a href="carpeta 2/pagina2.html">
+        click aqui
+    </a>
+    para ir a la pagina 2.
+</p>
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <b>esta es la pagina 1</b>
+                <p>
+                    <a href="#">
+                        click aqui
+                    </a>
+                    para ir a la pagina 2.
+                </p>
+            </div>
+
+            <h2>pagina 2</h2>
+            <div class="code_content">
+                <code>
+                    <div class="content_copy">
+                        <p class="t5 texto_copiado">texto copiado</p>
+                        <i class="copiar5 fa-solid fa-copy"></i>
+                    </div>
+<textarea readonly class="codificacion codificacion5 cood">
+<b>esta es la pagina 2</b>
+<p>
+    <a href="../pagina1.html">
+        click aqui
+    </a>
+    para ir a la pagina 1.
+</p>
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <b>esta es la pagina 2</b>
+                <p>
+                    <a href="#">
+                        click aqui
+                    </a>
+                    para ir a la pagina 1.
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+
+
+    <footer>
+        <div class="footer_div">
+            <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+        </div>
+    </footer>
+
+
+    <script src="redirigir.js"></script>
+</body>
+</html>

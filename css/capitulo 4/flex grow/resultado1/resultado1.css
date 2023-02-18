@@ -1,0 +1,42 @@
+body{
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.sin_grow{
+    display: flex;
+    height: 40vh;
+    border: 2px solid #08eb1a;
+    padding: 15px;
+}
+.sin_grow div{
+    border: 2px solid #08eb1a;
+    color: #08eb1a;
+}
+.con_grow{
+    display: flex;
+    height: 40vh;
+    border: 2px solid #08eb1a;
+    padding: 15px;
+}
+.con_grow div{
+    border: 2px solid #08eb1a;
+    color: #08eb1a;
+    flex-grow: 1;
+}
+
+a{
+    color: #08eb1a;
+    text-shadow: 5px 5px 15px #08eb1a;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+h4{
+    color: #08eb1a;
+    text-shadow: 5px 5px 15px #08eb1a;
+    text-align: center;
+    font-size: 1.5em;
+}

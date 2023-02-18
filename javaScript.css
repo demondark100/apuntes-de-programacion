@@ -1,0 +1,335 @@
+body{
+    font-family: sans-serif;
+    background-image: url("https://wallpapersmug.com/download/750x1334/ee041b/computer-screen-code-program.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+a{
+    text-decoration: none;
+    user-select: none;
+}
+header{
+    background-color: #363636ee;
+    box-sizing: border-box;
+    padding: 3px;
+    height: 35px;
+}
+
+
+.header_content{
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer_text_1{
+    font-size:  18px;
+    color: #fefeff88;
+}
+.footer_text_2{
+    font-size: 18px;
+    color: #fefeff88;
+}
+footer{
+    margin-top: auto;
+    background-color: #363636;
+}
+
+
+.img_logo{
+    margin-top: -2px;
+    width: 35px;
+}
+.text_logo{
+    color: #c8ccf8;
+    font-size: 13px;
+    position: relative;
+    top: -1px;
+}
+.menu{
+    color: #9eb6ff;
+    margin: 8px;
+}
+.menu:hover{
+    color: #f1ffb5;
+}
+.menu_nav{
+    list-style: none;
+    display: block;
+    box-sizing: border-box;
+    margin-left: -500%;
+    margin-top: -15px;
+}
+
+
+.li_nav{
+    margin-top: 15px;
+    width: 155px;
+}
+
+.li_nav a{
+    color: #e7e4ff;
+    font-size: 15px;
+}
+.li_nav a:hover{
+    color: #f1ffb3;
+}
+
+.mover{
+    margin-top: -20px;
+    background-color: #363636ee;
+    margin-left:-45px;
+    font-size: 15px;
+    transition-duration: .5s;
+    position: relative;
+}
+.mover .li_nav{
+    text-align: center;
+    width: 100%;
+}
+.mover_content{
+    margin-top: 100%;
+}
+
+
+p{
+    font-size: 16px;
+}
+
+@media(min-width: 820px){
+    body{
+        background-image: url("https://fondosmil.com/fondo/52521.jpg");
+    }
+
+    .menu{
+        margin-left: -50000%;
+    }
+    header{
+        height: 60px;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+    }
+    .img_logo{
+        margin-top: 1px;
+        width: 60px;
+    }
+    .text_logo{
+        font-size: 20px;
+    }
+    .menu_nav{
+        margin-top: 1px;
+        display: flex;
+        margin-left: 50px;
+        font-size: 25px;
+    }
+    .menu_nav a{
+        color: #fefeff88;
+    }
+    .li_nav a{
+        font-size: 25px;
+        color: #e7e4ff;
+    }
+}
+
+
+
+
+main h2{
+    margin-top: auto;
+}
+.curso{
+    display: flex;
+    justify-content: space-evenly;
+    height: 40px;
+    font-size: 20px;
+    margin: auto;
+    text-align: center;
+    color: #6ce2ff;
+    background-color: #0f1111ea;
+    width: 30%;
+    min-width: 250px;
+    max-width: 400px;
+}
+
+
+.fa-caret-up{
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+
+.icono__main{
+    align-self: center;
+    font-size: 1.5em;
+}
+
+
+main{
+    margin-top: auto;
+}
+
+
+
+.cursos_content:nth-child(1){
+    margin-top: 20px;
+}
+.cursos_content{
+    margin-bottom: 20px;
+}
+
+
+
+/* estas propiedades se tienen que cambiar segun se agreguen los cursos */
+
+
+.capitulos_content_1{
+    position: absolute;
+    top: -400%;
+    opacity: 0;
+}
+.capitulos_content_2{
+    position: absolute;
+    top: -400%;
+    opacity: 0;
+}
+.capitulos_content_3{
+    position: absolute;
+    top: -400%;
+    opacity: 0;
+}
+.capitulos_content_4{
+    position: absolute;
+    top: -400%;
+    opacity: 0;
+}
+.capitulos_content_5{
+    position: absolute;
+    top: -400%;
+    opacity: 0;
+}
+
+
+
+
+
+
+
+
+.capitulos_content a{
+    text-decoration: none;
+    color: #6fb3b6;
+    font-size: 18px;
+}
+
+.capitulos_content li{
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 18px;
+    width: 55%;
+    background-color: #0f1111ea;
+}
+.capitulos_content a:hover{
+    color: #3b989b;
+    font-size: 25px;
+    transition-duration: .5s;
+}
+
+
+
+.moverOpciones{
+    position: relative;
+    text-align: center;
+    opacity: 1;
+    top: auto;
+    width: 30%;
+    min-width: 250px;
+    max-width: 400px;
+    margin: auto;
+    list-style: none;
+    transition-property: position , margin , opacity;
+    transition-duration: .5s;
+}
+.abajo:hover{
+    color: #0f0;
+    cursor: pointer;
+}
+.arriba:hover{
+    color: #0f0;
+    cursor: pointer;
+}
+
+
+@media(min-width:850px){
+    h2{
+        font-size: 35px;
+    }
+    .capitulos_content a {
+        font-size: 25px;
+    }
+    .capitulos_content a:hover{
+        color: #6fb3b6;
+        font-size: 32px;
+    }
+}
+
+
+.curso__:nth-child(1){
+    margin-top: 120px;
+}
+
+
+
+
+.contendor_caps{
+    background-color: #000;
+    border: 2px solid #0f0f;
+    color: #e7e4ff;
+    width: 35%;
+    transform: translate(150%,-60%);
+    padding: 5px;
+    font-size: 0.4em;
+    position: absolute;
+    opacity: 0;
+    z-index: -2;
+}
+.contendor_caps p{
+    text-shadow: 8px 8px 15px #0f0;
+    font-size: 2em;
+    background: linear-gradient(90deg, #384b42,transparent,#384b42);
+}
+
+.mostrar_opciones{
+    z-index: 1;
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: .5s;
+}
+.no_cabe{
+    transform: translate(150%,-86%);
+}
+
+@media screen and (min-width: 820px) and (max-width: 950px){
+    .contendor_caps{
+        width: 45%;
+    }
+    .contendor_caps p{
+        font-size: 1.7em;
+    }
+}
+@media screen and (min-width: 950px){
+    .contendor_caps{
+        width: 50%;
+    }
+    .contendor_caps p{
+        font-size: 3em;
+    }
+}

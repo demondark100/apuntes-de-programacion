@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="flexbox.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>flexbox</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+    <main>
+        <div class="teoria">
+            <h1>flexbox</h1>
+            <p>
+                anteriormente se solia trabajar con tablas , float para crear los sitios web pero ahora se usa flexbox debido a que es mas facil y mas optimo. <br> <br>
+                flex requiere de dos cosas que son el flex contenedor y el flex contenido.
+            </p>
+
+            <div class="webside">
+                <div class="contenedor">
+                    flex contenedor
+                    <div class="hijo">
+                        flex hijo.
+                    </div>
+                </div>
+            </div>
+            <p>
+                nosotros al dar "display: flex;" a una caja se comportara como si fuese un bloque los cambios se notaran en los elementos hijos. <br> <br>
+                flexbox se mueve de arriba a abajo y de izquierda a derecha mostraria un grafico pero te marearias igual yo no entendi nada de flexbox con lo teorico entendi mas con el codigo y tu tambien lo haras >:v. <br> <br> <br>
+                ahora vamos a comprobar que el contenedor de felx se comporta como un bloque.
+            </p>
+            
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion0 cood">
+<div class="flex_content">
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quasi molestias, doloribus est quibusdam velit unde, odit nihil ab quae adipisci veniam corporis soluta alias id eum qui molestiae consequatur.
+    </p>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion1 cood">
+.flex_content{
+    display: flex;
+    background-color: #2f87a1;
+    color: #e7e4ff;
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <div class="flex_content">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quasi molestias, doloribus est quibusdam velit unde, odit nihil ab quae adipisci veniam corporis soluta alias id eum qui molestiae consequatur.
+                    </p>
+                </div>
+            </div>
+
+
+            <p>
+                mas diferencias con flex y block.
+            </p>
+
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion2 cood">
+<div class="ejemplo_block">
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium blanditiis velit animi autem omnis cupiditate, sapiente illo consectetur quo voluptatem vel dolorem eos cum vero nesciunt inventore. Sapiente, officiis ullam.
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae autem culpa iusto architecto unde officiis consequuntur totam adipisci, provident eaque. In, inventore. Dolor atque deserunt consequatur quod nisi sequi totam?
+    </p>
+</div>
+<div class="ejemplo_flex">
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium blanditiis velit animi autem omnis cupiditate, sapiente illo consectetur quo voluptatem vel dolorem eos cum vero nesciunt inventore. Sapiente, officiis ullam.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem molestias sint eligendi cumque. Accusantium, recusandae explicabo cum hic voluptatem debitis repudiandae facilis sit, optio quia praesentium quod ipsum animi cupiditate.
+    </p>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion3 cood">
+.ejemplo_block{
+    display: block;
+}
+.ejemplo_flex{
+    display: flex;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                como te das cuenta con block los hijos se ponen uno de bajo del otro pero con flex los hijos se ponen uno a lado del otro si al contenedor flex le agregamos mas hijos se iran poniendo uno a lado del otro cosa que con block no sucedera.
+            </p>
+            <h2>block</h2>
+            <div class="webside">
+                <div class="ejemplo_block">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium blanditiis velit animi autem omnis cupiditate, sapiente illo consectetur quo voluptatem vel dolorem eos cum vero nesciunt inventore. Sapiente, officiis ullam.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae autem culpa iusto architecto unde officiis consequuntur totam adipisci, provident eaque. In, inventore. Dolor atque deserunt consequatur quod nisi sequi totam?
+                    </p>
+                </div>
+            </div>
+            <h2>flex</h2>
+            <div class="webside">
+                <div class="ejemplo_flex">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium blanditiis velit animi autem omnis cupiditate, sapiente illo consectetur quo voluptatem vel dolorem eos cum vero nesciunt inventore. Sapiente, officiis ullam.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem molestias sint eligendi cumque. Accusantium, recusandae explicabo cum hic voluptatem debitis repudiandae facilis sit, optio quia praesentium quod ipsum animi cupiditate.
+                    </p>
+                </div>
+            </div>
+
+            <p>
+                nosotros a la hora de trabajar con flex las cajas siempre se ajustaran al contenido y que a diferencia de float no hay problemas de altura.
+            </p>
+
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion4 cood">
+<div class="contenido_flex">
+    <p class="parrafo1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio deserunt aliquid neque odit iure velit ex voluptas expedita alias, porro reiciendis cupiditate, unde ea. Perferendis hic cumque odit animi laborum.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum cum est corporis, quasi ab repellat delectus voluptas optio aliquam deserunt assumenda temporibus dignissimos nesciunt illum suscipit ex! Blanditiis, molestiae asperiores!
+    </p>
+    <p class="parrafo2">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi recusandae dolorum modi, provident magnam debitis ratione et molestiae facere, beatae soluta possimus numquam voluptate quo, aliquid incidunt repellendus aut ipsa.
+    </p>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                    <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion5 cood">
+.contenido_flex{
+    display: flex;
+    padding: 10px;
+}
+
+.parrafo1{
+    background-color: #c5bee6;
+    padding: 12px;
+    margin: 8px;
+}
+.parrafo2{
+    background-color: #34b66a;
+    padding: 12px;
+    margin: 8px;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                como te das cuenta uno tiene mas texto que el otro y aun asi se ajusta a al contenedor eliminando los problemas de altura.
+            </p>
+            <a class="resultado" href="resultado 1/resultado.html">resultado</a>
+
+            <a class="siguiente" href="../flex direction/flexDirection.html">flex direction =></a>
+
+        </div>
+    </main>
+    
+        <footer>
+            <div class="footer_div">
+                <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+            </div>
+        </footer>
+    
+    
+        <script src="flexbox.js"></script>
+    </body>
+</html>

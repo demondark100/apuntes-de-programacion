@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="introduccion.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>introduccion css</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+    <main>
+        <div class="teoria">
+            <h1>introduccion a css</h1>
+            <p>
+                css es una tecnologia / lenguaje que nos sirve para dar estilos a las cagitas que creamos con html. <br> <br>
+                ahora veremos como es la estructura de css para poder entender mejor a este lenguaje y poder usarlo con facilidad.
+            </p>
+
+            <h2>pseudocodigo</h2>
+            <p>
+                esta es la sintaxis del lenguaje siempre debes poner "{}" ":" y ";" de lo contrario el lenguaje no reconocera lo que escribimos.
+            </p>
+            <div class="code_content">
+                <p>correcto</p>
+                <code>
+
+<textarea readonly class="codificacion cood">
+elemento html / selector {
+    estilos / propiedad: valor del estilo;
+    estilos / propiedad: valor del estilo;
+    estilos / propiedad: valor del estilo;
+}
+</textarea>
+                </code>
+                <p>incorrecto</p>
+<textarea readonly class="codificacion cood">
+elemento html / selector 
+    estilos / propiedad valor del estilo;
+    estilos / propiedad: valor del estilo
+    estilos / propiedad: valor del estilo;
+}
+</textarea>
+            </div>
+
+            <p>
+                para crear un archivo css simepre debemos terminar con ".css"; de esta manera estamos indicando que crearemos un archivo css. <br>
+                ejemplo:
+            </p>
+            <h2>crear archivo css</h2>
+            <div class="code_content">
+                <code>
+<textarea readonly class="codificacion cood">
+archivo.css
+</textarea>
+                </code>
+            </div>
+
+            <p>
+                ahora vamos a enlazar html con css.
+            </p>
+            <h2>enlazar html y css</h2>
+            <div class="code_content">
+                <b>html</b>
+                <p>
+                    la etiqueta "link" es para poder enlazar nuestros estilos css este lleva como atributo: <br>
+                    1: "rel" que es para indicarle que daremos estilo css. <br>
+                    2: "href" para indicarle la ruta de nuestro archivo css recuerdan los enlaces de los <a href="../../../html/capitulo 3/redirigir/redirigir.html">protocolos local y https</a> donde si teniamos el archivo en una capeta teniamos que poner "/" bueno para enlazar css es igual.
+                </p>
+                <code>
+                    <div class="content_copy">
+                        <p class="t1 texto_copiado">texto copiado</p>
+                        <i class="copiar1 fa-solid fa-copy"></i>
+                    </div>
+
+<textarea readonly class="codificacion codificacion1 cood">
+<!-- poner en el head de nuestro html -->
+<link rel="stylesheet" href="archivo.css">
+</textarea>
+                </code>
+            </div>
+
+            <h2>crear archivo</h2>
+            <p>
+                aqui vamos a crear un html y lo enlazaremos. <br>
+                1: crear una carpeta llamada "primer proyecto css". <br>
+                2: crear un archivo llamado "estilos.html". <br>
+                3: crear un archivo llamado "style.css".
+            </p>
+            <div class="code_content">
+                <b>html</b>
+                <code>
+                    <div class="content_copy">
+                        <p class="t2 texto_copiado">texto copiado</p>
+                        <i class="copiar2 fa-solid fa-copy"></i>
+                    </div>
+
+<textarea readonly class="codificacion codificacion2 cood">
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+</textarea>
+                </code>
+                <p>css</p>
+                <div class="code_content">
+                    <code>
+                    <div class="content_copy">
+                        <p class="t3 texto_copiado">texto copiado</p>
+                        <i class="copiar3 fa-solid fa-copy"></i>
+                    </div>
+
+<textarea readonly class="codificacion codificacion3 cood">
+body{
+    background-color: #000;
+}
+
+/* aqui simplemente estamos dando un fondo al body por ahora no prestes atencion a este codigo. */
+</textarea>
+                    </code>
+                </div>
+            </div>
+            <p>y listo ya podemos trabajar con html y css cabe aclarar que a los archivos tanto html y css les puedes poner cualquier nombre mientras terminen en ".html" y ".css" no habra ningun problema.</p>
+
+        </div>
+    </main>
+
+
+
+    <footer>
+        <div class="footer_div">
+            <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+        </div>
+    </footer>
+
+
+    <script src="introduccion.js"></script>
+</body>
+</html>

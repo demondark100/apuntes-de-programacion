@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="FileReader.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>FileReader</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+
+<main>
+    <div class="teoria">
+        <h1>FileReader</h1>
+        <p>
+            a FileReader lo usamos cuando trabajamos con eventos por ejemplo si llamamos a "FileReader" nos mostrara todo null.
+        </p>
+        <p>ejemplo:</p>
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion0 cood">
+const reader__ = new FileReader;
+console.log(reader__);                 
+</textarea>
+                <p>
+                    //estamos creando un nuevo objeto.
+                </p>
+            </code>
+        </div>
+        <p>
+            entes de continuar explicaremos la diferencia entre "fetch" y "FileReader". <br>
+            <b>fetch:</b> <br>
+            esto leera archivos qye ya estan predefinidos en un servidor. <br>
+            <b>FileReader:</b> <br>
+            esto leera archivos que el usuario escoja osea archivos que no estan predefinidos.
+        </p>
+        <p>
+            el evento "change" detectara si hay un cambio en algun evento.
+        </p>
+        <p>
+            con esto solo estamos leendo solo un archivo que el usuario selecciono.
+        </p>
+        <div class="code_content">
+            <h2>HTML:</h2>
+            <code>
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion1 cood">
+<input type="file" id="archivo">                            
+</textarea>
+
+            <h2>javaScript:</h2>
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion2 cood">
+const archivo = document.getElementById("archivo") 
+archivo.addEventListener("change",(e)=>{ 
+    console.log(archivo.files[0])
+})                   
+</textarea>
+                <p>//con esto estamos leendo el archivo que el usuario escogio.</p>
+            </code>
+        </div>
+        
+        <h2>readAsText</h2>
+        <p>esto solo puede leer archivos de texto.</p>
+        <div class="code_content">
+            <code>
+                <h2>HTML:</h2>
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion3 cood">
+<input type="file" id="archivo">                 
+</textarea>
+
+                <h2>javaScript:</h2>
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion4 cood">
+const archivo = document.getElementById("archivo") 
+archivo.addEventListener("change",(e)=>{ 
+    leerArchivo(archivo.files[0])
+}) 
+const leerArchivo = archivo =>{ 
+    const reader = new FileReader;
+    reader.readAsText(archivo);
+    reader.addEventListener("load",(e)=>console.log(e));
+}              
+</textarea>
+                <p>
+                    //con esto veremos el prototipo del archivo que el usuario selecciono.
+                </p>
+            </code>
+        </div>
+
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                    <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion5 cood">
+const archivo = document.getElementById("archivo") 
+archivo.addEventListener("change",(e)=>{ 
+    leerArchivo(archivo.files[0])
+}) 
+const leerArchivo = archivo =>{ 
+    const reader = new FileReader; 
+    reader.readAsText(archivo); 
+    reader.addEventListener("load",(e)=>{ 
+        console.log(e.currentTarget.result)
+    }); 
+}         
+</textarea>
+                <p>con esto veremos el resultado de un archivo que tenga texto.</p>
+            </code>
+        </div>
+        <input type="file" id="archivo">
+        <br>
+        <p>
+            con esto estamos leendo varios archivos de texto que el usuario selecciono.
+        </p>
+
+        <div class="code_content">
+            <code>
+                <p>
+                    consejo para seleccionar multiples archivos debemos apretar ctrl.
+                </p>
+                HTML: <br>
+                input type="file" id="archivo" multiple>
+            </code>
+        </div>
+
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t6 texto_copiado">texto copiado</p>
+                    <i class="copiar6 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion6 cood">
+const archivo = document.getElementById("archivo") 
+archivo.addEventListener("change",(e)=>{ 
+    leerArchivo(archivo.files[0])
+}) 
+const leerArchivo = archivo =>{ 
+    for(let i in archivo){ 
+        const reader = new FileReader;
+        reader.readAsText(archivo[i]);
+        reader.addEventListener("load",(e)=>{
+            console.log(e.currentTarget.result)
+        }); 
+    } 
+}                 
+</textarea>
+                <p>
+                    con esto estamos leendo multiples archivos que selecciono el usuario,
+                </p>
+            </code>
+        </div>
+        <input type="file" id="archivo_2" multiple>
+
+        <h2>readAsDataUrl</h2>
+        <p>esto lee archivos como imagenes , videos , etc.</p>
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t7 texto_copiado">texto copiado</p>
+                    <i class="copiar7 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion7 cood">
+const archivo_3 = document.getElementById("archivo_3"); 
+archivo_3.addEventListener("change",(e)=>{ 
+    leerArchivo_2(archivo_3.file[0])
+}) 
+const leerArchivo_2 = archivo => { 
+    for(let i in archivo){ 
+        const reader_1 = new FileReader();
+        reader_1.readAsDataURL(archivo[i]);
+        reader_1.addEventListener("load",(E)=>{
+            console.log(e.currentTarget.result);
+        })
+    } 
+}        
+</textarea>
+            </code>
+        </div>
+        <input type="file" multiple id="archivo_3">
+    </div>
+</main>
+
+
+
+
+<footer>
+    <div class="footer_div">
+        <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+    </div>
+</footer>
+
+
+<script src="FileReader.js"></script>
+</body>
+</html>

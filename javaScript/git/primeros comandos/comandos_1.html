@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="comandos_1.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Recursividad</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+
+<main>
+    <div class="teoria">
+        <h1>primeros comandos git</h1>
+        <div class="code_content">
+            <code>
+                <b>ls</b>
+                <p>
+                    con esto veremos los archivos que tenemos.
+                </p>
+            </code>
+            <code>
+                <b>ls -a</b>
+                <p>
+                    con esto veremos los archivos ocultos.
+                </p>
+            </code>
+        </div>
+        <div class="code_content">
+            <code>
+                <b>pwd</b> <br>
+                con esto sabremos en que carpeta o directorio nos encontramos osea nuestra ubicacion exacta.
+            </code>
+        </div>
+        <div class="code_content">
+            <code>
+                <b>cd carpeta/directorio</b> <br>
+                con esto nos moveremos de carpeta en carpeta. <br>
+                <p>ejemplo:</p>
+                cd Downloads/algoxd.txt <br> <br>
+                <b>cd</b>
+                <p>
+                    con esto retrocederemos hasta el inicio de todo
+                </p>
+                <b>cd ..</b> 
+                <p>
+                    con esto retrocederemos solo una carpeta atras.
+                </p>
+            </code>
+        </div>
+        <div class="code_content">
+            <code>
+                <b>mkdir nombre</b>
+            </code>
+            <p>
+                con esto crearemos un nuevo archivo por ejemplo.
+            </p>
+            <code>
+                <b>mkdir proyecto_1</b>
+            </code>
+        </div>
+        <div class="code_content">
+            <code>
+                <b>git init</b>
+                <p>
+                    con esto vamos a inicializar un nuevo repositorio de git.
+                </p>
+            </code>
+        </div>
+        <div class="code_content">
+            <code>
+                <b>code .</b>
+                <p>
+                    con esto abriremos el editor en el lusgar que nos encontremos.
+                </p>
+            </code>
+        </div>
+        <div class="code_content">
+            <code>
+                <b>git status</b>
+                <p>
+                    con esto veremos el estado de nuestro repositorio.
+                </p>
+            </code>
+        </div>
+        <div class="code_content">
+            <code>
+                <b>git add nombre</b>
+                <p>
+                    con esto seleccionaremos un archivo.
+                </p>
+                <p>
+                    variantes.
+                </p>
+                <b>git add *archivo</b>
+                <p>
+                    ejemplo: <br>
+                    txt , js , py , html , etc.
+                </p>
+                <b>git add .</b>
+                <p>
+                    con esto seleccionaremos a todos los archivos que esten en ese enlistado.
+                </p>
+            </code>
+        </div>
+        <div class="code_content">
+            <code>
+                <b>git commit -m "mensaje"</b>
+                <p>
+                    ejemplo:
+                </p>
+                <b>git commit -m "arregle un bug XD"</b>
+                <p>
+                    esto nos servira para poner un mensaje a nuestro repositorio.
+                </p>
+            </code>
+        </div>
+        <div class="code_content">
+            <code>
+                <b>rm nombre</b>
+                <p>
+                    ejemplo:
+                </p>
+                <b>rm archivo.txt</b>
+            </code>
+        </div>
+        <div class="code_content">
+            <code>
+                <b>git restore --staged nombre de archivo</b>
+                <p>
+                    ejemplo:
+                </p>
+                <b>git restore --staged algo.txt</b>
+                <p>
+                    con esto quitaremos algun cambio que hagamos en simples palabras es como un ctr-z
+                </p>
+            </code>
+        </div>
+        <div class="code_content">
+            <code>
+                <b>mv nombre de archivo nuevo nombre:</b>
+                <p>
+                    ejemplo:
+                </p>
+                <b>mv archivo.txt archivo_1.txt</b>
+                <p>
+                    con esto cambiaremos el nombre de un archivo.
+                </p>
+                <b>git mv nombre de archivo , nuevo nombre</b>
+                <p>
+                    con esto lo haremos de forma mas rapida ya que se guardaran los cambios.
+                </p>
+            </code>
+        </div>
+        <div class="code_content">
+            <code>
+                <b>.gitignore</b>
+                <p>
+                    con esto estaremos ignorando un archivo esto nos puede servir para que solo nosotros podamos trabajar con ese archivo y que no se suba al repositorio.
+                </p>
+                <p>
+                    .gitignore debemos crearlo en un archivo nuevo y luego dentro de ese archivo poner la carpeta o archivo que queremos ignorar.
+                </p>
+            </code>
+        </div>
+        <div class="code_content">
+            <code>
+                <b>git status -s</b>
+                <p>
+                    con esto nos mostrara el estatus de nuestros repositorios pero de forma mas elegante 😎😎😎
+                </p>
+            </code>
+        </div>
+        <div class="code_content">
+            <code>
+                <b>git diff</b>
+                <p>
+                    nos esto veremos de forma mas visual los cambios que hicimos en nuestro archivo.
+                </p>
+            </code>
+        </div>
+        <div class="code_content">
+            <code>
+                <b>git log</b>
+                <p>
+                    con esto veremos el historial de cambios y ademas el usuario que los hizo.
+                </p>
+                <b>git log --oneline</b>
+                <p>
+                    con esto veremos lo mismo pero de forma mas elegante.
+                </p>
+            </code>
+        </div>
+        <div class="code_content">
+            <code>
+                <b>git branch</b>
+                <p>
+                    con esto veremos en que rama del proyecto estamos trabajando.
+                </p>
+            </code>
+        </div>
+        <div class="code_content">
+            <code>
+                <b>git checkout -b nombre de nueva rama</b>
+                <p>
+                    ejemplo:
+                </p>
+                <p>
+                    <b>git checkout -b nueva_rama</b>
+                </p>
+                <p>
+                    con esto crearemos una nueva rama para desarrollar.
+                </p>
+            </code>
+        </div>
+        <div class="code_content">
+            <code>
+                <b>git checkout nombre</b>
+                <p>
+                    ejemplo:
+                </p>
+                <b>git checkout rama_b</b>
+                <p>
+                    con esto nos moveremos a otra rama.
+                </p>
+            </code>
+        </div>
+        <div class="code_content">
+            <code>
+                <b>cat</b>
+                <p>
+                    con esto veremos el contenido de nuestro archivo.
+                </p>
+            </code>
+        </div>
+        <div class="code_content">
+            <code>
+                <b>git merge nombre</b>
+                <p>
+                    ejemplo:
+                </p>
+                <b>git merge rama_b</b>
+                <p>
+                    esto nos seevira para traer los cambios de una rama a otra. <br>
+                    posdata debemos estar en la rama que queramos traer los cambios.
+                </p>
+            </code>
+        </div>
+        <div class="code_content">
+            <code>
+                <b>git push</b>
+                <p>con esto estaremos subiendo los cambios que hagamos al github</p>
+            </code>
+        </div>
+        <div class="code_content">
+            <code>
+                <b>git push -u origin nombre</b>
+                <p>
+                    ejemplo:
+                </p>
+                <b>git push -u origin nuevaRama</b>
+                <p>
+                    con esto subiremos una nueva rama al github.
+                </p>
+            </code>
+        </div>
+        
+    </div>
+</main>
+
+
+
+    <footer>
+        <div class="footer_div">
+            <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+        </div>
+    </footer>
+    
+    
+    <script src="comandos_1.js"></script>
+    </body>
+</html>

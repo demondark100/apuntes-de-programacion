@@ -1,0 +1,11 @@
+.menu{
+    background-color: red;
+    opacity: 0.4;
+    position: fixed;
+    width: 100%;
+    color: white;
+    margin-top: -85px;
+}
+.pagina{
+    margin-top: 85px;
+}

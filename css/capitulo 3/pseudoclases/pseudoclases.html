@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="pseudoclases.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>pseudoelementos</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+
+    <main>
+        <div class="teoria">
+            <h1>pseudoelementos</h1>
+            <p>
+                los pseudoelementos son como propiedades extra que se aplican a algun elemento en html. <br>
+                somo usar pseudoelementos? <br> <br>
+                elemento:: pseudoelemento;
+            </p>
+
+            <h2>first-line</h2>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion0 cood">
+<p class="primer_linea">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. A facilis deleniti eum cupiditate consequuntur aperiam deserunt distinctio quis eveniet id tempora sint ipsa, beatae est culpa provident ad voluptatum repudiandae.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias in architecto blanditiis sit tempora doloribus ratione modi consectetur, inventore consequuntur rerum dicta hic ab quis placeat quisquam. Consequatur, perspiciatis iure?
+</p>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion1 cood">
+.primer_linea::first-line{
+    color: blue;
+    font-size: 1.5em;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                "first-line" es para dar estilos solo a la primera linea de un texto esto se hara de forma dinamica osea que si la resolucion se hace mas pqueña o mas grande siempre la primera linea conservara el estilo que le dimos.
+            </p>
+            <div class="webside">
+                <p class="primer_linea">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A facilis deleniti eum cupiditate consequuntur aperiam deserunt distinctio quis eveniet id tempora sint ipsa, beatae est culpa provident ad voluptatum repudiandae.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias in architecto blanditiis sit tempora doloribus ratione modi consectetur, inventore consequuntur rerum dicta hic ab quis placeat quisquam. Consequatur, perspiciatis iure?
+                </p>
+            </div>
+
+            <h2>first-letter</h2>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion2 cood">
+<p class="primerLetra">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptate, impedit aperiam eaque quasi earum error quas libero, ratione minus magni, repudiandae repellendus cumque recusandae voluptatem vitae? Ratione, sed voluptas?
+</p>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion3 cood">
+.primerLetra::first-letter{
+    font-size: 1.5em;
+    color: blueviolet;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                "first-letter" es para darle estilos solo a la primer letra de todas por ejemplo si quieres hacer un cuento y asi.
+            </p>
+            <div class="webside">
+                <p class="primerLetra">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptate, impedit aperiam eaque quasi earum error quas libero, ratione minus magni, repudiandae repellendus cumque recusandae voluptatem vitae? Ratione, sed voluptas?
+                </p>
+            </div>
+
+            <h2>placeholder</h2>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion4 cood">
+<input type="text" id="modificarInput" placeholder="XD">
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                    <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion5 cood">
+#modificarInput::placeholder{
+    color: wheat;
+    background-color: black;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                "placeholder" solo se aplican a los inputs debido a que esta atributo corresponde solo a los inputs , recuerda que el texto del placeholder desaparece cuando escribas algo en el input y que es un texto indicativo nada mas.
+            </p>
+            <div class="webside">
+                <input type="text" id="modificarInput" placeholder="XD">
+            </div>
+
+
+            <h2>selection</h2>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t6 texto_copiado">texto copiado</p>
+                    <i class="copiar6 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion6 cood">
+<p class="texto_seleccion">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quas explicabo, eius ratione adipisci temporibus iure architecto possimus. Porro quas nesciunt quae necessitatibus assumenda animi quis illum corporis nostrum esse.
+</p>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t7 texto_copiado">texto copiado</p>
+                    <i class="copiar7 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion7 cood">
+.texto_seleccion::selection{
+    background-color: black;
+    color: wheat;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                "selection" es para estilizar la barrita de seleccion para ponerlo a prueba selecciona el texto y veras como es que cambio.
+            </p>
+            <div class="webside">
+                <p class="texto_seleccion">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quas explicabo, eius ratione adipisci temporibus iure architecto possimus. Porro quas nesciunt quae necessitatibus assumenda animi quis illum corporis nostrum esse.
+                </p>
+            </div>
+
+
+            <h2>after y before</h2>
+            <p>
+                estas propiedades son hijos del elemento que creemos pero no forma parte del <a href="../../../javaScript/capitulo 4/DOM/DOM.html">DOM</a> como tal.
+            </p>
+
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t8 texto_copiado">texto copiado</p>
+                    <i class="copiar8 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion8 cood">
+<p class="oracion">
+    a la
+</p>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t9 texto_copiado">texto copiado</p>
+                    <i class="copiar9 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion9 cood">
+.oracion::before{
+    content: "bienvenidos ";
+}
+.oracion::after{
+    content: " programacion";
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                la propiedad content es para poder escribir oraciones y asi pero se pueden poner imagenes gifs lo que sea esto se puede usar para animaciones etc.
+            </p>
+            <div class="webside">
+                <p class="oracion">
+                    a la
+                </p>
+            </div>
+
+
+        </div>
+    </main>
+    
+        <footer>
+            <div class="footer_div">
+                <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+            </div>
+        </footer>
+    
+    
+        <script src="pseudoclases.js"></script>
+    </body>
+</html>

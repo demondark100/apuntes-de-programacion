@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="metodosC.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>Metodos de cadena.</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <main>
+      <div class="teoria">
+        <h1>Metodos de cadena</h1>
+        <p>
+          los metodos de cadena nos sirven mucho porque nos permite modificar o comprobar muchas cosas de los caracteres. <br>
+          ahora empecemos con los metodos.
+        </p>
+        <h2>dir</h2>
+        <p>
+          primero tenemos dir que nos sirve para ver los metodos de una cadena , listas . etc esto se mostrara segun sea.
+        </p>
+        <h2>sintaxis</h2>
+        <div class="code_content">
+          <code>
+<textarea readonly class="codificacion cood">
+dir(variable);
+
+# dir reconocera de forma automatica que tipo de dato tiene la variable y segun eso nos mostrara los metodos correspondientes. 
+</textarea>
+          </code>
+        </div>
+        <h2>ejemplo de uso</h2>
+        <div class="code_content">
+          <code>
+            <div class="content_copy">
+               <p class="t0 texto_copiado">texto copiado</p>
+              <i class="copiar0 fa-solid fa-copy"></i>
+            </div>
+<textarea readonly class="codificacion codificacion0 cood">
+cadena = "metodos";
+# print(dir(cadena));
+
+lista = ["cadena1","cadena2"];
+# print(dir(lista));
+
+diccionario = {
+  "nombre": "diccionario",
+  "funcion": "guardar datos",
+  "metodos": "dir"
+}
+
+# print(dir(diccionario))
+</textarea>
+          </code>
+        </div>
+
+        
+        <h2>upper y lower</h2>
+        <p>
+          upper: pone todas las letras en mayuscula. <br>
+          lower: pone todas las letras en minuscula
+        </p>
+        <h3>ejemplo de uso</h3>
+        <div class="code_content">
+          <code>
+            <div class="content_copy">
+               <p class="t1 texto_copiado">texto copiado</p>
+              <i class="copiar1 fa-solid fa-copy"></i>
+            </div>
+<textarea readonly class="codificacion codificacion1 cood">
+cambio_mayuscula = "esto cambiara a mayuscula";
+cambio_minuscula = "ESTO CAMBIARA A MINUSCULA";
+
+print(cambio_mayuscula.upper());
+print(cambio_minuscula.lower());
+</textarea>
+          </code>
+        </div>
+        <div class="consola">
+          ESTO CAMBIARA A MAYUSCULA <br>
+          esto cambiara a minuscula
+          <div id="palito"></div>
+        </div>
+
+
+        <h2>capitalize</h2>
+        <p>
+          este metodo nos servira para cambiar la primera letra en mayuscula nada mas.
+        </p>
+         <h2>ejemplo de uso</h2>
+        <div class="code_content">
+          <code>
+            <div class="content_copy">
+               <p class="t2 texto_copiado">texto copiado</p>
+              <i class="copiar2 fa-solid fa-copy"></i>
+            </div>
+<textarea readonly class="codificacion codificacion2 cood">
+letra_mayus = "emilia es buena waifu";
+
+print(letra_mayus.capitalize());
+</textarea>
+          </code>
+        </div>
+        <div class="consola">
+          Emilia es buena waifu
+          <div id="palito"></div>
+        </div>
+        
+
+        <h2>find</h2>
+        <p>
+          find recibe un parametro el cual es que caracter o caracteres queremos encontrar y si lo encuentra nos mostrara su posision y si no la encuentra nos mostrara "-1" indicando que no encontro lo que buscamos , el conteo de posisiones inicia desde cero.
+        </p>
+        <h3>sintaxis</h3>
+        <div class="code_content">
+          <code>
+<textarea readonly class="codificacion cood">
+variable.find("que caracter o caracteres queremos buscar");
+</textarea>
+          </code>
+        </div>
+        <h3>ejemplo de uso</h3>
+        <div class="code_content">
+          <code>
+            <div class="content_copy">
+               <p class="t3 texto_copiado">texto copiado</p>
+              <i class="copiar3 fa-solid fa-copy"></i>
+            </div>
+<textarea readonly class="codificacion codificacion3 cood">
+inicio = "mira como inicia desde 0";
+print(inicio.find("mira"));
+print(inicio.find("m"));
+
+encontro = "ahora a buscar posision cualquiera";
+print(encontro.find("buscar"));
+print(encontro.find("b"));
+
+no_encontro = "no encontrara nada";
+print(no_encontro.find("Sasha"));
+print(no_encontro.find("z"));
+
+</textarea>
+          </code>
+        </div>
+        <div class="consola">
+          0 <br>
+          0 <br>
+          8 <br>
+          8 <br>
+          -1 <br>
+          -1
+          <div id="palito"></div>
+        </div>
+
+
+        <h2>index</h2>
+        <p>
+          es lo mosmo que find solo que si no encuentra la palabra que le indiquemos detendra la ejecucion del programa.
+        </p>
+        <div class="code_content">
+          <code>
+            <div class="content_copy">
+               <p class="t4 texto_copiado">texto copiado</p>
+              <i class="copiar4 fa-solid fa-copy"></i>
+            </div>
+<textarea readonly class="codificacion codificacion4 cood">
+encontro = "hola mundo";
+print(encontro.index("a"));
+
+no_encontro = "mundo";
+# print(no_encontro.index("l"));
+</textarea>
+          </code>
+        </div>
+        <div class="consola">
+          3
+          <div id="palito"></div>
+        </div>
+
+
+        <h2>isnumeric</h2>
+        <p>
+          isnumeric detectara si una string tiene un numero por ejemplo "15" nos dira true porque la cadena es numerica sin embargo si esa cadena tiene "hola 15" dira false porque hay caracteres no solo un numero.
+        </p>
+         <h3>ejemplo de uso</h3>
+        <div class="code_content">
+          <code>
+            <div class="content_copy">
+               <p class="t5 texto_copiado">texto copiado</p>
+              <i class="copiar5 fa-solid fa-copy"></i>
+            </div>
+<textarea readonly class="codificacion codificacion5 cood">
+numero = "15";
+print(numero.isnumeric())
+
+cadena_con_numero = "hola 15";
+print(cadena_con_numero.isnumeric())
+</textarea>
+          </code>
+        </div>
+        <div class="consola">
+          true <br>
+          false
+          <div id="palito"></div>
+        </div>
+
+
+        
+        <h2>isalpha</h2>
+        <p>
+          detectara que una string solo tenga caracteres de la "a" hasta la "z" si encuentra espacios o numeros o cualquier otra cosa que no sea parte del alfabeto dira false.
+        </p>
+        <div class="code_content">
+          <code>
+            <div class="content_copy">
+               <p class="t6 texto_copiado">texto copiado</p>
+              <i class="copiar6 fa-solid fa-copy"></i>
+            </div>
+<textarea readonly class="codificacion codificacion6 cood">
+alphanumerico = "holaMundo";
+print(alphanumerico.isalpha());
+
+falso_1 = "esto tiene espacios";
+print(falso_1.isalpha());
+
+falso_2 = "esto tien . dos . xd";
+print(falso_2.isalpha());
+</textarea>
+          </code>
+        </div>
+        <div class="consola">
+          true <br>
+          false <br>
+          false
+          <div id="palito"></div>
+        </div>
+
+
+        
+        <h2>count</h2>
+        <p>
+          buscara cuantas coincidencias hay en una cadena en el parametro debemos indicar que palabra o caracter queremos saber cuantas coincidencias tiene. <br>
+          en simples palabras la funcion se preguntara cuantas "a" hay en esta cadena de texto?
+        </p>
+        <h3>sintaxis</h3>
+        <div class="code_content">
+          <code>
+<textarea readonly class="codificacion cood">
+variable.count("palabra para saber cuantas coincidencias tiene");
+</textarea>
+          </code>
+        </div>
+
+         <h3>ejemplo de uso</h3>
+        <div class="code_content">
+          <code>
+            <div class="content_copy">
+               <p class="t7 texto_copiado">texto copiado</p>
+              <i class="copiar7 fa-solid fa-copy"></i>
+            </div>
+<textarea readonly class="codificacion codificacion7 cood">
+concidencias_1 = "la vida es para soñar en grande pero la vida es cruel";
+print(concidencias_1.count("vida"));
+
+concidencias_2 = "hola Maryn";
+print(concidencias_2.count("a"));
+
+sin_coincidir = "manos frias";
+print(sin_coincidir.count("hielo"));
+
+</textarea>
+          </code>
+        </div>
+        <div class="consola">
+          2 <br>
+          2 <br>
+          0
+          <div id="palito"></div>
+        </div>
+
+
+        
+        <h2>len</h2>
+        <p>
+          nos mostrara la cantidad de caracteres que tiene una string.
+        </p>
+        <h3>sintaxis</h3>
+        <p>
+          bueno esta propiedad tiene dos formas de uso.
+        </p>
+        <div class="code_content">
+          <code>
+<textarea readonly class="codificacion cood">
+sintaxis 1:
+variable.__len__();
+
+variable 2:
+len(variable)
+</textarea>
+          </code>
+        </div>
+         <h2></h2>
+        <div class="code_content">
+          <code>
+            <div class="content_copy">
+               <p class="t8 texto_copiado">texto copiado</p>
+              <i class="copiar8 fa-solid fa-copy"></i>
+            </div>
+<textarea readonly class="codificacion codificacion8 cood">
+forma_1 = "Ram y Rem son gemelas";
+print(forma_1.__len__());
+
+forma_2 = "Mitsuri es una pilar";
+print(len(forma_2));
+
+</textarea>
+          </code>
+        </div>
+        <div class="consola">
+        21 <br>
+        20
+          <div id="palito"></div>
+        </div>
+
+
+        <h2>startswith / endswith</h2>
+        <p>
+          estos dos metodos haran una busqueda y diran true o false true si encontro y false si no encontro.
+        </p>
+        <ol>
+          <li>startswith: dira si la letra o palabra que indiquemos esta al principio de la cadena de texto</li>
+          <li>endswith: dira si la letra o palabra que indiquemos esta al final de la cadena de texto</li>
+        </ol>
+        <h3>sintaxis</h3>
+        <div class="code_content">
+          <code>
+<textarea readonly class="codificacion cood">
+variable.startswith("caracter o caracteres");
+
+variable.endswith("caracter o caracteres");
+</textarea>
+          </code>
+        </div>
+         <h2>ejemplo de uso</h2>
+        <div class="code_content">
+          <code>
+            <div class="content_copy">
+               <p class="t9 texto_copiado">texto copiado</p>
+              <i class="copiar9 fa-solid fa-copy"></i>
+            </div>
+<textarea readonly class="codificacion codificacion9 cood">
+inicia_con_1 = "las papas son deliciosas";
+inicia_con_2 = "las papas son deliciosas";
+inicia_con_3 = "las papas son deliciosas";
+print(inicia_con_1.startswith("las"));
+print(inicia_con_2.startswith("l"));
+print(inicia_con_3.startswith("el"));
+
+
+finaliza_con_1 = "las waifus son lo mejor del anime";
+finaliza_con_2 = "las waifus son lo mejor del anime";
+finaliza_con_3 = "las waifus son lo mejor del anime";
+print(finaliza_con_1.endswith("anime"));
+print(finaliza_con_2.endswith("e"));
+print(finaliza_con_3.endswith("manga"));
+</textarea>
+          </code>
+        </div>
+        <div class="consola">
+          true <br>
+          true <br>
+          false <br>
+          true <br>
+          true <br>
+          false
+          <div id="palito"></div>
+        </div>
+
+        
+
+        <h2>replace</h2>
+        <p>
+          esta propiedad nos sirve para reemplazar un caractes o caracteres por otro este metodo recibe dos parametros.
+        </p>
+        <h3>simtaxis</h3>
+        <div class="code_content">
+          <code>
+<textarea readonly class="codificacion cood">
+variable.replace(
+  "palabra de la cadena que quieres reemplazar",
+  "con que quieres reemplazar esa palabra"
+);
+</textarea>
+          </code>
+        </div>
+
+         <h3>ejemplo de uso</h3>
+        <div class="code_content">
+          <code>
+            <div class="content_copy">
+               <p class="t10 texto_copiado">texto copiado</p>
+              <i class="copiar10 fa-solid fa-copy"></i>
+            </div>
+<textarea readonly class="codificacion codificacion10 cood">
+reemplazo_1 = "el mesa es negra";
+reemplazo_2 = "lo mesa es negra";
+reemplazo_3 = "la sillo es negra";
+
+print(reemplazo_1.replace("el","la"));
+print(reemplazo_2.replace("o","a"));
+print(reemplazo_3.replace("sillo","silla"));
+</textarea>
+          </code>
+        </div>
+        <div class="consola">
+          la mesa es negra <br>
+          la mesa es negra <br>
+          la silla es negra
+          <div id="palito"></div>
+        </div>
+
+
+
+        <h2>split</h2>
+        <p>
+          esto hara que las cadenas se separen y se conviertan en arreglos , en el parametro debemos poner cual de los caracteres queremos que haga la separacion.
+        </p>
+        <h3>sintaxis</h3>
+        <div class="code_content">
+          <code>
+<textarea readonly class="codificacion cood">
+cadena = "hola mundo";
+nuevo_arreglo = cadena.split(" ");
+
+cadena = "hola,mundo";
+nuevo_arreglo = cadena.split(",")
+</textarea>
+          </code>
+        </div>
+         <h3>ejemplo de uso</h3>
+        <div class="code_content">
+          <code>
+            <div class="content_copy">
+               <p class="t11 texto_copiado">texto copiado</p>
+              <i class="copiar11 fa-solid fa-copy"></i>
+            </div>
+<textarea readonly class="codificacion codificacion11 cood">
+cadena = "hola mundo";
+nuevo_arreglo = cadena.split(" ");
+print(nuevo_arreglo)
+</textarea>
+          </code>
+        </div>
+        <div class="consola">
+          ['hola', 'mundo']
+          <div id="palito"></div>
+        </div>
+
+
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer_div">
+          <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+      </div>
+  </footer>
+
+
+  <script src="metodosC.js"></script>
+</body>
+</html>

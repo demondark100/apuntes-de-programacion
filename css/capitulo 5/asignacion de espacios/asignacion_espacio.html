@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="asignacion_espacio.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>asignacion de espacios</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+    <main>
+        <div class="teoria">
+            <h1>asignacion de espacios</h1>
+            <p>
+                nosotros podemos aignar cuanto queremos que ocupe cada celda/grisha. <br>
+                <br>
+                estas propiedades se deben aplicar a los contenedores hijos del grid content. <br> <br>
+                grid-column-start: aqui debemos poner desde que linea inicia.  <br>
+                grid-column-end: aqui debemos poner en que linea finaliza.  <br>
+                grid-row-start: aqui debemos poner desde que linea inicia.  <br>
+                grid-row-end: aqui debemos poner en que linea finaliza.  <br> <br>
+                estos se pueden abreviar con: <br>
+                grid-row:  <br>
+                grid-column:  <br>
+                es recomendable solo usar "grid-row" y "grod-column". <br>
+                pseudocodigo: <br>
+                grid-column: desde que linea inicia / desde que linea; <br>
+                grid-row: desde que linea inicia / desde que linea; <br> <br>
+                las lineas tienen un numero asignado para poder asignar espacios en el grid.
+            </p>
+            <img src="https://keepcoding.io/wp-content/uploads/2022/06/diagrama-de-numeracion-de-lineas-de-grid.jpg" alt="grid_number" title="grid_number">
+
+
+            <h2>sin resumir codigo</h2>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion0 cood">
+<div class="sin_resumir">
+    <div>
+        >:v
+    </div>
+    <div>
+        >:v
+    </div>
+    <div>
+        >:v
+    </div>
+    <div>
+        >:v
+    </div>
+    <div>
+        >:v
+    </div>
+    <div>
+        >:v
+    </div>
+    <div>
+        >:v
+    </div>
+    <div>
+        >:v
+    </div>
+    <div>
+        >:v
+    </div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion1 cood">
+.sin_resumir{
+    display: grid;
+    border: 5px solid #32a8a8;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.sin_resumir div:nth-child(1){
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.sin_resumir div:nth-child(2){
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+.sin_resumir div{
+    border: 2px solid #000;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                como te das cuenta para poder asignar espacios necesitamos de dos lineas para el inicio y el final. 
+            </p>
+            <div class="webside">
+                <div class="sin_resumir">
+                    <div>
+                        >:v
+                    </div>
+                    <div>
+                        >:v
+                    </div>
+                    <div>
+                        >:v
+                    </div>
+                    <div>
+                        >:v
+                    </div>
+                    <div>
+                        >:v
+                    </div>
+                    <div>
+                        >:v
+                    </div>
+                    <div>
+                        >:v
+                    </div>
+                    <div>
+                        >:v
+                    </div>
+                    <div>
+                        >:v
+                    </div>
+                </div>
+            </div>
+
+
+            <h2>resumir codigo</h2>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion2 cood">
+<div class="con_resumir">
+    <div>
+        >:v
+    </div>
+    <div>
+        >:v
+    </div>
+    <div>
+        >:v
+    </div>
+    <div>
+        >:v
+    </div>
+    <div>
+        >:v
+    </div>
+    <div>
+        >:v
+    </div>
+    <div>
+        >:v
+    </div>
+    <div>
+        >:v
+    </div>
+    <div>
+        >:v
+    </div>
+</div>
+
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion3 cood">
+.con_resumir{
+    display: grid;
+    border: 5px solid #32a8a8;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.con_resumir div:nth-child(1){
+    grid-column: 1/3;
+}
+.con_resumir div:nth-child(2){
+    grid-row: 2/4;
+}
+.con_resumir div{
+    border: 2px solid #000;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                en vez de poner grid-column/row-start/end lo resumimos en una sola linea de codigo y es mas legible.
+            </p>
+            <div class="webside">
+                <div class="con_resumir">
+                    <div>
+                        >:v
+                    </div>
+                    <div>
+                        >:v
+                    </div>
+                    <div>
+                        >:v
+                    </div>
+                    <div>
+                        >:v
+                    </div>
+                    <div>
+                        >:v
+                    </div>
+                    <div>
+                        >:v
+                    </div>
+                    <div>
+                        >:v
+                    </div>
+                    <div>
+                        >:v
+                    </div>
+                    <div>
+                        >:v
+                    </div>
+                </div>
+                
+            </div>
+
+
+            <h2>span</h2>
+            <p>
+                esto nos puede ayudar para evitar contar las lineas , al poner span contara literalmente las filas o columnas ya no las lineas como antes. <br>
+                <br>
+                pseudocodigo: <br>
+                grid-row: desde que linea empieza / span cuantas filas ocupara; <br>
+                grid-row: 1 / span 3.
+            </p>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion4 cood">
+<div class="spam_content">
+    <div>
+        >:v
+    </div>
+    <div>
+        >:v
+    </div>
+    <div>
+        >:v
+    </div>
+    <div>
+        >:v
+    </div>
+    <div>
+        >:v
+    </div>
+    <div>
+        >:v
+    </div>
+    <div>
+        >:v
+    </div>
+    <div>
+        >:v
+    </div>
+    <div>
+        >:v
+    </div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                    <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion5 cood">
+.spam_content{
+    display: grid;
+    border: 5px solid #32a8a8;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.spam_content div:nth-child(1){
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
+.spam_content div{
+    border: 2px solid #000;
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <div class="spam_content">
+                    <div>
+                        >:v
+                    </div>
+                    <div>
+                        >:v
+                    </div>
+                    <div>
+                        >:v
+                    </div>
+                    <div>
+                        >:v
+                    </div>
+                    <div>
+                        >:v
+                    </div>
+                    <div>
+                        >:v
+                    </div>
+                    <div>
+                        >:v
+                    </div>
+                    <div>
+                        >:v
+                    </div>
+                    <div>
+                        >:v
+                    </div>
+                </div>
+            </div>
+
+            <a class="siguiente" href="../repeat/repeat.html">repeat=></a>
+
+        </div>
+    </main>
+    
+        <footer>
+            <div class="footer_div">
+                <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+            </div>
+        </footer>
+    
+    
+        <script src="asignacion_espacio.js"></script>
+    </body>
+</html>

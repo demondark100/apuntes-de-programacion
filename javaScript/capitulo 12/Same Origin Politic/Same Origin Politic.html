@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="Same Origin Politic.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Same Origin Politic</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+
+
+<main>
+    <div class="teoria">
+        <h1>Same Origin Politic</h1>
+        <p>un enlace se compone por 3 partes.</p>
+            <div class="enlaces_content">
+                <div class="enlace enlace_1">protocolo</div>
+                <div class="enlace enlace_2">host</div>
+                <div class="enlace enlace_3">puerto</div>
+            </div>
+            <div class="enlaces_content">
+                <div class="enlace enlace_1">http//</div>
+                <div class="enlace enlace_2">localhost</div>
+                <div class="enlace enlace_3">:5500</div>
+            </div>
+
+        <p>
+            Same Origin Politic solo nos permitira acceder a los worker o a otras cosas siempre y cuando el origen sea el mismo y el correcto.
+        </p>
+        <b>aqui un ejemplo:</b>
+
+        <b>puerto correcto.</b>
+            <div class="code_content">
+            <p>aqui todo estara correcto en este caso el puerto es el 5500 y al final agregamos worker.js para acceder porque es el mismo protocolo el mismo host y el mismo puerto.</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+
+<textarea class="codificacion codificacion0 cood">
+const worker = new Worker("http://127.0.0.1:5500/worker.js");
+</textarea>
+            </code>
+            </div>
+
+        <b>puerto incorrecto.</b>
+            <div class="code_content">
+            <p>sin embargo aqui estamos cambiando el puerto de 5500 a 8090 por lo cual no accedera al worker ya que se esta cambiando el puerto con lo cual el origin no es el mismo/correcto por lo tanto no accedera al worker.</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+
+<textarea class="codificacion codificacion1 cood">
+const worker = new Worker("http://127.0.0.1:5500/worker.js");
+</textarea>
+            </code>
+            </div>
+
+            <h2>un ejemplo mas.</h2>
+            <b>correcto.</b>
+            <p>si todo esta correcto funcionara</p>
+            <div class="enlaces_content">
+                <div class="enlace enlace_1">protocolo</div>
+                <div class="enlace enlace_2">host</div>
+                <div class="enlace enlace_3">puerto</div>
+            </div>
+            <div class="enlaces_content">
+                <div class="enlace enlace_1">http//</div>
+                <div class="enlace enlace_2">127.0.0.1</div>
+                <div class="enlace enlace_3">:5500</div>
+            </div>
+
+            <h2>incorrecto</h2>
+            <b>incorrecto.</b>
+            <p>si algo esta incorrecto no funcionara no accedera.</p>
+            <div class="enlaces_content">
+                <div class="enlace enlace_1">protocolo</div>
+                <div class="enlace enlace_2">host</div>
+                <div class="enlace enlace_3">puerto</div>
+            </div>
+            <div class="enlaces_content">
+                <div class="enlace enlace_1">http//</div>
+                <div class="enlace enlace_2">127.0.0.1</div>
+                <div class="enlace enlace_3">:8080</div>
+            </div>
+
+            <h2>de forma resumida:</h2>
+            <div class="code_content">
+                <p>si solo ponemos:</p>
+                <code>
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+
+<textarea class="codificacion codificacion2 cood">
+const worker = new Worker("worker.js");
+</textarea>
+                </code>
+                <p>se da a entender de forma automatica que el:</p>
+                <div class="enlaces_content">
+                    <div class="enlace enlace_1">protocolo</div>
+                    <div class="enlace enlace_2">host</div>
+                    <div class="enlace enlace_3">puerto</div>
+                </div>
+                <p>son los correctos.</p>
+            </div>
+
+    </div>
+</main>
+
+
+
+
+
+    <footer>
+        <div class="footer_div">
+            <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+        </div>
+    </footer>
+    
+    
+        <script src="Same Origin Politic.js"></script>
+    </body>
+</html>

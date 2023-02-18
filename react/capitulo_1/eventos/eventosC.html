@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="eventosC.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>eventos(clase)</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+
+
+
+    <main>
+        <div class="teoria">
+            <h1>eventos(clase)</h1>
+            <p>
+                los eventos de clase nos sirve para darle funcionalidad a un boton , trabajar con este tipo de eventos nos traera problemas con "this" para eso esque esta bind que es para que se pueda detectar los cambion de las funciones.
+            </p>
+
+            <h2>bind</h2>
+            <p>
+                ".bind(this)" con esto reconoceremos el this de un metodo/funcion.
+            </p>
+
+            <h2>onClick</h2>
+            <p>
+              esto es igual al html solo que en vez de usar "" usaremos {} para hacerlo todo de forma dinamica.
+            </p>
+
+            <div class="code_content">
+              <code>
+<textarea readonly class="codificacion cood">
+objeto {
+  constructor(){
+    this.funcion = this.funcion.bind(this)
+  }
+}
+
+
+  funcion(){
+    //hacer algo.
+  }
+
+// aqui estamos bindeando this para que no quede vacio y corrijamos errores a futuro.
+
+  render() {
+    return(
+      <button onClick={this.funcion}></button>
+    )
+  }
+
+// para llamar a la funcion/metodo debemos usar this debido a que es programacion orientada  a objetos :v.
+</textarea>
+              </code>
+          </div>
+
+            <h2>hacer contador</h2>
+            <div class="code_content">
+                <code>
+<textarea readonly class="codificacion cood">
+import React from "react";
+import {Component} from "react";
+
+// primero importamos react y el componente para trabajar con programacion orientada a objetos.
+
+export class Contador extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      contador: 0
+    }
+
+    //aqui crearemos un estado con contador para que aumente o disminuya disminuya dinamicamente.
+    
+    this.incrementar = this.incrementar.bind(this)
+    this.decrementar = this.decrementar.bind(this)
+
+    // aqui estamos bindeando para que a la hora de usar this en los metodos no nos retorne "undefined" y por consecuente nos de error.
+  }
+
+  incrementar(){
+    this.setState({
+      contador: this.state.contador + 1
+    })
+
+    // aqui estamos creando un estado para que el contador se incremente.
+
+  }
+
+  decrementar() {
+    this.setState({
+      contador: this.state.contador - 1
+    })
+
+    // aqui estamos decrementando de uno a uno.
+  }
+
+  render(){
+    return(
+      <div>
+        <h4>contador</h4>
+        <p>{this.state.contador}</p>
+        
+        // en este "p" sera donde se hara el cambio dinamico osea estamos diciento que al principio sera 0 ya que en el constructor indicamos que el valor sera 0.
+
+        <nav>
+          <button onClick={this.incrementar}>+</button>
+          <button onClick={this.decrementar}>-</button>
+          
+          // ahora estamos creando el evento llamando a las funciones correspondientes.
+        
+        </nav>
+      </div>
+    )
+  }
+}
+</textarea>
+                </code>
+            </div>
+
+            <h2>codigo sin comentarios</h2>
+            <div class="code_content">
+              <code>
+                  <div class="content_copy">
+                      <p class="t0 texto_copiado">texto copiado</p>
+                      <i class="copiar0 fa-solid fa-copy"></i>
+                  </div>
+                  
+<textarea readonly class="codificacion codificacion0 cood">
+import { Component } from "react"
+
+
+export class RenderE extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      contador: 0
+    }
+    
+    this.incrementar = this.incrementar.bind(this)
+    this.decrementar = this.decrementar.bind(this)
+
+  }
+
+  incrementar(){
+    this.setState({
+      contador: this.state.contador + 1
+    })
+  }
+
+  decrementar() {
+    this.setState({
+      contador: this.state.contador - 1
+    })
+  }
+
+  render(){
+    return(
+      <div>
+        <h4>contador</h4>
+        <p>{this.state.contador}</p>
+        
+
+        <nav>
+          <button onClick={this.incrementar}>+</button>
+          <button onClick={this.decrementar}>-</button>
+                  
+        </nav>
+      </div>
+    )
+  }
+}
+</textarea>
+              </code>
+          </div>
+          <div class="webside">
+            <h4>contador</h4>
+            <p class="numero">0</p>
+            <nav>
+              <button class="incrementar">+</button>
+              <button class="decrementar">-</button>
+            </nav>
+          </div>
+
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="footer_div">
+          <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+        </div>
+    </footer>
+
+
+    <script src="eventosC.js"></script>
+</body>
+</html>

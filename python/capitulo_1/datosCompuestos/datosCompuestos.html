@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="datosCompuestos.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>datos compuestos.</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <main>
+      <div class="teoria">
+        <h1>datos compuestos</h1>
+        <p>
+          los datos compuestos son formas distintas de guardar cosas que a diferenecia de una variable estos pueden guardar 2 o mas datos cosa que una variable no puede hacer.
+        </p>
+        <h2>pseudocodigo</h2>
+        <div class="code_content">
+          <code>
+<textarea readonly class="codificacion cood">
+lista = ["valor","valor","valor"];
+tupla = ("valor","valor","valor");
+conjunto = {"valor","valor","valor"};
+diccionario = {
+  "identificador": "valor",
+  "identificador": "valor"
+}
+</textarea>
+          </code>
+        </div>
+
+        <p>
+          como te habras dado cuenta en el pseudocodigo tenemos 3 formas de guardar los datos que se representan de esta manera. <br>
+          [] , () , {}.
+        </p>
+
+        <h2>posisiones</h2>
+        <p>
+          antes de continuar debbesmos aprender las posisiones ,  estos inician desde el 0 por ejemplo si quieres llamar al primer elemento en vez de poner 1 debes poner 0 y si quieres llamar al siguiente el 1 el 2 y asi sucesivamente.
+        </p>
+        <div class="code_content">
+          <p>
+            en este ejemplo te daras cuenta como funcionan las posisiones y de paso aprenderas como se llama una posision en especifico.
+          </p>
+          <h2>pseudocogo</h2>
+          <code>
+<textarea readonly class="codificacion cood">
+datos = [0,1,2,3]
+imprimir(datos[0])
+
+resultado: 0;
+
+
+nombres = ["Maryn" = 0 ,"Eren" = 1 ,"Mizuhara" = 2,"Ruka" = 3]
+
+imprimir(nombres[0])
+resultado: "Maryn"
+
+imprimir(nombres[1])
+resultado: "Eren"
+
+imprimir(nombres[2])
+resultado: "Mizuhara"
+
+imprimir(nombres[3])
+resultado: "Ruka"
+</textarea>
+          </code>
+        </div>
+
+        
+        <h2>Listas</h2>
+        <p>
+          estos son mas conocidos como arreglos , vectores estos pueden modificar su valor de forma dinamica.
+        </p>
+        <div class="code_content">
+          <p>
+            en este ejercicio vamos a cambiar de forma dinamica un valor para poder entender como funcionan los arreglos.
+          </p>
+          <code>
+            <div class="content_copy">
+               <p class="t0 texto_copiado">texto copiado</p>
+              <i class="copiar0 fa-solid fa-copy"></i>
+            </div>
+<textarea readonly class="codificacion codificacion0 cood">
+waifus = ["Mikasa","Akari","Uraraka","Megumin","Kirito","Mitsuri"];
+waifus[4] = "Sumi";
+print(waifus)
+</textarea>
+          </code>
+        </div>
+        <div class="consola">
+          ["Mikasa","Akari","Uraraka","Megumin","Sumi","Mitsuri"]
+          <div id="palito"></div>
+        </div>
+
+        <h2>Tupla</h2>
+        <p>
+          estos son demasiado similares a los arreglos/Listas pero estos no se pueden modificar de forma dinamica no puedes cambiar ningun valor si lo intentas habra error de sintaxis,
+        </p>
+        <h2>error</h2>
+        <div class="code_content">
+          <p>
+            si quieres ver un elemento en especifico se usa la misma forma de llamar a un elemento variable[indice] <br>
+            esto nos dara error porque no podemos modificarlo al igual que un arrego.
+          </p>
+          <code>
+<textarea readonly class="codificacion cood">
+colores = ("rojo","blanco","verde","negro","azul");
+colores[0] = "amarillo";
+print(colores)
+</textarea>
+          </code>
+        </div>
+        <h2>correcto</h2>
+        <div class="code_content">
+          <code>
+            <div class="content_copy">
+               <p class="t1 texto_copiado">texto copiado</p>
+              <i class="copiar1 fa-solid fa-copy"></i>
+            </div>
+<textarea readonly class="codificacion codificacion1 cood">
+juegos = ("Left 4 Dead","gta","half life","mobile legends","God of War");
+print(juegos[0])
+print(juegos)
+</textarea>
+          </code>
+        </div>
+        <div class="consola">
+          Left 4 Dead <br>
+          ("Left 4 Dead","gta","half life","mobile legends","God of War")
+          <div id="palito"></div>
+        </div>
+
+        <h2>Conjunto</h2>
+        <p>
+          un conjunto es un tipo de datos de colección desordenada que es iterable, mutable y no tiene elementos duplicados.
+        </p>
+        <div class="code_content">
+          <code>
+            <div class="content_copy">
+               <p class="t2 texto_copiado">texto copiado</p>
+              <i class="copiar2 fa-solid fa-copy"></i>
+            </div>
+<textarea readonly class="codificacion codificacion2 cood">
+frutas = {"manzana","pera","durazno","naranja","uva"};
+print(frutas[3])
+print(frutas)
+</textarea>
+          </code>
+        </div>
+        <div class="consola">
+          naranja <br>
+          {"manzana","pera","durazno","naranja","uva"}
+          <div id="palito"></div>
+        </div>
+
+        <h2>Diccionario</h2>
+        <p>
+          de esta manera podremos guardar datos de una forma mas dinamica ahora un ejemplo del como usar el diccionario.
+        </p>
+        <h2>pseudocodigo</h2>
+        <h2>crear diccionario</h2>
+        <div class="code_content">
+          <code>
+<textarea readonly class="codificacion cood">
+diccionario = {
+  "nombre": "valor",
+  "nombre": "valor"
+}
+</textarea>
+          </code>
+        </div>
+        <h2>llamar diccionario</h2>
+        <div class="code_content">
+          <code>
+<textarea readonly class="codificacion cood">
+variable["nombre del valor que queremos mostrar"]
+</textarea>
+          </code>
+        </div>
+
+        <h2>python</h2>
+        <div class="code_content">
+          <code>
+            <div class="content_copy">
+               <p class="t3 texto_copiado">texto copiado</p>
+              <i class="copiar3 fa-solid fa-copy"></i>
+            </div>
+<textarea readonly class="codificacion codificacion3 cood">
+waifu = {
+  "nombre": "Akame",
+  "edad": 18,
+  "estatura": 1.65,
+  "rol": "asesina",
+  "cabello": "negro"
+};
+
+print(waifu["nombre"]);
+print(waifu["edad"]);
+print(waifu["estatura"]);
+print(waifu["rol"]);
+print(waifu["cabello"]);
+</textarea>
+          </code>
+        </div>
+        <div class="consola">
+          Akame <br>
+          18 <br>
+          1.65 <br>
+          asesina <br>
+          negro
+          <div id="palito"></div>
+        </div>
+
+
+
+      </div>
+    </main>
+
+
+    <footer>
+      <div class="footer_div">
+          <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+      </div>
+  </footer>
+
+
+  <script src="datosCompuestos.js"></script>
+</body>
+</html>

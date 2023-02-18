@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize_arreglos_a.css">
+    <link rel="stylesheet" href="arreglosAsociativos.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>arreglos asociativo</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+
+    <main>
+        <div class="teoria">
+            <h1>arreglos asociativo</h1>
+            <p>
+                los arreglos asociativos son un objeto.
+            </p>
+
+            <h2>pseudocodigo</h2>
+            <div class="code_content">
+                <code>
+<textarea readonly class="codificacion cood">
+variable = { 
+    nombre: contenido,
+    nombre: contenido,
+    nombre: contenido
+}  
+
+//forma de llamar 1:
+console.log(objeto.nombre); 
+//forma de llamar 2:
+console.log(objeto["nombre"])
+</textarea>
+                </code>
+            </div>
+
+            <h2>javaScript</h2>
+            <div class="code_content">
+                <code>
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion1 cood">
+let personas = { 
+    nombre: "Pepe",
+    apellido: "Gonzales",
+    correo: "pepe@gmail.com"
+} ;
+console.log(personas.nombre); 
+//resultado: "Pepe"
+console.log(personas["apellido"]); 
+//resultado: "Gonzales"
+console.log(personas.correo); 
+//resultado: "pepe@gmail.com"
+</textarea>
+                </code>
+            </div>
+
+            <div class="code_content">
+                <p>
+                    pseudocodigo:
+                </p>
+                <p>
+                    esto sera para crear propiedades nuevas a un objeto.
+                </p>
+                <code>
+<textarea readonly class="codificacion cood">
+Object.defineProperty( 
+    objeto, "propiedad" , 
+    { valor: "valor" }
+)
+</textarea>
+                </code>
+                <p>
+                    javaScript:
+                </p>
+                <code>
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion3 cood">
+const objeto = {};
+Object.defineProperty(
+    objeto, "color" , 
+    {value: "verde"}
+);
+</textarea>
+                </code>
+                <p>
+                    tambien podemos agregar propiedades de esta manera.
+                </p>
+                <code>
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion4 cood">
+const agregar = {
+    agregar1: 1,
+    agregar2: 2
+}    
+agregar.agregar3 = 3
+console.log(agregar)
+</textarea>
+                </code>
+            </div>
+
+            <div class="code_content">
+                <p>
+                    de esta manera podemos cambiar el valor de una propiedad.
+                </p>
+                <code>
+                <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                    <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion5 cood">
+const agregar = {
+    agregar1: 1,
+    agregar2: 2
+};
+agregar.agregar2 = 8;
+console.log(agregar);
+</textarea>
+                </code>
+            </div>
+
+            <div class="code_content">
+                <p>
+                    con "writable: false" estamos diciendo que esa propiedad no se puede reescribir.
+                </p>
+                <code>
+                <div class="content_copy">
+                    <p class="t6 texto_copiado">texto copiado</p>
+                    <i class="copiar6 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion6 cood">
+const objeto = {};
+Object.defineProperty(
+    objeto, "color",
+    {value: "verde",
+    writable: false}
+);
+console.log(objeto)
+</textarea>
+                </code>
+            </div>
+
+            <div class="code_content">
+                <p>
+                    con "preventExtensions()" evitaremos que se puedan agregar mas propiedades a un objeto.
+                </p>
+                <code>
+                <div class="content_copy">
+                    <p class="t7 texto_copiado">texto copiado</p>
+                    <i class="copiar7 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion7 cood">
+const obj = {
+    juego: "left 4 dead 2"
+}
+Object.preventExtensions(obj)
+obj.desarrollador =  "valve"
+</textarea>
+                </code>
+            </div>
+
+            <div class="code_content">
+                <p>
+                    con "delete" eliminaremos la propiedad que queramos posdata solo funciona en objetos.
+                </p>
+                <code>
+                <div class="content_copy">
+                    <p class="t8 texto_copiado">texto copiado</p>
+                    <i class="copiar8 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion8 cood">
+const objeto = {                        
+    musica: "adventure",
+    artista: "Coldplay"
+}
+delete objeto.artista;
+console.log(objeto)
+</textarea>
+                </code>
+            </div>
+
+        </div>
+    </main>
+
+
+
+
+
+
+    <footer>
+        <div class="footer_div">
+            <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+        </div>
+    </footer>
+    
+    
+    <script src="arreglosAsociativos.js"></script>
+</body>
+</html>

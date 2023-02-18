@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="transition.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>transition</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+    <main>
+        <div class="teoria">
+            <h1>Transition</h1>
+            <p>
+                esto es para hacer trnasisiones en distintas cosas es como dar una animacion por ejemplo a los hover. <br>
+                en simples palbras transition nos mostrara el proceso de un cambio a otro. <br> <br>
+                ejemplo:
+            </p>
+
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion0 cood">
+<div class="ejemplo1_tr">
+    <p>
+        hola.
+    </p>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion1 cood">
+.ejemplo1_tr{
+    background-color: #000;
+    color: #fff;
+
+
+    transition-duration: .5s;
+}
+.ejemplo1_tr:hover{
+    background-color: #0f0;
+    color: #000;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                como te das cuenta al pasar el mouse sobre el elemento "p" se demora de pasar de un color a otro.
+            </p>
+            <div class="webside">
+                <div class="ejemplo1_tr">
+                    <p>
+                        hola.
+                    </p>
+                </div>                
+            </div>
+
+            <h2>transition-property</h2>
+            <p>
+                con esto le indicaremos que propiedad queremos que se haga el cambion por ejemplo el background,color,font,etc.
+            </p>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion2 cood">
+<div class="property_content">
+    <div class="cajita1">
+
+    </div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion3 cood">
+.property_content{
+    background-color: #1815d1f8;
+    height: 65%;
+    padding: 10px;
+}
+.cajita1{
+    width: 35%;
+    height: 40%;
+    background-color: #87d10f;
+
+    transition-property: background;
+    transition-duration: .5s;
+}
+.cajita1:hover{
+    background-color: #2f87a1;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                en este caso le decimos que property haga la transision a el background siempre es necesario poner esta propiedad debido a que si no lo hacemos el sitio web consumira mas recursos por lo cual se comportara de forma mas lenta.
+            </p>
+            <div class="webside">
+                <div class="property_content">
+                    <div class="cajita1">
+                        
+                    </div>
+                </div>
+            </div>
+
+            
+            <h2>transition-duration</h2>
+            <p>
+                esta propiedad es para dar cuanto tiempo va a durar la transision. <br>
+                a estos les puedes poner segundos por ejemplo. <br>
+                1s 2s 3s , etc. <br>
+                y si queremos menos de un segundo se pone.
+                0.5s , 0.1s , 0.8s , etc. <br>
+                pero podemos quitar el 0 y solo poner <br>
+                .5s , .1s , .8s. <br>
+                puedes ir jugando con los valores para que se adapten a tus gustos o estilos.
+            </p>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion4 cood">
+<div class="duration_content">
+    <div class="cajita2">
+
+    </div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                    <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion5 cood">
+.duration_content{
+    background-color: #000000f8;
+    height: 65%;
+    padding: 10px;
+}
+.cajita2{
+    width: 35%;
+    height: 40%;
+    background-color: #ffffff;
+
+    transition-property: background;
+    transition-duration: 1s;
+}
+.cajita2:hover{
+    background-color: #000000;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                como te das cuenta la transision se hace en 1 segundo pero se puede cambiar ese tiempo por el que tu quieras.
+            </p>
+            <div class="webside">
+                <div class="duration_content">
+                    <div class="cajita2">
+                
+                    </div>
+                </div>
+            </div>
+
+
+            <h2>transition-delay</h2>
+            <p>
+                si queremos que la transision no se muestre al instante podemos hacer que se muestre dentro de un tiempo con transition-delay.
+            </p>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t6 texto_copiado">texto copiado</p>
+                    <i class="copiar6 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion6 cood">
+<div class="delay_content">
+    <div class="cajita3">
+        
+    </div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t7 texto_copiado">texto copiado</p>
+                    <i class="copiar7 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion7 cood">
+.delay_content{
+    background-color: #000000f8;
+    height: 65%;
+    padding: 10px;
+}
+.cajita3{
+    width: 35%;
+    height: 40%;
+    background-color: #ffffff;
+
+    transition-property: background;
+    transition-duration: 1s;
+    transition-delay: 1s;
+}
+.cajita3:hover{
+    background-color: #000000;
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <div class="delay_content">
+                    <div class="cajita3">
+                        
+                    </div>
+                </div>
+            </div>
+
+
+            <h2>inherit</h2>
+            <p>
+                esta propiedad ereda es color de su contenedor.
+            </p>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t8 texto_copiado">texto copiado</p>
+                    <i class="copiar8 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion8 cood">
+<div class="i_content">
+    <div class="i_hijo">
+
+    </div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t9 texto_copiado">texto copiado</p>
+                    <i class="copiar9 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion9 cood">
+.i_content{
+    background-color: #2f87a1;
+    width: 100%;
+    height: 50%;
+    padding: 15px;
+}
+.i_hijo1{
+    width: 35%;
+    height: 35%;
+    border: 2px solid #000;
+
+    background-color: inherit;
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <div class="i_content">
+                    <div class="i_hijo1">
+                
+                    </div>
+                </div>
+            </div>
+
+
+            <h2>transision-timing-function</h2>
+            <p>
+                esta propiedad es la curva del tiempo que se tardara en hacerse la animacion. <br>
+
+            </p>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t10 texto_copiado">texto copiado</p>
+                    <i class="copiar10 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion10 cood">
+<div class="timing_content">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t11 texto_copiado">texto copiado</p>
+                    <i class="copiar11 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion11 cood">
+.timing_content{
+    padding: 25px;
+    background-color: #2f87a1;
+}
+
+.timing_content div{
+    border: 2px solid #000;
+    margin: 15px;
+    width: 25%;
+    height: 50px;
+    background-color: #000;
+    transition-property: background left;
+    transition-duration: 1s;
+    position: relative;
+    left: 0;
+}
+
+.timing_content:hover div{
+    left: 50%;
+    background-color: inherit;
+}
+
+.timing_content div:hover {
+    background-color: inherit;
+}
+.timing_content div:nth-child(1){
+    transition-timing-function: linear;
+}
+.timing_content div:nth-child(2){
+    transition-timing-function: ease;
+    /* "ease" es la propiedad que viene por defecto. */
+}
+.timing_content div:nth-child(3){
+    transition-timing-function: ease-in;
+}
+.timing_content div:nth-child(4){
+    transition-timing-function: ease-out;
+}
+.timing_content div:nth-child(5){
+    transition-timing-function: ease-in-out;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                como te das cuenta las animaciones no van a la misma velocidad debido a que lesd cambiamos el timing , parece que unas llegan antes que otras pero en realidad llegan al mismo tiempo solo que la animacion hace una pequeña curva de tiempo , en simples palabras todas llegan en 1 segundo como nosotros le indicamos.
+            </p>
+            <div class="webside">
+                <div class="timing_content">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+
+            <h2>diferencia de tiempos</h2>
+            <p>
+                por ultimo en transition-property y transition-duration si queremos que el tiempo de las anicaciones sea una distinta de la otra se debe poner coma y siempre ira en orden.
+                <br> <br>
+                pseudocodigo: <br> <br>
+                transition-property: background , left; <br>
+                transition-durantion: tiempo de background , tiempo de left; <br>
+                <br> <br>
+                css: <br> <br>
+                transition-property: background , left; <br>
+                transition-durantion: 1s , 2s;
+            </p>
+
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t12 texto_copiado">texto copiado</p>
+                    <i class="copiar12 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion12 cood">
+<div class="diferencia_content">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t13 texto_copiado">texto copiado</p>
+                    <i class="copiar13 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion13 cood">
+.diferencia_content{
+    padding: 25px;
+    background-color: #2f87a1;
+}
+.diferencia_content div{
+    border: 2px solid #000;
+    margin: 15px;
+    width: 25%;
+    height: 50px;
+    background-color: #000;
+    transition-property: background , left;
+    transition-duration: .4s , 1.2s;
+    position: relative;
+    left: 0;
+}
+.diferencia_content:hover div{
+    left: 50%;
+    background-color: inherit;
+}
+
+
+
+.diferencia_content div:hover {
+    background-color: inherit;
+}
+.diferencia_content div:nth-child(1){
+    transition-timing-function: linear;
+}
+.diferencia_content div:nth-child(2){
+    transition-timing-function: ease;
+}
+.diferencia_content div:nth-child(3){
+    transition-timing-function: ease-in;
+}
+.diferencia_content div:nth-child(4){
+    transition-timing-function: ease-out;
+}
+.diferencia_content div:nth-child(5){
+    transition-timing-function: ease-in-out;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                como te das cuenta el background hace su transision mas rapido que left.
+            </p>
+            <div class="webside">
+                <div class="diferencia_content">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+        <footer>
+            <div class="footer_div">
+                <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+            </div>
+        </footer>
+    
+    
+        <script src="transition.js"></script>
+    </body>
+</html>

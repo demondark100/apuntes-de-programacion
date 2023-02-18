@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize_POD.css">
+    <link rel="stylesheet" href="POD.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>funciones</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+<main>
+    <div class="teoria">
+        <h1>programacion orientado a objetos</h1>
+
+        <div class="code_content">
+            <h2>pseudocodigo POD:</h2>
+            <code>
+<textarea readonly class="codificacion cood">
+clase nombre { 
+    descripcion(objeto) { 
+        este.objeto = objeto,
+        este.objeto = objeto
+    } 
+}
+</textarea>
+            </code>
+        </div>
+
+        <p>ahora lo haremos con javaScript real</p>
+        
+        <div class="code_content">
+            <h2>javaScript POD:</h2>
+            <code>
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion0 cood">
+class Puerta { 
+    constructor(color,material){ 
+        this.color = color;
+        this.material = material;
+    } 
+}
+</textarea>
+            </code>
+        </div>
+
+        <p>para poder llamar a un objeto debemos hacer una variable de respaldo</p>
+
+        <div class="code_content">
+            <h2>pseudocodigo llamar:</h2>
+            <code>
+<textarea readonly class="codificacion cood">
+variable = nuevo objeto(poner la descripcion del objeto)
+</textarea>
+            </code>
+        </div>
+
+        <p>ahora con sintaxis javaScript:</p>
+
+        <div class="code_content">
+            <h2>javaScript llamar:</h2>
+            <code>
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion1 cood">
+const puerta = new Puerta("negro","madera");
+</textarea>
+            </code>
+        </div>
+
+        <p>ahora podemos llamar al objeto puerta de esta manera</p>
+
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion2 cood">
+console.log(puerta)
+</textarea>
+            </code>
+        </div>
+
+        <p>y si queremos algun dato en especifico podemos hacer esto:</p>
+        
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion3 cood">
+console.log(puerta.color);
+//resultado: "negro"
+</textarea>
+            </code>
+        </div>
+
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion4 cood">
+console.log(puerta.material);
+//resultado: "madera"
+</textarea>
+            </code>
+        </div>
+
+        <p>luego tenemos a los metodos que son igual que las funciones solo que al estar dentro de un objeto se le denomina como metodo.</p>
+
+        <div class="code_content">
+            <h2>pseudocodigo metodo:</h2>
+            <code>
+<textarea readonly class="codificacion cood">
+class Puerta { 
+    constructor(color,material){ 
+        this.color = color;
+        this.material = material;
+    } 
+    nombre(parametros){ 
+        hacer algo
+    } 
+}
+</textarea>
+            </code>
+        </div>
+
+        <p>ahora con javaScript real:</p>
+
+        <div class="code_content">
+            <h2>javaScript metodo:</h2>
+            <code>
+                <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                    <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion5 cood">
+class Puerta { 
+    constructor(color,material){ 
+        this.color = color;
+        this.material = material;
+    } 
+    describir(){ 
+        console.log(`
+            la puerta es de color ${this.color} y esta hecho de ${this.material}
+        `)
+    } 
+}
+</textarea>
+            </code>
+        </div>
+
+        <p>para llamar a un metodo es igual a una funcion pero debemos asignarlo a un objeto.</p>
+
+        <div class="code_content">
+            <h2>pseudocodigo llamar</h2>
+            <code>
+                <textarea readonly class="codificacion cood">
+objeto.metodo()
+                </textarea>
+            </code>
+        </div>
+
+        <p>ahora con javaScript:</p>
+
+        <div class="code_content">
+            <h2>javaScript llamar:</h2>
+            <code>
+                <div class="content_copy">
+                    <p class="t6 texto_copiado">texto copiado</p>
+                    <i class="copiar6 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion6 cood">
+const puerta = new Puerta("negro","madera")
+puerta.describir();
+//resultado: 
+//"la puerta es de color negro y esta hecho de madera"
+</textarea>
+            </code>
+        </div>
+
+        <p>de esta manera llamamos a un metodo recuerda siempre debe de ir acompañado de un objeto previamente creado</p>
+
+        <p>erencia</p>
+
+        <div class="code_content">
+            <h2>pseudocodigo erencia</h2>
+            <code>
+<textarea readonly class="codificacion cood">
+clase objeto eredar objeto anterior { 
+    descripcion(eredar objeto anterior y agregar cosas nuevas) { 
+        erencia(cosas que eredara),
+        hacer algo
+    } 
+}
+</textarea>
+            </code>
+        </div>
+        
+        <b>ahora con javaScript:</b>ç
+        <div class="code_content">
+            <h2>javaScript erencia:</h2>
+            <code>
+                <div class="content_copy">
+                    <p class="t7 texto_copiado">texto copiado</p>
+                    <i class="copiar7 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion7 cood">
+class Puerta { 
+    constructor(color,material){ 
+        this.color = color;
+        this.material = material;
+    } 
+    describir(){ 
+        console.log(`
+            la puerta es de color ${this.color} y esta hecho de ${this.material}
+        `)
+    } 
+}
+class ventana extends Puerta { 
+    constructor(color,material,forma){ 
+        super(color,material),
+        this.forma = forma
+    } 
+}
+</textarea>
+            </code>
+        </div>
+
+
+        <h2>metodos estaticos</h2>
+        <div class="code_content">
+            <b>pseudocodigo estatico:</b>
+            <code>
+<textarea readonly class="codificacion cood">
+class objeto{ 
+    constructor(color){
+        this.color = color
+    } 
+    metodo estatico descripcion(){ 
+        hacer algo
+    } 
+}
+</textarea>
+            </code>
+        </div>
+
+        <p>ahora con javaScript:</p>
+
+        <div class="code_content">
+            <h2>javaScript estatico:</h>
+            <code>
+                <div class="content_copy">
+                    <p class="t8 texto_copiado">texto copiado</p>
+                    <i class="copiar8 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion8 cood">
+class Objeto{ 
+    constructor(color){
+        this.color = color
+    } 
+    static describir(){ 
+        console.log("este es un objeto de color verde")
+    } 
+} 
+Objeto.describir();
+</textarea>
+            </code>
+        </div>
+
+        <p>metodos accesores</p>
+
+        <div class="code_content">
+            <h2>pseudocodigo accesores:</h2>
+            <code>  
+<textarea readonly class="codificacion cood">
+class objeto { 
+    constructor(material){ 
+        this.material = material
+    } 
+    cambiar nombre(parametro){ 
+        this.material = parametro
+    } 
+    acceder nombre(){ 
+        retornar this.material
+    } 
+}  
+</textarea>
+            </code>
+        </div>
+
+        <div class="code_content">
+            <h2>javaScript accesores:</h2>
+            <code>
+                <div class="content_copy">
+                    <p class="t9 texto_copiado">texto copiado</p>
+                    <i class="copiar9 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion9 cood">
+class Objeto{ 
+    constructor(forma,material){ 
+        this.forma = forma
+        this.material = material
+    } 
+    set cambio(material) { 
+        this.material = material
+    } 
+    get acceder(){ 
+        return this.material
+    } 
+} 
+</textarea>
+            </code>
+        </div>
+
+        <p>llamaremos a los metodos accesores</p>
+
+        <div class="code_content">
+            <h2>pseudocodigo llamar:</h2>
+            <code>
+                <textarea readonly class="codificacion cood">
+objeto.metodo = "nuevo valor";
+console.log(objeto.metodo)
+                </textarea>
+            </code>
+        </div>
+
+        <p>ahora con javaScript</p>
+        <div class="code_content">
+            <h2>javaScript llamar:</h2>
+            <code>
+                <div class="content_copy">
+                    <p class="t10 texto_copiado">texto copiado</p>
+                    <i class="copiar10 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion10 cood">
+const pared = new Objeto("cuadrada","madera");
+pared.cambio = "hierro";
+console.log(pared.acceder)
+</textarea>
+            </code>
+        </div>
+
+
+        <p>ahora veremos todo lo aprendido:</p>
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t11 texto_copiado">texto copiado</p>
+                    <i class="copiar11 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion11 cood">
+class Objeto {
+    constructor(color,material){ 
+        this.color = color
+        this.material = material
+    } 
+} 
+class Mesa extends Objeto{
+    constructor(material,forma){
+        super(material)
+        this.forma = forma
+    }
+    static algo(){
+        console.log("xd")
+    }
+    set cambio(objeto){
+        this.forma = objeto
+    }
+    get acceder(){
+        return this.forma
+    }
+}
+Mesa.algo()
+const mesa = new Mesa("madera","rectangular")
+mesa.cambio = "cuadrada" 
+console.log(mesa.acceder)</textarea>
+            </code>
+        </div>
+    </div>
+</main>
+
+    <footer>
+        <div class="footer_div">
+            <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+        </div>
+    </footer>
+    
+    
+    <script src="POD.js"></script>
+</body>
+</html>

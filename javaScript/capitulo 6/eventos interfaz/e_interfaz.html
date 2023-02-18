@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="e_interfaz.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>eventos interfaz</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+<main>
+    <div class="teoria">
+        <h1>eventos de la interfaz</h1>
+        <div class="code_content">
+            <code>
+                <p>HTML:</p>
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion0 cood">
+<p class="parrafo"> hola mundo </p>
+</textarea>
+
+                <p>javaScript:</p>
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion1 cood">
+const parrafo = document.querySelector(".parrafo"); 
+parrafo.addEventListener("error",()=>{
+    alert("ha sucedido un error")
+});
+</textarea>
+            </code>
+            <p>
+                con "error" el evento se activara cuando pase un error por ejemplo no cargo una imagen.
+            </p>
+        </div>
+
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion2 cood">
+window.addEventListener("load",()=>{
+    alert("el sitio web a cargado correctamente.")
+});
+</textarea>
+            </code>
+            <p>
+                con "load" el evento se activara cuando el elemento que indiquemos haya cargado por completo.
+            </p>
+        </div>
+
+        <div class="code_content">
+            <code>
+                <p>
+                    javaScript:
+                </p>
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion3 cood">
+addEventListener("resize",()=>{
+    alert("se cambio la resolucion")
+});
+</textarea>
+            </code>
+            <p>
+                "resize" se ejecutara cuando la resolucion se cambie.
+            </p>
+        </div>
+
+        <div class="code_content">
+            <code>
+                <p>
+                    javaScript:
+                </p>
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion4 cood">
+addEventListener("scroll",()=>{
+    alert("se escroleo el sitio web")
+});
+</textarea>
+            </code>
+            <p>
+                "scroll" se ejecutara cuando se escrolee en el sitio web.
+            </p>
+        </div>
+
+        <div class="code_content">
+            <code>
+                <p>
+                    javaScript:
+                </p>
+                <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                    <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion5 cood">
+seleccion.addEventListener("select",(e)=>{
+    console.log(e.target.selectionStart);
+    console.log(e.target.selectionEnd);
+})           
+</textarea>
+            </code>
+            <p>
+                con "select" podemos ver que selecciono el usuario de algun input. 
+            </p>
+            <p>
+                con "selectionStart" y "selectionEnd" podremos ver la posision del inicio y final de donde selecciono el usuario.
+            </p>
+        </div>
+
+        <div class="code_content">
+            <code>
+                <p>
+                    HTML:
+                </p>
+                <div class="content_copy">
+                    <p class="t6 texto_copiado">texto copiado</p>
+                    <i class="copiar6 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion6 cood">
+<input class="seleccion" type="text">
+<div class="mostrar"> 
+
+</div>     
+</textarea>
+            <p>
+                javaScript:
+            </p>
+                <div class="content_copy">
+                    <p class="t7 texto_copiado">texto copiado</p>
+                    <i class="copiar7 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion7 cood">
+const seleccion = document.querySelector(".seleccion"); 
+const mostrar = document.querySelector(".mostrar");                
+seleccion.addEventListener("select",(e)=>{
+    let posision_1 = e.target.selectionStart;
+    let posision_2 = e.target.selectionEnd;
+    let seleccionado = seleccion.value.substring(posision_1,posision_2);
+    mostrar.textContent = seleccionado
+});
+</textarea>
+            </code>
+        </div>
+
+        <p>resultado:</p>
+        <p>escribe algo y seleccionalo veras como es que en la pantalla aparecera lo que seleccionaste.</p>
+        
+        <div class="content_input">
+            <input class="seleccion" type="text" placeholder="escribir">
+            <div class="mostrar"></div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer_div">
+        <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+    </div>
+</footer>
+
+
+<script src="e_interfaz.js"></script>
+</body>
+</html>

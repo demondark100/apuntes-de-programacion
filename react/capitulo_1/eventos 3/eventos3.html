@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="eventos3.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>Eventos Nativos, Sintéticos & Personalizados</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+    <main>
+        <div class="teoria">
+            <h1>Eventos Nativos, Sintéticos & Personalizados</h1>
+            <p>
+                nosotros podemos acceder a los eventos que react obtimizo para los navegadores pero tambien podemos acceder a los eventos nativos de javaScript.
+            </p>
+
+            <h2>eventos react (pseudocodigo)</h2>
+            <p>
+             con estos eventos mostraremos los eventos que implemento react.
+            </p>
+            <div class="code_content">
+                <code>
+<textarea readonly class="codificacion cood">
+importar { componente } de "react";
+
+exportar clase Ejemplo extender componente {
+ ejemplo1=(e)=>{
+  mostrar.consola(e)
+ }
+ // con esto veremos las propiedades del evento.
+ 
+ ejemplo2=(e)=>{
+  mostrar.consola(e.target)
+ }
+ // con esto mostramos la propiedad "target" del evento.
+
+ renderizar() {
+  retornar(
+   <divisor>
+    <boton click={este.ejemplo1}>ejemplo 1</boton>
+    <boton click={este.ejemplo2}>ejemplo 1</boton>
+   </divisor>
+  )
+ }
+}
+</textarea>
+                </code>
+            </div>
+
+
+            <h2>eventos nativos javaScript(pseudocodigo)</h2>
+            <p>
+             para poder mostrar los eventos nativos necesitaremos de "nativeEvent"
+            </p>
+            <div class="code_content">
+             <code>
+<textarea readonly class="codificacion cood">
+importar { componente } de "react";
+
+exportar clase Ejemplo extender componente {
+ ejemplo1=(e)=>{
+  mostrar.consola(e.nativeEvent)
+ }
+ // con este evento accedemos a los eventos nativos de javaScript.
+ 
+ ejemplo2=(e)=>{
+  mostrar.consola(e.nativeEvent.target)
+ }
+ // con esto mostramos la propiedad "target" del evento nativo de javaScript.
+
+ renderizar() {
+  retornar(
+   <divisor>
+    <boton click={este.ejemplo1}>ejemplo 1</boton>
+    <boton click={este.ejemplo2}>ejemplo 1</boton>
+   </divisor>
+  )
+ }
+}
+</textarea>
+             </code>
+         </div>
+
+         <h2>ejmplo de real</h2>
+         <div class="code_content">
+          <code>
+              <div class="content_copy">
+                  <p class="t0 texto_copiado">texto copiado</p>
+                  <i class="copiar0 fa-solid fa-copy"></i>
+              </div>
+              
+<textarea readonly class="codificacion codificacion0 cood">
+import {Component} from "react";
+
+export class MostarE extends Component {
+ 
+ eventosReact=(e)=>{
+  console.log(e);
+  // con esto mostramos de forma automatica los eventos de react.
+  
+  console.log(e.target);
+  // con esto mostramos la propiedad target de react.
+ }
+
+ eventosNativos=(e)=>{
+  console.log(e.nativeEvent);
+  // con esto mostraremos los eventos nativos de javaScript.
+ 
+  console.log(e.nativeEvent.target);
+  // con esto mostramos la propiedad target de los eventos nativos,
+ }
+
+ render() {
+  return(
+   <div>
+    <h4>mostrar eventos de reat y nativos</h4>
+    <nav>
+     <button onClick={this.eventosReact}>eventos react</button>
+     <button onClick={this.eventosNativos}>eventos nativos javaScript</button>
+    </nav>
+   </div>
+  )
+ }
+}
+</textarea>
+          </code>
+      </div>
+      <div class="webside">
+       <h4>mostrar eventos de reat y nativos</h4>
+       <nav>
+        <button id="react">eventos react</button>
+        <button id="nativos">eventos nativos</button>
+       </nav>
+      </div>
+          <p id="error"></p>
+
+
+          <h2>eventos sintaticos</h2>
+          <p>
+              los eventos sintaticos nos permite agregar mas parametros a un metodo para poder poner un mensaje por ejemplo. <br>
+              como sabemos a la hora de usar los eventos cuando ponermos un parametro lo toma por defecto como eventos.
+          </p>
+
+          <div class="code_content">
+           <code>
+<textarea readonly class="codificacion cood">
+funcion1 = (event)=>{
+ // el primer parametro siempre sera el evento del click.
+}
+
+funcion2 = (event , parametro personalizado)=>{
+ // tomara al parametro evento pero ahora agregamos al parametro personalizado para usarlo como queramos.
+}
+</textarea>
+           </code>
+       </div>
+
+
+          <h2>pseudocodigo</h2>
+          <div class="code_content">
+              <code>
+<textarea readonly class="codificacion cood">
+importar componente de "react";
+
+exportar clase Ejemplo extender de componente {
+ funcion(e,parametroPersonalizado){
+  mostrar.consola(parametroPersonalizado);
+ }
+
+ renderizar(){
+  retornar(
+   <divisor>
+    <boton click={(evento)=>{
+     esta.funcion(
+      e,
+      // parametro 1 el evento por defecto.
+
+      "este es el mensaje que se mostrara"
+      // parametro 2 el evento que se modificara.
+      )
+    }}>
+     saludar
+    </boton>
+   </divisor>
+  )
+ }
+}
+</textarea>
+              </code>
+          </div>
+
+
+          <h2>hacer un evento que salude</h2>
+          <div class="code_content">
+              <code>
+                  <div class="content_copy">
+                      <p class="t1 texto_copiado">texto copiado</p>
+                      <i class="copiar1 fa-solid fa-copy"></i>
+                  </div>
+                  
+<textarea readonly class="codificacion codificacion1 cood">
+import {Component} from "react";
+
+export default class Ejercicio extends Component{
+ saludar=(e,mensaje)=>{
+  console.log(mensaje)
+ }
+
+ render(){
+  return(
+   <div>
+    <button onClick={(e)=>this.saludar(e,"hola humano")}>
+     saludar
+    </button>
+   </div>
+  )
+ }
+}
+</textarea>
+              </code>
+          </div>
+          <div class="webside">
+            <button id="saludar">saludar</button>
+          </div>
+
+          <h2>evento personalizado</h2>
+          <p>
+            con esto podremos usar un componente para que funcione como un boton personalizado.
+          </p>
+          <h2>pseudocodigo</h2>
+          <div class="code_content">
+            <code>
+<textarea readonly class="codificacion cood">
+importar {componente} de "react";
+
+funcion Personalizado=(props)=>{
+  retornar <boton cuandoHagaClick={props.parametroParaHacerClick}>saludar al humano</boton>
+  // este sera el boton que recibira el metodo/funcion de "saludo" 
+
+}
+
+exportar clase Ejemplo extender componente {
+  saludo=(eventos,mensaje)=>{
+    mostrar.consola(mensaje)
+  
+    // cuando se haga click en el componente personalizado se ejecutara esta funcion/metodo.
+  }
+
+  renderizar(){
+    retornar(
+      <diviso>
+        <Personalizado 
+          parametroParaHacerClick={
+            (e)=>{
+              este.saludo(e,"hola humano")
+            }
+          }
+        />
+        // aqui llamamos al componente , luego creamos un atributo para ponerle el metodo/funcion
+      </diviso>
+    )
+  }
+}
+</textarea>
+            </code>
+        </div>
+
+        <h2>codigo real</h2>
+        <h2></h2>
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+                
+<textarea readonly class="codificacion codificacion2 cood">
+import {Component} from "react";
+
+function Boton({click}){
+  return <button onClick={click}>saludar al humano</button>
+}
+
+export class Personalizar extends Component{
+  saludar=(e,mensaje)=>{
+    console.log(mensaje)
+  }
+
+  render(){
+    return(
+      <div>
+        <Boton
+          click={(e)=>this.saludar(e,"hola humano")}
+        />
+      </div>
+    )
+  }
+}
+</textarea>
+            </code>
+        </div>
+        <div class="webside">
+          <button id="saludarHumano">saludar al humano</button>
+        </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer_div">
+          <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+        </div>
+    </footer>
+
+
+    <script src="eventos3.js"></script>
+</body>
+</html>

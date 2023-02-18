@@ -1,0 +1,13 @@
+.content{
+    display: flex;
+    flex-wrap: wrap;
+}
+.content div{
+    width: 200px;
+    height: 200px;
+    background-color: #59ff4a;
+    margin: 18px;
+}
+p{
+    font-size: 1.2rem;
+}

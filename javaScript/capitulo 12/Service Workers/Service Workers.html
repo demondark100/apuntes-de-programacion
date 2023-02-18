@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="Service Workers.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Service Workers</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+<main>
+    <div class="teoria">
+        <h1>Service Workers</h1>
+        <p>aqui una forma grafica del como es Service Workers</p>
+        <img src="https://www.arsys.es/blog/file/uploads/2018/03/serviceworker01.jpg" alt="Service Workers">
+        <p>Service Workers en un archivo js que esta a la escucha de varios sucesos es como un intermediario entre el navegador y el sitio web.</p>
+
+        <h2>register</h2>
+        <div class="code_content">
+            <p>primero vamos a registrar nuestro service Worker <br>
+                1: crear un nuevo archivo service worker podemos ponerle cualquier nombre. <br> 
+                2: registrar service worker esto se revisa en aplicacion de la consola.
+            </p>
+            <code>
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion0 cood">
+navigator.serviceWorker.register("svw.js");
+
+// aqui ya estamos registrando nuestro service worker en este caso se llama svw.js.
+</textarea>
+            </code>
+        </div>
+
+        <p>en los service workers es recomendable trabajar con self en vez de this ejemplo.</p>
+        <p>"service worker" tiene un ciclo de vida primero se istala despues esta activado , el evento install es el primero que tiene un service worker.</p>
+
+        <h2>install</h2>
+        <div class="code_content">
+            <p>este evento de instalar solo se ejecuta una vez despues se activa.</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion1 cood">
+self.addEventListener("install",e=>{
+    console.log("instalando service worker.")
+})
+</textarea>
+            </code>
+        </div>
+
+        <h2>activate</h2>
+        <div class="code_content">
+            <p>con "activate" estamos verificando que se active el service worker.</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion2 cood">
+self.addEventListener("activavate",()=>{
+    console.log("el service worker esta activo.")
+})
+</textarea>
+            </code>
+        </div>
+
+        <h2>error</h2>
+        <div class="code_content">
+            <p>este evento se ejecutara en caso de que haya un error.</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion3 cood">
+self.addEventListener("error",()=>{
+    console.log("el hubo un error.")
+})
+</textarea>
+            </code>
+        </div>
+
+        <h2>evento fetch</h2>
+        <div class="code_content">
+            <p>este evento verifica que se este enviando una solicitud a ese service worker.</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion4 cood">
+self.addEventListener("fetch",e=>{
+    console.log("se esta interseptando la peticion.")
+})
+
+// esto interseptara las peticiones una y otra vez.
+</textarea>
+            </code>
+        </div>
+
+        <h2>metodos:</h2>
+        
+        <h2>2: ready</h2>
+        <div class="code_content">
+            <p>"ready" verificara que service worker ya haya cargado en la pagina esto trabaja con promesas.</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                    <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion5 cood">
+navigator.serviceWorker.ready
+    .then((res)=>{
+        console.log(res.active);
+    });
+</textarea>
+            </code>
+        </div>
+
+        <p>enviar mensaje desde javaScript a service worker.</p>
+        <h2>2: postMessage:</h2>
+        <div class="code_content">
+            <p>javaScript principal:</p>
+            <p>ahora si podemos enviar un mensaje con "postMessage" al service worker.</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t6 texto_copiado">texto copiado</p>
+                    <i class="copiar6 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion6 cood">
+navigator.serviceWorker.ready
+    .then((res)=>{
+        res.active.postMessage("se enviara un mensaje al service worker.");
+    });
+</textarea>
+            </code>
+            <p>service worker:</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t7 texto_copiado">texto copiado</p>
+                    <i class="copiar7 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion7 cood">
+self.addEventListener("message",e=>{
+    console.log(`se recibio el siguiente mensaje ${e.data}`);
+});
+</textarea>
+            </code>
+        </div>
+
+        <p>enviar mensaje desde service worker a javaScript</p>
+        <div class="code_content">
+            <p>service worker:</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t8 texto_copiado">texto copiado</p>
+                    <i class="copiar8 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion8 cood">
+self.addEventListener("message",e=>{
+    e.source.postMessage("se enviara un mensaje desde aqui.");
+})
+</textarea>
+            </code>
+            <p>javaScript:</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t9 texto_copiado">texto copiado</p>
+                    <i class="copiar9 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion9 cood">
+navigator.serviceWorker.addEventListener("message",e=>{
+    console.log(`se revibio el siguiente mensaje ${e.data}`);
+});
+</textarea>
+            </code>
+        </div>
+
+    </div>
+</main>
+
+
+
+    <footer>
+        <div class="footer_div">
+            <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+        </div>
+    </footer>
+    
+    
+        <script src="Service Workers.js"></script>
+    </body>
+</html>

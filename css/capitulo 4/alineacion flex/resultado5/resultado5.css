@@ -1,0 +1,44 @@
+body{
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h3{
+    text-shadow: 5px 5px 15px #21fa74;
+    color: #21fa74;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.content_cajas{
+    height: 100vh;
+    border: 2px solid #21fa74;
+    display: flex;
+    justify-content: center;
+}
+.caja1{
+    align-self: flex-start;
+    color: #21fa74;
+    border: 2px solid #21fa74;
+}
+.caja2{
+    align-self: center;
+    color: #21fa74;
+    border: 2px solid #21fa74;
+}
+.caja3{
+    align-self: flex-end;
+    color: #21fa74;
+    border: 2px solid #21fa74;
+}
+
+
+
+
+a{
+    color: #21fa74;
+    text-shadow: 5px 5px 15px #21fa74;
+    font-size: 1.5em
+    text-decoration: none;
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="display.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>display</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+
+    <main>
+        <div class="teoria">
+            <h1>display</h1>
+            <p>
+                bueno veremos las otras propiedades de display pero no profundizaremos. <br>
+                aparte de: <br>
+                display: block; <br>
+                display: inline; <br>
+                tenemos a: <br>
+                display: flex; <br>
+                display: grid; <br>
+                como dije anteriormente estas propiedades modifican el comportamiento de las cajas. <br>
+                para recordar...
+            </p>
+
+            <h2>block</h2>
+
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion0 cood">
+<div class="content_block">
+    todo el espacio
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion1 cood">
+.content_block{
+    display: block;
+    background-color: black;
+    color: wheat;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                recuerda que display block ocupara todo el espacio por mas que el contenido sea demasiado poco.
+            </p>
+            <div class="webside">
+                <div class="content_block">
+                    todo el espacio
+                </div>
+            </div>
+
+            <h2>inline</h2>
+
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion2 cood">
+<div class="elemento_linea">
+    linea
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion3 cood">
+.elemento_linea{
+    display: inline;
+    background-color: black;
+    color: wheat;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                recuerda que display inline se adapta al espacio que ocupa no ocupara todo el espacio como display block.
+            </p>
+            <div class="webside">
+                <div class="elemento_linea">
+                    linea
+                </div>
+            </div>
+            
+            <h2>inline block</h2>
+            
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion4 cood">
+<div class="l_b_1">
+    linea/bloque 1
+</div>
+<div class="l_b_2">
+    linea/bloque 2
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                    <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion5 cood">
+.l_b_1{
+    display: inline-block;
+    background-color: black;
+    color: wheat;
+    width: 25%;
+}
+.l_b_2{
+    display: inline-block;
+    background-color: black;
+    color: wheat;
+    width: 25%;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                recuerda que "inline block" se comporta como inline pero se puede modificar como si fuese display block pero al comportarse como inline un elemento se pone al lado del otro como en este ejemplo.
+            </p>
+            <div class="webside">
+                <div class="l_b_1">
+                    linea/bloque 1
+                </div>
+                <div class="l_b_2">
+                    linea/bloque 2
+                </div>
+            </div>
+
+            <p>
+                las demas propiedades tendran su propia explicacion para mas adelante.
+            </p>
+
+
+        </div>
+    </main>
+
+
+        <footer>
+            <div class="footer_div">
+                <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+            </div>
+        </footer>
+    
+    
+        <script src="display.js"></script>
+    </body>
+</html>

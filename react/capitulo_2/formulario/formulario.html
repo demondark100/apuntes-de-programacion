@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="formulario.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>formulario</title>
+  </head>
+<body>
+  <header>
+    <div class="header_content">
+      <div class="logo_container">
+        <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+      </div>
+      <div class="nav_container">
+        <i class="fa-solid fa-bars menu"></i>
+      </div>    
+      </div>
+      <div class="nav_content">
+        <nav class="header_nav">
+          <ul class="menu_nav">
+            <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+            <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+            <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+            <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+          </ul>
+        </nav>
+      </div>    
+  </header>
+
+
+
+
+  	<main>
+  		<div class="teoria">
+  			<h1>formularios</h1>
+  			<p>
+  				react nos da unas herramientas para poder trabajar con los formularios  <br>
+  				tenemos dos estrategias para trabajar con los formularios:
+  			</p>
+  			<ol>
+  				<li>
+  					controlados: estos estan gestionados por los estados (recomendado).
+  				</li>
+  				<li>
+  					no controlados: son las que usan las referencias de react (no recomendado).
+  				</li>
+  			</ol>
+  			<p>
+  				muy importante si usamos la etiqueta "label" como sabemos estos tienen como atributo "for" pero en react se cambia por "htmlFor" , es de buena practica pornerle el atributo name.
+  			</p>
+
+             <h2>ejemplo</h2>
+             <div class="code_content">
+               <code>
+<textarea readonly class="codificacion cood">
+<label htmlFor="nombre">pon tu nombre de usuario aqui</label>
+<input type="text" id="nombre" name="nombre">
+</textarea>
+               </code>
+             </div>
+
+             <p>
+             	para trabajar con los inputs react nos recomienda trabajar con las variables de estado , ahora tenemos un problema y esque no podemos usar value por defecto par que nos traera una advertencia por lo cual es lo correcto sera trabajar con el evento onChange pero si queremos ponerle un value por defecto podemos usar la propiedad "defaultValue"
+             </p>
+
+             <h2>defaultValue no controlado</h2>
+             <div class="code_content">
+               <code>
+                 <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                   <i class="copiar0 fa-solid fa-copy"></i>
+                 </div>
+<textarea readonly class="codificacion codificacion0 cood">
+import React from "react";
+import { useState } from  "react";
+
+let preguntar = prompt("dime un valor para el input")
+
+function Hooks(){
+
+	const [dato,setDato] = useState(preguntar)
+	
+	return(
+		<>
+			<input 
+				type="text" 
+				name="nombre"
+				defaultValue={dato}
+			/>
+		</>
+	)
+}
+</textarea>
+               </code>
+             </div>
+             <div class="webside">
+             	<button id="preguntar_1">preguntar?</button>
+             	<input type="text" id="input_1">
+             </div>
+
+
+             <h2>onChange controlado</h2>
+             <p>
+             	"onChange" se usa para los inputs y los textarea y asi es como react recomienda trabajarlos. <br>
+             	recuerda que esto trabaja con los inputs de forma controlada y qye trabajan con las variables de estado. <br>
+             	el evento "e" hace referencia al evento. <br>
+             	el "e.target.value" hace referencia al valor del input.
+             </p>
+
+             <div class="code_content">
+               <code>
+                 <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                   	<i class="copiar1 fa-solid fa-copy"></i>
+                 </div>
+
+<textarea readonly class="codificacion codificacion1 cood">
+import React , {useState} from "react";
+
+function Hooks(){
+
+	const [valor,setValor] = useState("");
+	
+	return(
+		<input 
+			type="text" 
+			name="nombre"
+			onChange={
+				(e)=>setValor(e.target.value)
+			}
+		/>
+	)
+}
+</textarea>
+               </code>
+             </div>
+             <div class="webside">
+             		<input type="text">
+             </div>
+
+
+             <h2>otros inputs</h2>
+             <p>
+             	a diferencia de los inputs de texto con los inputs de tipo radio o checkbox podemos darle un value para que se cambie el estado.
+             </p>
+             <h2>ejemplo de uso</h2>
+             <div class="code_content">
+               <code>
+                 <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                   	<i class="copiar2 fa-solid fa-copy"></i>
+                 </div>
+<textarea readonly class="codificacion codificacion2 cood">
+import React , { useState } from "react";
+
+function Hooks(){
+
+	const [radio,setRadio] = useState("");
+
+	return(
+		<div>
+			<h5>elige tu waifu preferida</h5>
+      <form>
+
+        <input 
+          type="radio"
+          id="Rem"
+          value="Rem"
+          name="waifu"
+          onChange={e=>setRadio(e.target.value)}
+        />
+        <label htmlFor="Rem">Rem</label>
+
+        <input 
+          type="radio"
+          id="Emilia"
+          value="Emilia"
+          name="waifu"
+          onChange={e=>setRadio(e.target.value)}
+        />
+        <label htmlFor="Emilia">Emilia</label>
+
+        <input 
+          type="radio"
+          id="Ram"
+          value="Ram"
+          name="waifu"
+          onChange={e=>setRadio(e.target.value)}
+        />
+        <label htmlFor="Ram">Ram</label>
+
+        <input 
+          type="radio"
+          id="Beatriz"
+          value="Beatriz"
+          name="waifu"
+          onChange={e=>setRadio(e.target.value)}
+        />
+        <label htmlFor="Beatriz">Beatriz</label>
+
+        <input 
+          type="radio"
+          id="Petra"
+          value="Petra"
+          name="waifu"
+          onChange={e=>setRadio(e.target.value)}
+        />
+        <label htmlFor="Petra">Petra</label>
+
+      </form>
+
+
+		</div>
+	)
+}
+ </textarea>
+               </code>
+             </div>
+
+             <div class="webside">
+							<h5>elige tu waifu preferida</h5>
+      				<form>
+
+        			<input 
+          			type="radio"
+          			id="Rem"
+          			value="Rem"
+          			name="waifu"
+        			/>
+        			<label for="Rem">Rem</label>
+
+        			<input 
+          			type="radio"
+          			id="Emilia"
+          			value="Emilia"
+          			name="waifu"
+        			/>
+        			<label for="Emilia">Emilia</label>
+
+        			<input 
+          			type="radio"
+          			id="Ram"
+          			value="Ram"
+          			name="waifu"
+        			/>
+        			<label for="Ram">Ram</label>
+
+        			<input 
+          			type="radio"
+          			id="Beatriz"
+          			value="Beatriz"
+          			name="waifu"
+        			/>
+        			<label for="Beatriz">Beatriz</label>
+
+        			<input 
+          			type="radio"
+          			id="Petra"
+          			value="Petra"
+          			name="waifu"
+        			/>
+        			<label for="Petra">Petra</label>
+      				</form>
+             </div>
+             <div class="mostrar_content">
+             		<img class="imagenWaifu">
+             		<p id="mensajeWaifu"></p>
+             </div>
+
+             <h2>defaultChecked</h2>
+             <p>
+             	esta propiedad en react es equivalente a checked de html basico con esto podremos marcar un check por defecto y se actualizara la variable de estado.
+             </p>
+             <h2>ejemplo</h2>
+             <div class="code_content">
+               <code>
+                 <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                   	<i class="copiar3 fa-solid fa-copy"></i>
+                 </div>
+<textarea readonly class="codificacion codificacion3 cood">
+import React , {useState} from "react";
+function Hooks(){
+	const [valor,setValor] = useState("");
+	return(
+		<div>
+			<h5>elige lenguaje</h5>
+			<label htmlFor="javaScipt">javaScipt</label>
+			<input 
+				type="radio"  
+				name="lenguaje" 
+				id="javaScipt"
+				value="javaScipt"
+				onChange={e=>setValor(e.target.value)}
+				defaultChecked
+			/>
+			<label htmlFor="python">python</label>
+			<input 
+				type="radio" 
+				name="lenguaje"
+				id="python"
+				value="python"
+				onChange={e=>setValor(e.target.value)}
+			/>
+		</div>
+	)
+}
+</textarea>
+               </code>
+             </div>
+             <div class="webside">
+ 								<h5>elige lenguaje</h5>
+								<label for="javaScipt">javaScipt</label>
+								<input 
+									type="radio"  
+									name="lenguaje" 
+									id="javaScipt"
+									value="javaScipt"
+									checked="" 
+								/>
+								<label for="python">python</label>
+								<input 
+									type="radio" 
+									name="lenguaje"
+									id="python"
+									value="python"
+								/>
+             </div>
+
+
+             <h2>input select</h2>
+             <p>
+	             	para los inputs de tipo select son similares a los del tipo texto pero osea que no usamos "value" si no que usamos "defaultValue" al igual que los inputs de tipo texto
+             </p>
+             <div class="code_content">
+               <code>
+                 <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                   	<i class="copiar4 fa-solid fa-copy"></i>
+                 </div>
+<textarea readonly class="codificacion codificacion4 cood">
+import React , {useState} from "react";
+function Hooks(){
+	const [seleccion,setSeleccion] = useState("");
+
+  return(
+    <div>
+      <label htmlFor="lenguaje">elige un lenguaje</label>
+      <select 
+        id="lenguaje"
+        name="lenguaje"
+        defaultValue="javaScript"
+        onChange={e=>setSeleccion(e.target.value)}
+      >
+        <option value="...">...</option>
+        <option value="javaScript">javaScript</option>
+        <option value="python">python</option>
+        <option value="c#">c#</option>
+        <option value="java">java</option>
+      </select>
+    </div>
+  )
+}
+</textarea>
+               </code>
+             </div>
+             <div class="webside">
+ 							<label htmlFor="lenguaje">elige un lenguaje</label>
+      				<select 
+        				id="lenguaje"
+        				name="lenguaje"
+        				value="javaScript"
+      				>
+        				<option value="...">...</option>
+        				<option value="javaScript">javaScript</option>
+        				<option value="python">python</option>
+        				<option value="c#">c#</option>
+        				<option value="java">java</option>
+      				</select>
+             </div>
+
+
+             <h2>checkbox</h2>
+             <p>
+             	esto es similar a radio pero aqui en vez de ponerle el valor le pondremos valores booleanos en las variables de estado.
+             </p>
+             <div class="code_content">
+               <code>
+                 <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                   	<i class="copiar5 fa-solid fa-copy"></i>
+                 </div>
+<textarea readonly class="codificacion codificacion5 cood">
+import React , {useState} from "react";
+
+function Hooks(){
+
+	const [check,setCheck] = useState(false);
+
+  return(
+    <div>
+      <form>
+        <h4>te gusta programar?:</h4>
+        <input 
+          type="checkbox"
+          id="aseptar"
+          name="terminos"
+          onChange={e=>setCheck(e.target.checked)}
+        /> 
+        <label htmlFor="aseptar">si me gusta :D</label>
+
+        <input 
+          type="checkbox"
+          id="denegar"
+          name="terminos"
+          onChange={e=>setCheck(e.target.checked)}
+        /> 
+        <label htmlFor="denegar">no , es aburrido >:v</label>
+      </form>
+    </div>
+  )
+}
+</textarea>
+               </code>
+             </div>
+            <div class="webside">
+ 							  <form>
+        					<h4>te gusta programar?:</h4>
+        					<input 
+          				type="checkbox"
+          				id="aseptar"
+          				name="terminos"
+        				/> 
+        				<label for="aseptar">si me gusta :D</label>
+
+        				<input 
+          				type="checkbox"
+          				id="denegar"
+          				name="terminos"
+        				/> 
+        				<label for="denegar">no , es aburrido >:v</label>
+      				</form>
+            </div>
+
+            <h2>enviar formulario</h2>
+             <p>
+             	ahora veremos como enviar el formulario y de paso mandar una alerta pero si solo deseas enviar puedes poner el input o el button pero para poder hacer un evento al boton de envio para dar un mensaje o algo podemos usar el evento "onSubmit".
+             </p>
+
+             <h3>sintaxis</h3>
+             <div class="code_content">
+               <code>
+<textarea readonly class="codificacion cood">
+<form onsubmit={evento}>
+
+</form>
+</textarea>
+
+               </code>
+             </div>
+
+             <div class="code_content">
+               <code>
+                 <div class="content_copy">
+                    <p class="t6 texto_copiado">texto copiado</p>
+                   	<i class="copiar6 fa-solid fa-copy"></i>
+                 </div>
+<textarea readonly class="codificacion codificacion6 cood">
+import React , {useState} from "react";
+
+
+function Hooks(){
+
+  const [nombre,setNombre] = useState("");
+
+  const avisar=(e)=>{
+    e.preventDefault();
+    alert("se envio tu nombre a ningun lado no se nada de backend :v")
+  }
+
+  return(
+    <div>
+      <form onSubmit={avisar}>
+        <input 
+          type="text" 
+          placeholder="nombre"
+          onChange={
+            (e)=>setNombre(e.target.value)
+          }
+        />
+        <button>enviar nombre</button>
+      </form>
+    </div>
+  )
+}
+</textarea>
+               </code>
+             </div>
+             <div class="webside">
+      				<form onSubmit={avisar}>
+        				<input 
+          				type="text" 
+          				placeholder="nombre"
+        				/>
+        				<button id="alerta">enviar nombre</button>
+      				</form>
+             </div>
+
+						<h2>ejercicio formulario</h2>
+             <div class="code_content">
+               <code>
+                 <div class="content_copy">
+                    <p class="t7 texto_copiado">texto copiado</p>
+                   	<i class="copiar7 fa-solid fa-copy"></i>
+                 </div>
+<textarea readonly class="codificacion codificacion7 cood">
+import React , {useState} from "react";
+
+
+function Hooks(){
+
+  const [nombre,setNombre] = useState("");
+  const [lenguaje,setLenguaje] = useState("");
+  const [seleccion,setSeleccion] = useState("");
+  const [condicion,setCondicion] = useState(false);
+
+
+  const avisar=(e)=>{
+    e.preventDefault();
+    alert("uahahaha te jakie ok no nisiquiera escribi bien xd")
+  }
+
+  return(
+    <div>
+      <h1>encuesta de trabajo</h1>
+      <form onSubmit={avisar}>
+        <label htmlFor="nombres">nombres completos</label>
+        <input 
+          id="nombres"
+          type="text"
+          name="encuesta"
+          placeholder="nombre completo"
+          onChange={
+            (e)=>setNombre(e.target.value)
+          }
+        />
+
+        <h3>cual es tu lenguaje mas usado?</h3>
+
+        <label htmlFor="javaScript">javaScript</label>
+        <input 
+          type="radio"
+          id="javaScript"
+          name="encuesta"
+          value="javaScript"
+          onChange={(e)=>setLenguaje(e.target.value)}
+        />
+
+        <label htmlFor="python">python</label>
+        <input 
+          type="radio"
+          id="python"
+          name="encuesta"
+          value="python"
+          onChange={(e)=>setLenguaje(e.target.value)}
+        />
+
+        <label htmlFor="c#">c#</label>
+        <input 
+          type="radio"
+          id="c#"
+          name="encuesta"
+          value="c#"
+          onChange={(e)=>setLenguaje(e.target.value)}
+        />
+
+        <label htmlFor="ruby">ruby</label>
+        <input 
+          type="radio"
+          id="ruby"
+          name="encuesta"
+          value="ruby"
+          onChange={(e)=>setLenguaje(e.target.value)}
+        />
+
+        <label htmlFor="php">php</label>
+        <input 
+          type="radio"
+          id="php"
+          name="encuesta"
+          value="php"
+          onChange={(e)=>setLenguaje(e.target.value)}
+        />
+
+        <h3>que lenguaje te gusta menos?</h3>
+        <label htmlFor="lenguajeM">lenguaje</label>
+        <select
+          defaultValue="ensamblador"
+          id="lenguajeM"
+          onChange={(e)=>setSeleccion(e.target.value)}
+          name="encuesta"
+        >
+          <option value="javaScript">javaScript</option>
+          <option value="python">python</option>
+          <option value="java">java</option>
+          <option value="c++">c++</option>
+          <option value="ruby">ruby</option>
+          <option value="ruby">ruby</option>
+          <option value="ensamblador">ensamblador :v</option>
+        </select>
+
+
+        <h3>condiciones</h3>
+        <label htmlFor="condicion">aseptas no se que aseptaras pero lo aseptas?</label>
+        <input
+          id="condicion"
+          type="checkbox"
+          name="encuesta"
+          onChange={(e)=>setCondicion(e.target.checked)}
+        />
+
+        <button>postularse</button>
+      </form>
+    </div>
+  )
+}
+</textarea>
+               </code>
+             </div>
+             <div class="webside">
+ 								<form onSubmit={avisar}>
+        					<label for="nombres">nombres completos</label>
+        						<input 
+          						id="nombres"
+          						type="text"
+          						name="encuesta"
+          						placeholder="nombre completo"
+        						/>
+
+        						<h3>cual es tu lenguaje mas usado?</h3>
+
+        						<label for="javaScript">javaScript</label>
+        						<input 
+          						type="radio"
+          						id="javaScript"
+          						name="encuesta"
+          						value="javaScript"
+        						/>
+
+        						<label for="python_1">python</label>
+        						<input 
+          						type="radio"
+          						id="python_1"
+          						name="encuesta"
+          						value="python"
+        						/>
+
+        						<label for="c#">c#</label>
+        						<input 
+          						type="radio"
+          						id="c#"
+          						name="encuesta"
+          						value="c#"
+							       />
+
+        						<label for="ruby">ruby</label>
+        						<input 
+          						type="radio"
+						          id="ruby"
+          						name="encuesta"
+          						value="ruby"
+										/>
+
+        						<label for="php">php</label>
+        							<input 
+          							type="radio"
+          							id="php"
+          							name="encuesta"
+          							value="php"
+							        />
+
+        						<h3>que lenguaje te gusta menos?</h3>
+        						<label for="lenguajeM">lenguaje</label>
+        						<select
+        							value="ensamblador"
+          						id="lenguajeM"
+          						name="encuesta"
+        						>
+          						<option value="javaScript">javaScript</option>
+          						<option value="python">python</option>
+          						<option value="java">java</option>
+          						<option value="c++">c++</option>
+          						<option value="ruby">ruby</option>
+          						<option value="ruby">ruby</option>
+          						<option value="ensamblador">ensamblador :v</option>
+        						</select>
+
+
+        						<h3>condiciones</h3>
+        						<label for="condicion">aseptas no se que aseptaras pero lo aseptas?</label>
+        						<input
+         							id="condicion"
+          						type="checkbox"
+          						name="encuesta"
+        						/>
+
+        				<button id="mensaje_2">postularse</button>
+      				</form>
+             </div>
+
+
+             <h2>obtimizar todo!!</h2>
+             <p>
+             	en el caso de que queramos hacer un formulario mas complejo seria muy tedioso crear una variable de estado para cada dato con lo cual podemos crear funciones que obtimicen esto y en vwz de andar poniendo todo en una variable para cada uno podemos crear solo una variable de estado con un solo objeto vacio.
+             </p>
+
+             <div class="code_content">
+               <code>
+                 <div class="content_copy">
+                    <p class="t8 texto_copiado">texto copiado</p>
+                   	<i class="copiar8 fa-solid fa-copy"></i>
+                 </div>
+
+<textarea readonly class="codificacion codificacion8 cood">
+const [valores,setValores] = useState({})
+</textarea>
+               </code>
+             </div>
+
+             <p>
+             	luego creamos dos funciones que nos permitan trabajar con el atributo name y rellenar ese objeto vacio con los datos del usuario.
+             </p>
+             <div class="code_content">
+               <code>
+               	<ol>
+               		<li>creamos dos funciones una para los inputs en general y otra para los checkebox</li>
+               		<li>en ambas les damos el event "e"</li>
+               		<li>accedemos al estado</li>
+               		<li>usamos un parametro rest para poder crear el objeto y se actualice</li>
+               		<li>destructuramos la propiedad name</li>
+               		<li>accedemos al valor "value" pero en el de check cambiamos a "checked" para comprobar si es verdadero o falso</li>
+               	</ol>
+                 <div class="content_copy">
+                    <p class="t9 texto_copiado">texto copiado</p>
+                   	<i class="copiar9 fa-solid fa-copy"></i>
+                 </div>
+<textarea readonly class="codificacion codificacion9 cood">
+ const manejarCambio=(e)=>{
+  setForm({
+    ...form,
+    [e.target.name]: e.target.value
+  })
+}
+ const manejarCheck=(e)=>{
+  setForm({
+    ...form,
+    [e.target.name]: e.target.checked
+  })
+}
+</textarea>
+               </code>
+             </div>
+
+
+
+             <h2>ejercicio obtimizado</h2>
+             <div class="code_content">
+               <code>
+                 <div class="content_copy">
+                    <p class="t10 texto_copiado">texto copiado</p>
+                   	<i class="copiar10 fa-solid fa-copy"></i>
+                 </div>
+<textarea readonly class="codificacion codificacion10 cood">
+import React , {useState} from "react";
+
+
+function Hooks(){
+
+  const [form,setForm] = useState({});
+  
+  const manejarCambio=(e)=>{
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value
+    })
+  }
+  const manejarCheck=(e)=>{
+    setForm({
+      ...form,
+      [e.target.name]: e.target.checked
+    })
+  }
+
+
+  const avisar=(e)=>{
+    e.preventDefault();
+    alert("no te estas postulando a nada tranqui")
+  }
+
+  return(
+    <div>
+      <h1>encuesta de trabajo</h1>
+      <form onSubmit={avisar}>
+        <label htmlFor="nombres">nombres completos</label>
+        <input 
+          id="nombres"
+          type="text"
+          name="nombres"
+          placeholder="nombre completo"
+          onChange={manejarCambio}
+        />
+        <label htmlFor="apellidos">apellidos</label>
+        <input 
+          type="text"
+          id="apellidos"
+          name="apellidos"
+          placeholder="apellidos"
+          onChange={manejarCambio}
+        />
+
+        <h3>cual es tu lenguaje mas usado?</h3>
+
+        <label htmlFor="javaScript">javaScript</label>
+        <input 
+          type="radio"
+          id="javaScript"
+          name="lenguaje mas usado"
+          value="javaScript"
+          onChange={manejarCambio}
+        />
+
+        <label htmlFor="python">python</label>
+        <input 
+          type="radio"
+          id="python"
+          name="lenguaje mas usado"
+          value="python"
+          onChange={manejarCambio}
+        />
+
+        <label htmlFor="c#">c#</label>
+        <input 
+          type="radio"
+          id="c#"
+          name="lenguaje mas usado"
+          value="c#"
+          onChange={manejarCambio}
+        />
+
+        <label htmlFor="ruby">ruby</label>
+        <input 
+          type="radio"
+          id="ruby"
+          name="lenguaje mas usado"
+          value="ruby"
+          onChange={manejarCambio}
+        />
+
+        <label htmlFor="php">php</label>
+        <input 
+          type="radio"
+          id="php"
+          name="lenguaje mas usado"
+          value="php"
+          onChange={manejarCambio}
+        />
+
+        <h3>que lenguaje te gusta menos?</h3>
+        <label htmlFor="lenguajeM">lenguaje</label>
+        <select
+          defaultValue="ensamblador"
+          id="lenguajeM"
+          onChange={manejarCambio}
+          name="lenguaje menos"
+        >
+          <option value="javaScript">javaScript</option>
+          <option value="python">python</option>
+          <option value="java">java</option>
+          <option value="c++">c++</option>
+          <option value="ruby">ruby</option>
+          <option value="ruby">ruby</option>
+          <option value="ensamblador">ensamblador :v</option>
+        </select>
+
+
+        <h3>condiciones</h3>
+        <label htmlFor="condicion">aseptas no se que aseptaras pero lo aseptas?</label>
+        <input
+          id="condicion"
+          type="checkbox"
+          name="condicion"
+          onChange={manejarCheck}
+        />
+
+        <button>postularse</button>
+      </form>
+    </div>
+  )
+}
+</textarea>
+               </code>
+             </div>
+             <div class="webside">
+ 								<form>
+  								<label for="nombres">nombres completos</label>
+							  	<input 
+    								id="nombres"
+    								type="text"
+    								name="nombres"
+    								placeholder="nombre completo"
+  								/>
+  								<label for="apellidos">apellidos</label>
+  								<input 
+    								type="text"
+    								id="apellidos"
+    								name="apellidos"
+    								placeholder="apellidos"
+  								/>
+
+  								<h3>cual es tu lenguaje mas usado?</h3>
+
+  								<label for="javaScript">javaScript</label>
+  								<input 
+    								type="radio"
+    								id="javaScript"
+    								name="lenguaje mas usado"
+    								value="javaScript"
+  								/>
+
+  								<label for="python">python</label>
+  								<input 
+    								type="radio"
+    								id="python"
+    								name="lenguaje mas usado"
+    								value="python"
+  								/>
+
+  								<label for="c#">c#</label>
+  								<input 
+    								type="radio"
+    								id="c#"
+    								name="lenguaje mas usado"
+    								value="c#"
+  								/>
+
+  								<label for="ruby">ruby</label>
+  								<input 
+    								type="radio"
+    								id="ruby"
+    								name="lenguaje mas usado"
+    								value="ruby"
+  								/>
+
+  								<label for="php">php</label>
+  								<input 
+    								type="radio"
+    								id="php"
+    								name="lenguaje mas usado"
+    								value="php"
+  								/>
+
+  								<h3>que lenguaje te gusta menos?</h3>
+  								<label for="lenguajeM">lenguaje</label>
+  								<select
+    								defaultValue="ensamblador"
+    								id="lenguajeM"
+    								name="lenguaje menos"
+  								>
+    								<option value="javaScript">javaScript</option>
+    								<option value="python">python</option>
+   									<option value="java">java</option>
+    								<option value="c++">c++</option>
+    								<option value="ruby">ruby</option>
+    								<option value="ruby">ruby</option>
+    								<option value="ensamblador">ensamblador :v</option>
+  								</select>
+
+
+  								<h3>condiciones</h3>
+  								<label for="condicion">aseptas no se que aseptaras pero lo aseptas?</label>
+  								<input
+    								id="condicion"
+    								type="checkbox"
+    								name="condicion"
+  								/>
+
+  							<button id="mensaje_3">postularse</button>
+							</form>
+             </div>
+
+
+  		</div>
+  	</main>
+
+
+ 
+   <footer>
+     <div class="footer_div">
+       <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+     </div>
+   </footer>
+ 
+ 
+     <script src="formulario.js"></script>
+   </body>
+ </html>

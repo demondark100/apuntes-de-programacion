@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="git.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>git</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+
+<main>
+    <div class="teoria">
+        <h1>git</h1>
+        <p>
+            consejo si se trabaja desde windows no es recomendable trabajar desde la terminal por defecto es mejor abrir.
+        </p>
+        <h2>"Git Bash"</h2>
+        <p>
+            y si es linux o mac debemos abrir:
+        </p>
+        <h2>cmd terminal</h2>
+        <p>
+            aqui veremos comandos de git para la configuracion inicial.
+        </p>
+        <h2>
+            ver version de git.
+        </h2>
+        <div class="code_content">
+            <code>
+                <b>git --version</b> <br>
+                con esto sabremos la version de git
+            </code>
+        </div>
+
+        <h2>
+            configuracion global.
+        </h2>
+        <div class="code_content">
+            <code>
+                <b>git config --global</b> <br> <br>
+                con esto la configuracion que hagamos se aplicara en todos los proyectos que hagamos. <br> <br>
+            </code>
+            <code>
+                <b>git config --global user.name "nombre completo"</b> <br> <br>
+                con name pondremos nuestro nombre de usuario. <br> <br>
+            </code>
+            <code>
+                <b>git config --global user.email correo</b> <br> <br>
+                con esto configuraremos nuestro correo no es necesario el uso de comillas. <br> <br>
+            </code>
+        </div>
+
+        <h2>
+            poner nuestro editor de codigo a git.
+        </h2>
+        <div class="code_content">
+            <code>
+                <b>git config --global core.editor "code --wait"</b> <br> <br>
+                con esto le estamos asignando un editor de codigo a git. <br> <br>
+            </code>
+            <code>
+                <b>git config --global -e</b> <br> <br>
+                con esto abriremos nuestra configuracion en visual studio code debemos cerrar vsc<br> <br>
+            </code>
+        </div>
+
+        <h2>
+            configuracion de saltos de linea.
+        </h2>
+        <div class="code_content">
+            <code>
+                <b>git config --global core.autocrlf sistema operativo</b> <br> <br>
+                esto dependera del sistrma operativo ejemplo. <br>
+                si es windows debes poner true <br>
+                si es mac o linux input <br>
+                con esto le diremos a git como debe tratar los saltos de linea.
+                <p>
+                    ejemplo windows.
+                </p>
+                <b>git config --global core.autocrlf true</b> <br> <br>
+                <p>
+                    ejemplo linux mac.
+                </p>
+                <b>git config --global core.autocrlf input</b> <br>
+            </code>
+        </div>
+
+        <div  class="code_content">
+            <code>
+                <b>git config --global -h</b> <br>
+                con esto podremos jugar con la configuracion de git.
+            </code>
+        </div>
+
+    </div>
+</main>
+
+
+
+<footer>
+    <div class="footer_div">
+        <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+    </div>
+</footer>
+
+
+<script src="git.js"></script>
+</body>
+</html>

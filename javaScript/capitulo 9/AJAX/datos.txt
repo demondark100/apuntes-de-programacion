@@ -1,0 +1,4 @@
+{
+    "musica": "fiesta pagana",
+    "genero": "rock"
+}

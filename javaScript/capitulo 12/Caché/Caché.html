@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="Caché.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Caché</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+<main>
+    <div class="teoria">
+        <h1>Caché</h1>
+        <p>el cache almacena informacion que ya solicitamos de forma cotidiana/normalmente lo ciañ hace que el usuario tenga que esperar menos por entrar al sitio web.</p>
+        
+        <h2>open</h2>
+        <div class="code_content">
+            <p>se acuerdan de <a href="../../capitulo 11/IndexedDB/IndexedDB.html">indexedDB</a> bueno el Caché es similar con el metodo open ya que abrira el archivo si ya es existente y si no existe lo creara en este caso crearemos un archivo llamado "archivo estatico".</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion0 cood">
+    // el cache se trabaja con promesas asi esque tenemos que usar then de esta manera.
+caches.open("archivo estatico").then(Cache=>{
+    console.log(Cache)
+})
+</textarea>
+            </code>
+        </div>
+
+        <h2>metodos:</h2>
+
+        <h2>add</h2>
+        <div class="code_content">
+            <p>"add" agrega recursos a la memoria cache.</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion1 cood">
+caches.open("archivo estatico").then(Cache=>{
+    Cache.add("Caché.html")
+})
+
+// aqui estamos diciendo que agregue a nuestro archivo html.
+</textarea>
+            </code>
+        </div>
+
+        <h2>addAll</h2>
+        <div class="code_content">
+            <p>esto es para agregar todos los archivos que deseemos a travez de un arreglo.</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion2 cood">
+caches.open("archivo estatico").then(Cache=>{
+    Cache.addAll(["Caché.html","Caché.css","Caché.js"]);
+})
+
+// aqyi estamos agregando varios archivos del mismo sitio web.
+</textarea>
+            </code>
+        </div>
+
+        <h2>match</h2>
+        <div class="code_content">
+            <p>devuelve una promesa que resuelve en una matriz de todas las solicitudes.</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion3 cood">
+caches.open("archivo estatico").then(Cache=>{
+    Cache.match("Caché.html").then(res=>{
+        console.log(res);
+    })
+})
+
+// esto nos devolvera una promesa resuelta con el elemento que hemos indicado.
+</textarea>
+            </code>
+        </div>
+
+        <h2>matchAll</h2>
+        <div class="code_content">
+            <p>"matchAll" nos devolvera un arreglo de respuestas.</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion4 cood">
+caches.open("archivo estatico").then(Cache=>{
+    Cache.matchAll("Caché.html").then(res=>{
+        console.log(res);
+    })
+})
+
+// esto nos ayudara por si tenemos mas de un archivo con el mismo nombre en este caso si tuvieramos mas de un archivo "Caché.html".
+</textarea>
+            </code>
+        </div>
+
+        <h2>put</h2>
+        <div class="code_content">
+            <p>envia una solicitud y trabaja con el response.</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                    <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion5 cood">
+caches.open("archivo estatico").then(Cache=>{
+    fetch("Caché.html").then(res =>{
+        Cache.put("Caché.html",res)
+            
+        // parametro 1: la url
+        // parameto 2: res 
+    })
+})
+
+// esto se usa mas para modificar una que otra cosa pero es mas usado add.
+</textarea>
+            </code>
+        </div>
+
+        <h2>delete:</h2>
+        <div class="code_content">
+            <p>"delete" es igual a "add" solo que este elimina el recurso ejemplo.</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t6 texto_copiado">texto copiado</p>
+                    <i class="copiar6 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion6 cood">
+caches.open("archivo estatico").then(Cache=>{
+    Cache.delete("Caché.html")
+})
+</textarea>
+            </code>
+        </div>
+
+        <h2>keys</h2>
+        <div class="code_content">
+            <p>"keys" nos devuelve una promesa que nos da una matriz de keys de los objetos almacenados.</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t7 texto_copiado">texto copiado</p>
+                    <i class="copiar7 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion7 cood">
+caches.open("archivo estatico").then(Cache=>{
+    Cache.addAll(["Caché.html","Caché.css","Caché.js"]);
+    Cache.keys().then(res=>{
+        console.log(res)
+    })
+    
+// esto nos devuelve toda la data del cache.
+})
+</textarea>
+            </code>
+        </div>
+
+    </div>        
+</main>
+
+
+
+    <footer>
+        <div class="footer_div">
+            <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+        </div>
+    </footer>
+    
+    
+        <script src="Caché.js"></script>
+    </body>
+</html>

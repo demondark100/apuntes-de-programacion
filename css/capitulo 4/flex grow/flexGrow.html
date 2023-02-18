@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="flexGrow.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>flex grow</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <main>
+        <div class="teoria">
+            <h1>flex grow</h1>
+            <p>
+                esta propiedad hace que las cajas se ajusten al espacio que sobra , "flex-grow" se debe aplicar en los elementos hijos no en los contnedores.
+            </p>
+            
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion0 cood">
+<h4>sin grow</h4>
+<div class="sin_grow">
+    <div>
+        caja 1
+    </div>
+    <div>
+        caja 2
+    </div>
+    <div>
+        caja 3
+    </div>
+</div>
+
+<h4>con grow</h4>
+<div class="con_grow">
+    <div>
+        caja 1
+    </div>
+    <div>
+        caja 2
+    </div>
+    <div>
+        caja 3
+    </div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion1 cood">
+body{
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h4{
+    color: #08eb1a;
+    text-shadow: 5px 5px 15px #08eb1a;
+    text-align: center;
+    font-size: 1.5em;
+}
+.sin_grow{
+    display: flex;
+    height: 40vh;
+    border: 2px solid #08eb1a;
+    padding: 15px;
+}
+.sin_grow div{
+    border: 2px solid #08eb1a;
+    color: #08eb1a;
+}
+.con_grow{
+    display: flex;
+    height: 40vh;
+    border: 2px solid #08eb1a;
+    padding: 15px;
+}
+.con_grow div{
+    border: 2px solid #08eb1a;
+    color: #08eb1a;
+    flex-grow: 1;
+}
+</textarea>
+                </code>
+            </div>
+            <a class="resultado" href="resultado1/resultado1.html">resultado</a>
+
+            <p>
+                esta propiedad se puede dar a los elementos por individual como se vio en el ejemplo anterior a estos podemos indicarle que tanto espacio queremos que ocupe puedes ir jugando con esta propiedad.
+            </p>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion2 cood">
+<div class="grow_ejemplo">
+    <div>
+        caja 1
+    </div>
+    <div>
+        caja 2
+    </div>
+    <div>
+        caja 3
+    </div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion3 cood">
+.grow_ejemplo{
+    display: flex;
+    height: 40vh;
+    padding: 15px;
+    background-color: #000;
+}
+.grow_ejemplo div{
+    color: #32a8a8;
+    border: 2px solid #32a8a8;
+}
+.grow_ejemplo div:nth-child(1){
+    flex-grow: 1;
+}
+.grow_ejemplo div:nth-child(3){
+    flex-grow: 2;
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <div class="grow_ejemplo">
+                    <div>
+                        caja 1
+                    </div>
+                    <div>
+                        caja 2
+                    </div>
+                    <div>
+                        caja 3
+                    </div>
+                </div>
+            </div>
+            <p>
+                por ultimo tenemos a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis" target="blank">flex-basis</a> y <a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink">flex-Shrink</a> que son similares a flex-grow pero con algunas diferencias puedes revisar la documentacion de css.
+            </p>
+
+
+            <h2>text-align</h2>
+            <p>
+                ahora veamos una prpiedad muy importante. <br>
+                "text-align" <br>
+                con esto posisionaremos los textos que este en bloque como p , h1 , div , etc. <br>
+                estos tienen como parametros. <br>
+                start: posisionara el texto al principio. <br>
+                center: posisionara el texto al centro. <br>
+                end: posisionara el texto al final.
+            </p>
+
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion4 cood">
+<p class="start">
+    esto estara al inicio.
+</p>
+<p class="center">
+    esto estara centrado.
+</p>
+<p class="end">
+    esto estara al final.
+</p>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                    <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion5 cood">
+.start{
+    text-align: start;
+    color: #9eb6ff;
+    background-color: #000;
+}
+.center{
+    text-align: center;
+    color: #9eb6ff;
+    background-color: #000;
+}
+.end{
+    text-align: end;
+    color: #9eb6ff;
+    background-color: #000;
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <p class="start">
+                    esto estara al inicio.
+                </p>
+                <p class="center">
+                    esto estara centrado.
+                </p>
+                <p class="end">
+                    esto estara al final.
+                </p>
+            </div>
+
+        </div>
+    </main>
+    
+        <footer>
+            <div class="footer_div">
+                <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+            </div>
+        </footer>
+    
+    
+        <script src="flexGrow.js"></script>
+    </body>
+</html>

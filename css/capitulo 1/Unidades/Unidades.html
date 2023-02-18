@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="Unidades.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>Unidades 1</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+    <main>
+        <div class="content_rem">
+            <img class="rem" src="https://media.tenor.com/eortAuaq80wAAAAC/rem-re-zero.gif" alt="rem">
+        </div>
+        <div class="teoria">
+            <h1>Unidades parte 1</h1>
+            <p>
+                tenemos dos tipos de medidas. <br>
+                relativas: son medidas que dependen de algo osea son variables. <br>
+                fijas: estos no cambiaran de medida ya que son fijas :v. <br> <br>
+                para continuar debemos entender que es la propìedad "font-size".
+            </p>
+
+            <h2>font-size</h2>
+            <p>
+                "font-size" nos sirve para cambiar el tamaño de los textos. <br> <br>
+                en las medidas fijas tenemos: <br>
+                px: Estos son medidas fijas que trabajan con pixeles. <br>
+                cm: estas medidas son cm a escala real. <br>
+                ml: esto tambien se manejan a milimetros reales. <br>
+                pt: son medidas por puntos. <br>
+                mayormente se suele usar px/pixeles pero puedes usar cualquiera. <br> <br>
+            </p>
+            <p>
+                aqui un ejemplo del como se usa "font-size" en vez de px puedes poner cualquier medida. cm,pt,cm,ml,etc.
+            </p>
+            <div class="code_content">
+                <p>html</p>
+                <code>
+                    <div class="content_copy">
+                        <p class="t0 texto_copiado">texto copiado</p>
+                        <i class="copiar0 fa-solid fa-copy"></i>
+                    </div>
+
+<textarea readonly class="codificacion codificacion0 cood">
+<h6 class="subtitulo_1">
+    este es un subtitulo feliz.
+</h6>
+</textarea>
+                </code>
+            </div>
+            <div class="code_content">
+                <p>css</p>
+                <code>
+                    <div class="content_copy">
+                        <p class="t1 texto_copiado">texto copiado</p>
+                        <i class="copiar1 fa-solid fa-copy"></i>
+                    </div>
+
+<textarea readonly class="codificacion codificacion1 cood">
+.subtitulo_1{
+    font-size: 23px;
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <h6 class="subtitulo_1">
+                    este es un subtitulo feliz.
+                </h6>
+            </div>
+            <h2>con medidas fijas.</h2>
+            <p>
+                Al usar medidas fijas nos puede traer un problema el cual si queremos trabajar con resoluciones las medidas de las letras no cambiaran su tamaño. <br>
+                si nos fijamos la cagita que esta adentro tiene una medida fija la cual mientras hagamos mas pequeña la resolucion la cagita que esta dentro se saldra de su contenedor y eso nos traera problemas  <br>
+                para poder hacer la resolucion mas pequeña hacer ctrl + la ruedita del mouse y si estas en mobil veras que la cagita de adentro sobresale debido a que es una medida fija y no esta adaptado para mobiles.
+            </p>
+            <div class="medida_fija">
+                <div class="cuadrado_1">
+                    <div class="cuadrado_2"></div>
+                </div>
+            </div>
+
+            <h2>medidas relativas</h2>
+            <p>
+                las medidas relativas si se adaptan a las resoluciones a medida que la resolucion se haga mas pequeña o grande.  <br> <br>
+                en medidas relativas tenemos a <b class="b_rem">Rem</b> y a Em. <br><br>
+                estas son como usar porcentajes cosa que veremos mas adelante pero en simples palabras las letras se adaptaran a la resolucion.
+            </p>
+            <h2>Em</h2>
+            <p>las unidades "em" se ajustan al font-size de algun contenedor padre. <br>
+            ejemplo</p>
+            <div class="code_content">
+                <p>html</p>
+                <code>
+                    <div class="content_copy">
+                        <p class="t2 texto_copiado">texto copiado</p>
+                        <i class="copiar2 fa-solid fa-copy"></i>
+                    </div>
+
+<textarea readonly class="codificacion codificacion2 cood">
+<div class="contenedor_padre">
+    <p class="contenedor_hijo">
+        esto se ajustara segun el padre.
+    </p>
+</div>
+</textarea>
+                </code>
+            </div>
+            <div class="code_content">
+                <p>css</p>
+                <code>
+                    <div class="content_copy">
+                        <p class="t3 texto_copiado">texto copiado</p>
+                        <i class="copiar3 fa-solid fa-copy"></i>
+                    </div>
+
+<textarea readonly class="codificacion codificacion3 cood">
+.contenedor_padre{
+    font-size: 18px;
+}
+.contenedor_hijo{
+    font-size: 1em;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                en este caso "1em" es igual a 18 px pero si al contenedor le ponemos 20px "1em" sera igual a 20px puedes ir jugando con esas escalas si ponemos 2em sera 40px y asi sucesivamente. 
+            </p>
+            <div class="webside">
+                <div class="contenedor_padre">
+                    <p class="contenedor_hijo">
+                        esto se ajustara segun el padre.
+                    </p>
+                </div>
+            </div>
+
+            <h2>Rem</h2>
+            <p>
+                las unidades rem no toman el font-size del contenedor padre si no que toman el font-size del body.
+            </p>
+            <div class="code_content">
+                <code>
+                    <div class="content_copy">
+                        <p class="t4 texto_copiado">texto copiado</p>
+                        <i class="copiar4 fa-solid fa-copy"></i>
+                    </div>
+
+<textarea readonly class="codificacion codificacion4 cood">
+<p class="parrafo_rem">
+    esto toma las medidas del body.
+</p>
+</textarea>
+                </code>
+            </div>
+            <div class="code_content">
+                <code>
+                    <div class="content_copy">
+                        <p class="t5 texto_copiado">texto copiado</p>
+                        <i class="copiar5 fa-solid fa-copy"></i>
+                    </div>
+
+<textarea readonly class="codificacion codificacion5 cood">
+.parrafo_rem{
+    font-size: 1.50rem;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                lo unico malo de rem esque tienes que andar calculando para tener las medidas que desees ya que rem toma como medidas a la raiz del documento html es mas facil trabajar con em (recomendado EM).
+            </p>
+            <div class="webside">
+                <p class="parrafo_rem">
+                    esto toma las medidas del body.
+                </p>
+            </div>
+            <p>
+                para entender mejor la resolucion relativa aqui un grafico. <br>
+                como te das cuenta el cuadradito de adentro se adapta asi es como funciona las medidas relativas tenlo en cuenta ya que estos graficos de medidas fijas/relativas tambien explican como funciona "responsive desing" el cual veremos mas adelante.
+            </p>
+
+            <div class="medida_relativa">
+                <div class="cuadrado_3">
+                    <div class="cuadrado_4"></div>
+                </div>
+            </div>
+            <a class="a_unidades_parte_2" href="../unidades 2/unidades_2.html">unidades parte 2</a>
+
+        </div>
+    </main>
+
+
+
+
+    <footer>
+        <div class="footer_div">
+            <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+        </div>
+    </footer>
+
+
+    <script src="Unidades.js"></script>
+</body>
+</html>

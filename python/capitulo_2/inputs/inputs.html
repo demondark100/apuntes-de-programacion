@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="inputs.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>entrada de datos.</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <main>
+      <div class="teoria">
+        <h1>entrada de datos</h1>
+        <p>
+          con esto pediremos datos al usuario para procesarlos y mostrarles un resultado , los inputs siempre devolveran una string por eso es que existen unos metodos para poder cambiar esos datos a numeros pero bueno empecemos.
+        </p>
+
+
+        <h2>input</h2>
+            <h3>sintaxis</h3>
+            <div class="code_content">
+              <code>
+<textarea readonly class="codificacion cood">
+input("mensaje que queremos dar");
+</textarea>
+              </code>
+            </div>
+
+            <h3>ejemplo de uso</h3>
+            <div class="code_content">
+              <code>
+                <div class="content_copy">
+                   <p class="t0 texto_copiado">texto copiado</p>
+                  <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion0 cood">
+nombre = input("dime tu nombre: ");
+print(nombre)
+</textarea>
+              </code>
+            </div>
+            <div class="consola">
+              <div id="contenedor_c">
+                dime tu nombre: 
+                <div id="texto_C" contenteditable="true"></div>
+                <div id="palito"></div>
+                <div id="mostrar_name"></div>
+              </div>
+            </div>
+
+
+            <h2>convertir datos</h2>
+            <p>
+              y que pasa si intentamos hacer operaciones? <br>
+              recuerda que cuando nosotros pasamos datos a un input siempre nos devolvera una string por ejemplo si le pasamos como dato 15 el input nos devolvera "15" por lo cual no podremos hacer operaciones  
+            </p>
+            <ol>
+              <li>int(): esto nos servira para convertir los datos a datos numericos</li>
+              <li>float(): esto convertira los datos a datos flotantes</li>
+            </ol>
+
+            <h3>sintaxis</h3>
+            <div class="code_content">
+              <code>
+<textarea readonly class="codificacion cood">
+int(variable o dato);
+float(variable o dato);
+</textarea>
+              </code>
+            </div>
+            <h3>ejemplo de uso</h3>
+            <h4>con int / float</h4>
+            <div class="code_content">
+              <code>
+                <div class="content_copy">
+                   <p class="t1 texto_copiado">texto copiado</p>
+                  <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion1 cood">
+numero_1 = input("dime el primer numero: ");
+numero_2 = input("dime el segundo numero: ");
+
+print(int(numero_1) + int(numero_2));
+
+
+flotante_1 = input("dime el primer flotante");
+flotante_2 = input("dime el segundo flotante");
+
+print(float(flotante_1) + float(flotante_2));
+</textarea>
+              </code>
+            </div>
+            <div class="consola">
+              dime el primer numero: 15 <br>
+              dime el segundo numero: 15 <br>
+              30 <br>
+              dime el primer flotante15 <br>
+              dime el segundo flotante15 <br>
+              30.0
+              <div id="palito"></div>
+            </div>
+            <h4>sin int/float</h4>
+            <div class="code_content">
+              <code>
+                <div class="content_copy">
+                   <p class="t2 texto_copiado">texto copiado</p>
+                  <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion2 cood">
+numero_1 = input("dime el primer numero: ");
+numero_2 = input("dime el segundo numero: ");
+
+print(numero_1 + numero_2);
+
+
+flotante_1 = input("dime el primer flotante");
+flotante_2 = input("dime el segundo flotante");
+
+print(flotante_1 + flotante_2);
+</textarea>
+              </code>
+            </div>
+            <div class="consola">
+              dime el primer numero: 15 <br>
+              dime el segundo numero: 15 <br>
+              1515 <br>
+              dime el primer flotante15.0 <br>
+              dime el segundo flotante15.0 <br>
+              15.015.0
+              <div id="palito"></div>
+            </div>
+
+
+
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer_div">
+          <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+      </div>
+  </footer>
+
+
+  <script src="inputs.js"></script>
+</body>
+</html>

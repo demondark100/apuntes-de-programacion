@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="Intersection_Observer.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Intersection Observer</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+
+    <main>
+        <div class="teoria">
+            <h1>Intersection Observer</h1>
+            <p>
+                esta API nos ayudara de mejor manera a manejar nuestro sitio web por detras pronto entenderemos a lo que me refiero.
+            </p>
+            <div class="code_content">
+                <code>
+                    <p>html:</p>
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion0 cood">
+<div class="caja caja_1"><span>caja 1</span></div>
+<div class="caja caja_2"><span>caja 2</span></div>
+<div class="caja caja_3"><span>caja 3</span></div>
+<div class="caja caja_4"><span>caja 4</span></div>
+</textarea>
+                    <p>css:</p>
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion1 cood">
+.caja {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    background-color: #23b6cf;
+    margin: 20px auto;
+    color: #f1ffb3;
+    font-size: 35px;
+    border: solid 4px #363636;
+}
+.caja span{
+    margin: auto;
+}
+.caja_2 {
+    background-color: #153692;
+    border: solid #000 4px;
+}
+.caja_3 {
+    background-color: #99c719;
+    border: solid #000 4px;
+}
+.caja_4 {
+    background-color: #d6a92d;
+    border: solid #000 4px;
+}  
+</textarea>
+                </code>
+            </div>
+
+            <div class="code_content">
+                <p>javaScript</p>
+
+                <p>parte 1 parametros.</p>
+                <code>
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion2 cood">
+const observer = new IntersectionObserver(callback,parametros);
+    // esto tiene dos parametros
+    // parametro 1 callback
+    // parametro 2 options
+</textarea>
+                    <p>parte 2 funcion:</p>
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion3 cood">
+    // esto se debe poner antes de declarar a la variable
+    // observer para poder ponerlo como parametro.
+
+const caja3 = document.querySelector(".caja_3")
+
+
+const verificarVisibilidad = (entradas) =>{
+        // esta funcion nos devolvera entradas.
+    
+    const entry = entradas[0];
+        // el parametro que recibira siempre sera un arreglo.
+    
+    console.log(entry)
+        // con esto nostraremos lo que hay en el elemento.
+}
+
+const observer = new IntersectionObserver(verificarVisibilidad,Option);
+</textarea>
+                    <p>parte 3 observe.</p>
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion4 cood">
+observer.observe(caja3)
+    // observe es un metodo que sirve para 
+    // observar el elemento que le digamos.
+</textarea>
+                    <p>parte 4 isIntersecting</p>
+                    <p>
+                        esto sera para verificar si la caja 3 
+                        aparece en el viewport si aparece dira true si no 
+                        aparece dira false.
+                    </p>
+                    <p>
+                        en la funcion en vez de solo poner entry agregaremos
+                        .isIntersecting ejemplo.
+                    </p>
+                <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                    <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion5 cood">
+const verificarVisibilidad = (entradas) =>{
+    const entry = entradas[0];
+    console.log(entry.isIntersecting)
+}
+</textarea>
+                    <p>codigo 1 completo sin comentarios:</p>
+                    <p>
+                        este codigo nos mostrara si una caja esta en el viewport o no.
+                    </p>
+                <div class="content_copy">
+                    <p class="t6 texto_copiado">texto copiado</p>
+                    <i class="copiar6 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion6 cood ">
+const caja3 = document.querySelector(".caja_3")
+const verificarVisibilidad = (entradas) =>{
+    const entry = entradas[0];
+    console.log(entry.isIntersecting)
+}
+const observer = new IntersectionObserver(verificarVisibilidad);
+observer.observe(caja3)
+</textarea>
+                </code>
+            </div>
+            <p>resultado:</p>
+            <p>
+                para ver los resultados precionar f12.
+            </p>
+            <div class="caja caja_1"><span>caja 1</span></div>
+            <div class="caja caja_2"><span>caja 2</span></div>
+            <div class="caja caja_3"><span>caja 3</span></div>
+            <div class="caja caja_4"><span>caja 4</span></div>
+
+
+            <div class="code_content">
+                <p>ejercicio.</p>
+                <code>
+                <div class="content_copy">
+                    <p class="t7 texto_copiado">texto copiado</p>
+                    <i class="copiar7 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion7 cood">
+const cajas = document.querySelectorAll(".caja")
+const verificarVisibilidad = (entradas) =>{
+    for(let entry of entradas){
+        if (entry.isIntersecting) {
+            console.log(`
+                se esta viendo la caja ${entry.target.textContent}
+            `)
+        }
+    }
+}
+const observer = new IntersectionObserver(verificarVisibilidad);
+for(let caja of cajas){
+    observer.observe(caja)
+}
+</textarea>
+                </code>
+            </div>
+            <p>resultado</p>
+            <p>
+                para ver los resultados precionar f12.
+            </p>
+                <div class="cajas caja1"><span>caja 1</span></div>
+                <div class="cajas caja2"><span>caja 2</span></div>
+                <div class="cajas caja3"><span>caja 3</span></div>
+                <div class="cajas caja4"><span>caja 4</span></div>
+
+            <div class="code_content">
+                <p>option</p>
+                <p>
+                    esto tambien se pone antes de declarar la variable observer.
+                </p>
+                <code>
+                <div class="content_copy">
+                    <p class="t8 texto_copiado">texto copiado</p>
+                    <i class="copiar8 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion8 cood">
+let options = {
+    // root: 
+        // esto toma un elemento como referencia por defecto es voewport.
+    rootMargin: '30px',
+        // esto dira cuanto margen tiene.
+    threshold: 0.5
+        // esto nos dira con que altura de la caja queremos trabajar.
+}
+
+const observer = new IntersectionObserver(callback,options);
+</textarea>
+                    <p>ejercicio</p>
+                <div class="content_copy">
+                    <p class="t9 texto_copiado">texto copiado</p>
+                    <i class="copiar9 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion9 cood">
+const caja3 = document.querySelector(".caja_3")
+
+const callback = (entradas) =>{
+    const entry = entradas[0];
+    console.log(entry.isIntersecting)
+}
+let option = { 
+        rootMargin: '50px',
+        threshold: 1.0
+}
+const observer = new IntersectionObserver(callback,option);
+observer_2.observe(caja3)
+</textarea>
+                </code>
+            </div>
+            <p>resultado</p>
+            <p>
+                para ver los resultados precionar f12.
+            </p>
+                <div class="cajass cajas_1"><span>caja 1</span></div>
+                <div class="cajass cajas_2"><span>caja 2</span></div>
+                <div class="cajass cajas_3"><span>caja 3</span></div>
+                <div class="cajass cajas_4"><span>caja 4</span></div>
+        </div>
+    </main>
+    
+
+
+    <footer>
+        <div class="footer_div">
+            <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+        </div>
+    </footer>
+    
+    
+        <script src="Intersection_Observer.js"></script>
+    </body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="clausulas.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Clausulas</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+
+
+<main>
+    <div class="teoria">
+        <h1>clausulas</h1>
+        <p>
+            las clausulas son funciones que retornan otras funciones.
+        </p>
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion0 cood">
+const saludar = (nombre) =>{ 
+    return function(){ 
+        console.log(`hola ${nombre}`)
+    } 
+} 
+let saludo = saludar("una persona") 
+addEventListener("load",saludo)             
+</textarea>
+            </code>
+        </div>
+
+        <p>
+            ejemplo clausula.
+        </p>
+
+        <h2>sin clausula</h2>
+        <div class="code_content">
+            <p>html:</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion1 cood">
+<div class="content"> 
+    <button class="t10 boton_1"> 10px </button>
+    <button class="t15 boton_1"> 15px </button>
+    <button class="t20 boton_1"> 20px </button>
+    <div class="texto"> 
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
+        libero repellendus et esse suscipit veritatis iure rem sed eum fuga
+        quo odit ad necessitatibus voluptas, similique reiciendis
+        recusandae? Laboriosam, eveniet!
+    </div> 
+</div>
+</textarea>
+                <p>
+                    javaScript:
+                </p>
+                <code>
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion2 cood">
+const cambiarTamaño = tamaño =>{ 
+    document.querySelector(".texto").style.fontSize = `${tamaño}px`
+    //esta funcion recibe un parametro para cambiar el tamaño de un texto. 
+} 
+document.querySelector(".t10").addEventListener("click",()=>cambiarTamaño(10)); 
+document.querySelector(".t15").addEventListener("click",()=>cambiarTamaño(15)); 
+document.querySelector(".t20").addEventListener("click",()=>cambiarTamaño(20));          
+</textarea>
+                </code>
+            </code>
+        </div>
+        <h2>con clausula</h2>
+        <div class="code_content">
+            <p>html:</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion3 cood">
+<div class="content"> 
+    <button class="t10 boton_1">10px </button>
+    <button class="t15 boton_1">15px </button>
+    <button class="t20 boton_1">20px </button>
+    <div class="texto"> 
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
+        libero repellendus et esse suscipit veritatis iure rem sed eum fuga
+        quo odit ad necessitatibus voluptas, similique reiciendis
+        recusandae? Laboriosam, eveniet!
+    </div> 
+</div>             
+</textarea>
+                <p>
+                    javaScript:
+                </p>
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion4 cood">
+const cambiarTamaño = tamaño =>{ 
+    return ()=>{ 
+        document.querySelector(".texto").style.fontSize = `${tamaño}px`
+    } 
+    //esta funcion recibe un parametro para cambiar el tamaño de un texto. 
+} 
+let t10 = cambiarTamaño(10); 
+let t15 = cambiarTamaño(15); 
+let t20 = cambiarTamaño(20); 
+    document.querySelector(".t10").addEventListener("click",t10); 
+    document.querySelector(".t15").addEventListener("click",t15); 
+    document.querySelector(".t20").addEventListener("click",t20);              
+</textarea>
+            </code>
+        </div>
+        <p>
+            el resultado de ambos codigos sera el mismo.
+        </p>
+        <div class="content">
+            <button class="t10 boton_1">10px</button>
+            <button class="t15 boton_1">15px</button>
+            <button class="t20 boton_1">20px</button>
+            <div class="texto">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis libero repellendus et esse suscipit veritatis iure rem sed eum fuga quo odit ad necessitatibus voluptas, similique reiciendis recusandae? Laboriosam, eveniet!
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<footer>
+    <div class="footer_div">
+        <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+    </div>
+</footer>
+
+
+<script src="clausulas.js"></script>
+</body>
+</html>

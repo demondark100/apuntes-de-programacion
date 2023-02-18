@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>estilos</title>
+  </head>
+<body>
+  <header>
+    <div class="header_content">
+      <div class="logo_container">
+        <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+      </div>
+      <div class="nav_container">
+        <i class="fa-solid fa-bars menu"></i>
+      </div>    
+      </div>
+      <div class="nav_content">
+        <nav class="header_nav">
+          <ul class="menu_nav">
+            <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+            <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+            <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+            <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+          </ul>
+        </nav>
+      </div>    
+  </header>
+
+
+
+
+  <main>
+  	<div class="teoria">
+  		<h1>estilos</h1>
+  		<p>
+  			para dar estilos a un componente tenemos distintas formas de hacerlo.
+  		</p>
+
+             <h2>estilos en hoja distinta</h2>
+             <p>
+             	para hacer esto es recomendable crear la nueva hoja en la misma carpeta donde esta el componente que queremos estilizar y ponerle el mismo nombre pero cambiando la extencion a css. <br>
+             	a diferencia de antes nosotros teniamos que llamar a css con la etiqueta "link" para poder entrelazar los estilos pero con react es un tanto distinto. 
+             </p>
+
+             <h3>llamando estilos</h3>
+             <div class="code_content">
+               <code>
+<textarea readonly class="codificacion cood">
+import "./nombre del carchivo";
+// de esta manera llamamos a la hoja de estilos con react.
+</textarea>
+               </code>
+             </div>
+             <h3>componente principal</h3>
+             <div class="code_content">
+               <code>
+                 <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                   	<i class="copiar0 fa-solid fa-copy"></i>
+                 </div>
+<textarea readonly class="codificacion codificacion0 cood">
+import React , {useState} from "react";
+import "./componentes.css"
+
+function Hooks(){
+  return(
+    <div className="contenedor">
+      <h1 className="titulo">estilizando</h1>
+      <div className="elements_content">
+        <p>elemento 1</p>
+        <p>elemento 2</p>
+      </div>
+    </div>
+  )
+}
+
+
+export default Hooks;
+</textarea>
+               </code>
+             </div>
+             <h3>hoja de estilos</h3>
+             <div class="code_content">
+               <code>
+                 <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                   	<i class="copiar1 fa-solid fa-copy"></i>
+                 </div>
+<textarea readonly class="codificacion codificacion1 cood">
+.contenedor{
+  background-color: #0cff82;
+}
+.titulo{
+  text-align: center;
+  color: #000;
+}
+.elements_content{
+  display: flex;
+  color: #000;
+  justify-content: space-between;
+}
+</textarea>
+               </code>
+             </div>
+             	<div class="webside">
+    						<div class="contenedor">
+      						<h1 class="titulo">estilizando</h1>
+      						<div class="elements_content">
+        						<p>elemento 1</p>
+        						<p>elemento 2</p>
+      						</div>
+    				 		</div>
+            	</div>
+
+            	<h2>estilos en linea</h2>
+            	<p>
+            		aqui usaremos el atributo style para poder dar estilos , a diferencia de las hojas de estilo separadas aqui los estilos se trabajan con camelCase y se abrem dos llaves uno que sera para indicarle que sera codigo js y el otro para crear el objeto con los estilos. <br>
+            		{codigo javaScript { abrir objeto de estilos. } }
+            	</p>
+             <h3>sintaxis</h3>
+             <div class="code_content">
+               <code>
+<textarea readonly class="codificacion cood">
+<etiqueta
+	style={{
+		estilos de del componente
+	}}
+>
+
+</etiqueta>
+</textarea>
+
+               </code>
+             </div>
+
+             <h3>ejemplo</h3>
+             <div class="code_content">
+               <code>
+                 <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                   	<i class="copiar2 fa-solid fa-copy"></i>
+                 </div>
+<textarea readonly class="codificacion codificacion2 cood">
+import React , {useState} from "react";
+
+function Hooks(){
+
+  return(
+    <div style={{backgroundColor: "#0cff82"}}>
+      <h1 style={{textAlign: "center",color: "#000"}}>estilizando</h1>
+      <div style={{display: "flex",color: "#000",justifyContent: "space-between"}}>
+        <p>elemento 1</p>
+        <p>elemento 2</p>
+      </div>
+    </div>
+  )
+}
+</textarea>
+               </code>
+             </div>
+            <div class="webside">
+    						<div class="contenedor">
+      						<h1 class="titulo">estilizando</h1>
+      						<div class="elements_content">
+        						<p>elemento 1</p>
+        						<p>elemento 2</p>
+      						</div>
+    				 		</div>
+            </div>
+
+
+             <h2>estilos en linea (otra forma de usarlas)</h2>
+             <p>
+             	con esta forma creamos un objeto y le damos estilos , despues llamamos al objeto que creamos y lo ponemos en los estilos.
+             </p>
+             <h3>sintaxis</h3>
+             <div class="code_content">
+               <code>
+<textarea readonly class="codificacion cood">
+let estilosParaContenedor = {
+	estilos que quieras
+}
+let estilosParaParrafo = {
+	estilos que quieras
+}
+
+<div style={estilosParaContenedor}>
+	<p style={estilosParaParrafo>
+		hola mundo
+	</p>
+</div>
+</textarea>
+
+               </code>
+             </div>
+
+             <h3>ejemplo de uso</h3>
+             <div class="code_content">
+               <code>
+                 <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                   	<i class="copiar3 fa-solid fa-copy"></i>
+                 </div>
+<textarea readonly class="codificacion codificacion3 cood">
+import React , {useState} from "react";
+
+function Hooks(){
+
+  let contenedor = {
+    backgroundColor: "#0cff82"
+  }
+  let titulo = {
+    textAlign: "center",
+    color: "#000"
+  }
+  let contenedor2 = {
+    display: "flex",
+    color: "#000",
+    justifyContent: "space-between"
+  }
+
+
+  return(
+    <div style={contenedor}>
+      <h1 style={titulo}>estilizando</h1>
+      <div style={contenedor2}>
+        <p>elemento 1</p>
+        <p>elemento 2</p>
+      </div>
+    </div>
+  )
+}
+</textarea>
+               </code>
+             </div>
+             <div class="webside">
+    						<div class="contenedor">
+      						<h1 class="titulo">estilizando</h1>
+      						<div class="elements_content">
+        						<p>elemento 1</p>
+        						<p>elemento 2</p>
+      						</div>
+    				 		</div>
+             </div>
+
+
+             <h2>estilos por modulo</h2>
+             <p>
+             	los estilos por modulo nos permite poner un estilo por defecto por asi decirlo por ejemplo uno que estilice el error y otro que estilice el exito. <br>
+             	para crear un estilo por modulo necesitamos crear una hoja de estilo aparte este debe llevar .modude.css para ser creado. <br>
+             	crear modulo de estilos: <br>
+             	nombre.module.css. <br>
+             	luego para importar un modilo de estilos necesitamos crear una variable que sera la que identificara  a ese estilo de modulo. <br>
+             	ahora para usar un modilo necesitamos de la propiedad "className" pero en vez de las comillas "" debemos poner llaves {} y poner el estilo de modulo que queremos.
+             </p>
+             <h3>sintaxis</h3>
+             <div class="code_content">
+               <code>
+<textarea readonly class="codificacion cood">
+import variable from "./ubicacion del archivo";
+
+<p className={variable.a que estilo queremos acceder}>hola mundo</p> 
+</textarea>
+
+               </code>
+             </div>
+             <h2>ejemplo de uso</h2>
+             <h3>componente</h3>
+             <div class="code_content">
+               <code>
+                 <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                   	<i class="copiar4 fa-solid fa-copy"></i>
+                 </div>
+<textarea readonly class="codificacion codificacion4 cood">
+import React , {useState} from "react";
+import moduleStyles from "./estilo.module.css";
+
+function Hooks(){
+  return(
+    <div>
+      <p className={moduleStyles.error}>esto es el color rojo</p>
+      <p className={moduleStyles.exito}>esto es el color verde</p>
+    </div>
+  )
+}
+</textarea>
+               </code>
+             </div>
+             <h3>modulo de estilos</h3>
+             <div class="code_content">
+               <code>
+                 <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                   	<i class="copiar5 fa-solid fa-copy"></i>
+                 </div>
+<textarea readonly class="codificacion codificacion5 cood">
+.error{
+  background-color: #f00;
+  color: #000;
+}
+.exito{
+  background-color: #0f0;
+  color: #000;
+}
+</textarea>
+               </code>
+             </div>
+
+             	<div class="webside">
+ 								<div>
+      						<p class="rojo">esto es el color rojo</p>
+      						<p class="verde">esto es el color verde</p>
+    						</div>
+             	</div>
+
+
+             	<h2>sass</h2>
+             	<p>
+             		para instalar "sass" necesitamos abrir una nueva terminal y poner: <br>
+             		npm install node-sass. <br>
+             		para crear un archivo con sass necesitamos crear un estilo con la extencion scss.
+             	</p>
+             <h3>sintaxis sass</h3>
+             <div class="code_content">
+               <code>
+             			<p>
+             				crear variable: $variable. <br>
+             				pseudoelementos: &:pseudoelemento{}
+             			</p>
+<textarea readonly class="codificacion cood">
+$colorAzul: #00f;
+$colorRojo: #f00;
+
+.elemento{
+	background-color: $colorAzul;
+	&:active{
+		background-color: $colorRojo;
+	}
+}
+</textarea>
+
+               </code>
+             </div>
+
+             <h2>ejemplo de uso</h2>
+             <h3>componente</h3>
+             <div class="code_content">
+               <code>
+                 <div class="content_copy">
+                    <p class="t6 texto_copiado">texto copiado</p>
+                   	<i class="copiar6 fa-solid fa-copy"></i>
+                 </div>
+<textarea readonly class="codificacion codificacion6 cood">
+import React from "react";
+import "./estilos.scss";
+
+
+
+function Hooks(){
+  return(
+    <div>
+      <h4 className="ejemplo">estilo con sass</h4>
+    </div>
+  )
+}
+</textarea>
+               </code>
+             </div>
+             <h3>estilos sass</h3>
+             <div class="code_content">
+               <code>
+                 <div class="content_copy">
+                    <p class="t7 texto_copiado">texto copiado</p>
+                   	<i class="copiar7 fa-solid fa-copy"></i>
+                 </div>
+<textarea readonly class="codificacion codificacion7 cood">
+$colorVerde: #0f0;
+$colorOpcaco: #00ff00a2;
+
+.ejemplo{
+  background-color: $colorVerde;
+  color: #000;
+  transition-duration: .5s;
+  transition-timing-function: ease-in;
+  &:hover{
+    background-color: $colorOpcaco;
+    cursor: ponter;
+  }
+}
+</textarea>
+               </code>
+             </div>
+             <div class="webside">
+ 							<p class="ejemplo__">estilo con sass</p>
+             </div>
+
+
+
+
+  	</div>
+  </main> 
+ 
+ 
+   <footer>
+     <div class="footer_div">
+       <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+     </div>
+   </footer>
+ 
+ 
+     <script src="estilos.js"></script>
+   </body>
+ </html>

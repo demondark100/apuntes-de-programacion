@@ -1,0 +1,10 @@
+.wrap_content1{
+    display: flex;
+}
+.wrap_content1 div{
+    background-color: #3681e4;
+    margin: 15px;
+    width: 200px;
+    height: 200px;
+    color: #fff;
+}

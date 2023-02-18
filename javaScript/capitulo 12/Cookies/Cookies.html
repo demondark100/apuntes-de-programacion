@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="Cookies.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Cookies</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+<main>
+    <div class="teoria">
+        <h1>Cookies</h1>
+        <p>las "Cookies" se encargan de guardar informacion del ususario en el navegador.</p>
+    
+        <h2>pseudocodigo</h2>
+        <div class="code_content">
+            <code>
+<textarea readonly class="codificacion cood">
+Cookies clave=valor; atributo;
+</textarea>
+            </code>
+        </div>
+
+        <h2>crear cookies:</h2>
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion0 cood">
+document.cookie = "primera cookie";
+document.cookie = "segunda cookie";
+document.cookie = "tercera cookie";
+
+// de esta manera estamos creando nuestra primera cookie.
+</textarea>
+            </code>
+        </div>
+
+        <h2>acceder a las cookies:</h2>
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion1 cood">
+const crearCookies = (nombre,expira,path,age) =>{
+    document.cookie = `nombre=${nombre};expira=${expira};path=${path};age=${age}`;
+}
+crearCookies(
+    // primero va el nombre de la cookie.
+    "usuario",
+    // en expirar se debe poner en formato utc.
+    "Mon 28 Nov 2022 12:00:00 UTC",
+    // luego path que es donde se guardara normalmente no se pone nada ya que se almacena por defecto en el dominio.
+    "/",
+    // age cuanto dura en segundos.
+    "200"
+)
+</textarea>
+            </code>
+        </div>
+
+        <h2>codigo completo</h2>
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion2 cood">
+const newFechaUTC = dias =>{
+    let fecha = new Date();
+    fecha.setTime(fecha.getTime() + dias*1000*60*60*24);
+    return fecha.toUTCString();
+}
+const crearCookie = (nombre,dias) =>{
+    let expires = newFechaUTC(dias);
+    document.cookie = `${nombre};expires=${expires}`;
+}
+
+crearCookie("user_cookie",4)
+
+const obtenerCokkie = cookiesName =>{
+    let cookies = document.cookie;
+    cookies = cookies.split(";");
+    for (let i = 0; i < cookies.length; i++) {
+        let cookie = cookies[i].trim();
+        if (cookie.startsWith(cookiesName)) {
+            return cookie.split("=")[0]
+        }
+    }
+    return "no hay cookies";
+}
+</textarea>
+            </code>
+        </div>
+
+        <p>ahora para eliminar una cookie es tan simple como:</p>
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion3 cood">
+document.cookie = "user_cookie;max-age=0";
+// aqui creamos/remplazamos una cookie exostente y le decimos que se elimine en 0 segundos.
+</textarea>
+            </code>
+        </div>
+
+    </div>
+</main>
+
+    <footer>
+        <div class="footer_div">
+            <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+        </div>
+    </footer>
+    
+    
+        <script src="Cookies.js"></script>
+    </body>
+</html>

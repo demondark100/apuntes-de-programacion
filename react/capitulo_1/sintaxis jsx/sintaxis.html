@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="sintaxis.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>sintaxis jsx</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+
+    <main>
+        <div class="teoria">
+            <h1>sintaxis jsx</h1>
+            <p>
+                react como tal es como poner html css y javaScript en un solo archivo por ejemplo si queremos mostrar un valor de una variable normalmente seleccionariamos a la variable para poder dibujarlo en el DOM pero con jsx de react se facilita de mejor forma esta tarea.
+            </p>
+
+            <h2>jsx</h2>
+            <p>para poder poner del valor de una variable es necesario usar {}</p>
+            <div class="code_content">
+                <code>
+                    <div class="content_copy">
+                        <p class="t0 texto_copiado">texto copiado</p>
+                        <i class="copiar0 fa-solid fa-copy"></i>
+                    </div>
+                    
+<textarea readonly class="codificacion codificacion0 cood">
+let musica = "Smells Like Teen Spirit";
+<h2>{musica}</h2>
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <p>Smells Like Teen Spirit</p>
+            </div>
+
+            <p>
+                react tiene dos formas de implementar la sintaxis de jsx que es por funcion o po objeto. <br> <br>
+                siempre que queramos poner mas de un elemento es necesario crear un contenedor div.
+            </p>
+
+            <h2>funcion</h2>
+            <div class="code_content">
+                <code>
+                    <div class="content_copy">
+                        <p class="t1 texto_copiado">texto copiado</p>
+                        <i class="copiar1 fa-solid fa-copy"></i>
+                    </div>
+                    
+<textarea readonly class="codificacion codificacion1 cood">
+funcion Sintaxis(){
+  return(
+    <div>
+      <h1>hola mundo</h1>
+      <p>esto es la sintaxis de jsx.</p>
+    </div>
+  )
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <div>
+                    <h1>hola mundo</h1>
+                    <p>esto es la sintaxis de jsx.</p>
+                </div>
+            </div>
+
+            <h2>objeto</h2>
+            <div class="code_content">
+                <code>
+                    <div class="content_copy">
+                        <p class="t2 texto_copiado">texto copiado</p>
+                        <i class="copiar2 fa-solid fa-copy"></i>
+                    </div>
+                    
+<textarea readonly class="codificacion codificacion2 cood">
+import { Component } from "react";
+
+class Sintaxis extends Component {
+  render(){
+    return(
+      <div>
+        <h1>hola mundo</h1>
+        <p>esta es la sintaxis pero con objetos.</p>
+      </div>
+    )
+  }
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+              <div>
+                <h1>hola mundo</h1>
+                <p>esta es la sintaxis pero con objetos.</p>
+              </div>
+            </div>
+
+        </div>
+    </main>
+
+
+
+    <footer>
+        <div class="footer_div">
+            <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+        </div>
+    </footer>
+
+
+    <script src="sintaxis.js"></script>
+</body>
+</html>

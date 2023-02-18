@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="vida.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>ciclo de vida de los componentes</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+
+    <main>
+      <div class="teoria">
+        <h1>ciclo de vida de los componentes</h1>
+        <p>
+          los ciclos de vida son metodos especiales que nos ofrece react para ejecutar ciertas cosas de manera automatica , esto tiene 3 fases.
+        </p>
+        <ol>
+          <li><b>Montaje:</b> cuando se inserta nuestros componentes en el DON.</li>
+          <li><b>Actualizacion</b> cuando se renderiza los componentes por ejemplo cuando cambian las propiedades.</li>
+          <li><b>Desmontaje</b> cuando ya no se necesita de un componente y desaparece.</li>
+        </ol>
+
+        <p>
+          estos nos ofrecen metodos especiales que ya nos ofrece react.
+        </p>
+        <h2>Montaje</h2>
+        <ol>
+          <li><b>Constructor</b> es la generacion de la instancia del componente.</li>
+          <li><b>render</b> este es el unico metodo necesario de un componente.</li>
+          <li><b>componentDidMount()</b> nos sirve para hacer peticiones asincronas . react recomienda hacer todas las peticiones en este metodo.</li>
+        </ol>
+        <h2>Actualizacion</h2>
+        <ol>
+          <li><b>render</b> se ejecuta esto porque el DOM se tiene que volver a pintar.</li>
+          <li><b>componentDidUpdate()</b> esto nos sirve para actualizar por si queremos lanzar sierta programacion nos puede servir.</li>
+        </ol>
+        <h2>Desmontaje</h2>
+        <ol>
+          <li><b>componentWillUnmount()</b> esto es para cuando el elemento ha sido removido pero podemos ejecutar algo antes que sea removido.</li>
+        </ol>
+
+        <h2>hacer reloj digital</h2>
+        <h2>codigo explicado</h2>
+        <div class="code_content">
+<textarea readonly class="codificacion cood">
+// importamos react y component para usarlo.
+import React from "react";
+import {Component} from "react";
+
+
+class Reloj extends Component{
+  constructor(props){
+    super(props)
+  }
+
+  componentWillUnmount(){
+    // el compoonente ha sido eliminado del DOM.
+  }
+
+  render(){
+    return <h5>{this.props.hora}</h5>
+  }
+}
+
+
+// creamos y exportamos una nueva clase en este caso se llamara "Life" en referencia al ciclo de vida del componente. 
+export class Life extends Component{
+
+  // ponemos nuestro Constructor y hacemos que erede "props"
+
+  constructor(props){
+    
+    // 1 el componente se inicializa pero aun no esta en el DOM.
+    
+    super(props)
+
+    this.state = {
+
+      // este metodo nos mostrara la hora en tiempo real. 
+
+      hora: new Date().toLocaleTimeString()
+
+      // esto nos servira paera poder mostrar o quitar el reloj
+
+      visible: false
+    
+    }
+
+    // temporizador nos servira para poder mostrar o ociltar el reloj.
+
+    this.temporizador = null
+  }
+
+  componentDidMount(){
+    // el componente ya se encuantra en el DOM.
+
+  }
+
+  // este metodo recibe dos parametros 1 el objeto con las props previas 2 el objeto con la version previa del estado. 
+
+  componentDidUpdate(prevProps,prevState){
+    // el componente / props se han cambiado / actualizado.
+
+    console.log(prevProps)
+    console.log(prevState)
+
+  }
+
+  tiktak=()=>{
+
+    // cada segundo que pase se actualizara el estado hora por la nueva hora que de el objeto date.
+
+      this.temporizador = setInterval(() => {
+        this.setState({
+          hora: new Date().toLocaleTimeString()
+        })
+      }, 1000);
+  }
+
+  // creamos ambos metodos que usaremos para poder ponerlos en los botones.
+
+  iniciar=()=>{
+    
+    // llamamos al metodo tiktak para cuando se haga click se ejecute.
+
+    this.tiktak()
+
+    this.setState({
+      visible: true
+    })
+
+  }
+  detener=()=>{
+
+    // decimos que se detenga el "setInterval" cuando se haga click a este metodo
+
+    clearInterval(this.temporizador)
+
+
+    this.setState({
+      visible: false
+    })
+
+  }
+
+  // usamos render debido a que forma parte del ciclo de vida del componente.
+
+  render(){
+    
+    // 4 el componente se dibuja o se redibuja por algun cambio en el DOM.
+
+    return(
+      <div>
+        <h4>ciclo de vida</h4>
+
+        // creamos 2 botones y llamamos a sus respectivos metodos para poder iniciar o detener el reloj.
+
+        {this.state.visible && <Reloj hora={this.state.hora}/>}
+        <button onClick={this.iniciar}>iniciar</button>
+        <button onClick={this.detener}>detener</button>
+      </div>
+    )
+  }
+}
+</textarea>
+          </code>
+        </div>
+
+        
+             <h2>codigo completo</h2>
+            <div class="code_content">
+              <code>
+                <div class="content_copy">
+                   <p class="t0 texto_copiado">texto copiado</p>
+                  <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion0 cood">
+import React from "react";
+import {Component} from "react";
+
+
+class Reloj extends Component{
+  constructor(props){
+    super(props)
+  }
+
+  componentWillUnmount(){
+    console.log("el compoonente ha sido eliminado del DOM.")
+  }
+
+  render(){
+    return <h5>{this.props.hora}</h5>
+  }
+}
+
+export class Life extends Component{
+  constructor(props){
+    super(props)
+    this.state = {
+      hora: new Date().toLocaleTimeString(),
+      visible: false
+    }
+    this.temporizador = null
+  }
+  componentDidMount(){
+    console.log("el componente ya se encuantra en el DOM.")
+  }
+
+  componentDidUpdate(prevProps,prevState){
+    console.log("el componente / props se han cambiado / actualizado.")
+    console.log(prevProps)
+    console.log(prevState)
+  }
+
+  tiktak=()=>{
+      this.temporizador = setInterval(() => {
+        this.setState({
+          hora: new Date().toLocaleTimeString()
+        })
+      }, 1000);
+  }
+  iniciar=()=>{ 
+    this.tiktak()
+    this.setState({
+      visible: true
+    })
+  }
+  detener=()=>{
+    clearInterval(this.temporizador)
+    this.setState({
+      visible: false
+    })
+  }
+  render(){ 
+    return(
+      <div>
+        <h4>ciclo de vida</h4>
+        {this.state.visible && <Reloj hora={this.state.hora}/>}
+        <button onClick={this.iniciar}>iniciar</button>
+        <button onClick={this.detener}>detener</button>
+      </div>
+    )
+  }
+}
+</textarea>
+              </code>
+            </div>
+            <div class="webside">
+              <h5>ciclo de vida</h5>
+              <p id="hora"></p>
+              <button id="iniciar">iniciar</button>
+              <button id="detener">detener</button>
+            </div>
+
+
+      </div>
+    </main>
+
+
+<footer>
+ <div class="footer_div">
+   <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+ </div>
+</footer>
+
+
+  <script src="vida.js"></script>
+</body>
+</html>

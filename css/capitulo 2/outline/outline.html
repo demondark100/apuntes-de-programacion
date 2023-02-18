@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="outline.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>sombras</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <main>
+        <div class="teoria">
+            <h1>outline</h1>
+            <p>
+                el outline es un borde que no afecta al espacio de las cajas como si pasa con los <a href="../bordes/bordes.html">bordes</a> en simples palabras el outline no ocupara espacio real en el sitio web.
+            </p>
+
+            <h2 id="border_">border</h2>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion0 cood">
+<div class="borde_1">
+    cajita
+</div>
+<div class="borde_2">
+    cajita
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion1 cood">
+.borde_1{
+    background-color: green;
+    border: 8px solid orangered;
+    margin: auto;
+    width: 35%;
+    height: 150px;
+    color: whitesmoke;
+}
+.borde_2{
+    background-color: blue;
+    margin: auto;
+    width: 35%;
+    height: 150px;
+    color: whitesmoke;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                como te fijas el borde al ser algo ancho empuja a las cajas moviendolas de su posision original debido a que border si ocupa un espacio real en el sitio web.
+            </p>
+            <div class="webside">
+                <div class="borde_1">
+                    cajita
+                </div>
+                <div class="borde_2">
+                    cajita
+                </div>
+            </div>
+
+            <h2>outline</h2>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion2 cood">
+<div class="outline_1">
+    cajita
+</div>
+<div class="outline_2">
+    cajita
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion3 cood">
+.outline_1{
+    background-color: green;
+    outline: 10px solid orangered;
+    margin: auto;
+    width: 35%;
+    height: 150px;
+    color: whitesmoke;
+}
+.outline_2{
+    background-color: blue;
+    margin: auto;
+    width: 35%;
+    height: 150px;
+    color: whitesmoke;
+}
+
+</textarea>
+                </code>
+            </div>
+            <p>
+                ahora si te fijas el borde del outline no empuja a la caja de abajo debido a que no ocupa un espacio como tal en el sitio web para fijarte mejor fijate en la palbra "cajita" en la propiedad <a href="#border_">border de arriba</a> empuja a la caja y se puede ver la palabra "cajita" por completo pero con el outline si te fijas la palabra "cajita" no sale por completo ya que no esta empujando a la cajita.
+            </p>
+            <div class="webside">
+                <div class="outline_1">
+                    cajita
+                </div>
+                <div class="outline_2">
+                    cajita
+                </div>
+            </div>
+
+            <p>
+                para terminar de entender el outline solo es para resaltar algo y no ocupara espacio real un ejemplo del uso del outline son los input.
+            </p>
+
+
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion4 cood">
+<div class="input_content">
+    <input type="text">
+    <input class="sin_outline" type="text">
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                    <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion5 cood">
+.sin_outline{
+    outline: none;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                para notar la diferencia has click primero en el primer input que dice "con outline" y notaras como es que aparece un borde pero que no ocupa espacio , luego has click en el input que dice "sin outline" y veras como esque ya no sale ese pequeño borde para resaltar los inputs que es el outline.
+            </p>
+            <div class="webside">
+                <div class="input_content">
+                    <input type="text" placeholder="con outline">
+                    <input class="sin_outline" type="text" placeholder="sin outline">
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+        <footer>
+            <div class="footer_div">
+                <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+            </div>
+        </footer>
+    
+    
+        <script src="outline.js"></script>
+    </body>
+</html>

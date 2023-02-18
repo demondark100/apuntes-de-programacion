@@ -1,0 +1,11 @@
+.responsive_content{
+    background-color: rgb(8, 163, 54);
+}
+
+
+@media screen and (min-width: 820px){
+    .responsive_content{
+        background-color: rgb(27, 61, 37);
+        color: #fff;
+    }
+}

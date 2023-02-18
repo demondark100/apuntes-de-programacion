@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="margin.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>margin</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+
+
+    <main>
+        <div class="teoria">
+            <h1>margin</h1>
+            <p>
+                el margin es similar al padding con la diferencia que en vez de qye la caja deje un espacio por la parte de adentro lo hace desde la parte de afuera. <br>
+                ejemplo.
+            </p>
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfyITuYnHozccMOWw1Q0AbqTGF0PArIuMXKlWtR9esF7LDxT0lyyFRRWCC5sqxMSULIVw&usqp=CAU" alt="margin img" title="margin">
+            <b>posdata no prestes atencion a la propiedad border por ahora lo aprenderemos mas adelante.</b>
+
+            <p>
+                si te fijas margin es el espacio de afuera y padding como ya vimos es el espacio de adentro de la caja. <br> <br>
+                margin al igual que padding tiene: <br>
+                margin-top: 15px; <br>
+                margin-right: 15px; <br>
+                margin-bottom: 15px; <br>
+                margin-left: 15px; <br>
+            </p>
+
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion0 cood">
+<div class="m_content">
+    <div class="arriba">
+        arriba
+    </div>
+    <div class="derecha">
+        derecha
+    </div>
+    <div class="abajo">
+        abajo
+    </div>
+    <div class="izquierda">
+        izquierda
+    </div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion1 cood">
+.m_content{
+    display: block;
+    margin: auto;
+}
+.m_content .arriba{
+    background-color: blue;
+    margin-top: 8px;
+}
+.m_content .derecha{
+    background-color: blue;
+    margin-right: 12px;
+}
+.m_content .abajo {
+    background-color: blue;
+    margin-bottom: 8px;
+}
+.m_content .izquierda{
+    background-color: blue;
+    margin-left: 12px;
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <div class="m_content">
+                    <div class="arriba">
+                        arriba
+                    </div>
+                    <div class="derecha">
+                        derecha
+                    </div>
+                    <div class="abajo">
+                        abajo
+                    </div>
+                    <div class="izquierda">
+                        izquierda
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                luego tenemops a la propiedad auto que es para centrar elementos es como de decir... <br>
+                margin-top , margin-right , margin-bottom , margin-left.
+            </p>
+
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion2 cood">
+<div class="content_margin">
+    contenido
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion3 cood">
+.content_margin{
+    display: block;
+    margin: auto;
+    background-color: red;
+    color:  white;
+    width: 20%;
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <div class="content_margin">
+                    contenido
+                </div>
+            </div>
+
+            <p>
+                ahora otro ejemplo del como usar margin.
+            </p>
+
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion4 cood">
+<div class="caja_1">
+    caja 1
+</div>
+<div class="caja_2">
+    caja 2
+</div>
+<div class="caja_3">
+    caja 3
+</div>
+<div class="caja_4">
+    caja 4
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                    <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion5 cood">
+.caja_1{
+    color: white;
+    background-color: blue;
+    margin: auto;
+    margin-top: 15px;
+    width: 15%;
+}
+.caja_2{
+    color: white;
+    background-color: blue;
+    margin: auto;
+    margin-top: 15px;
+    width: 15%;
+}
+.caja_3{
+    color: white;
+    background-color: blue;
+    margin: auto;
+    margin-top: 15px;
+    width: 15%;
+}
+.caja_4{
+    color: white;
+    background-color: blue;
+    margin: auto;
+    margin-top: 15px;
+    width: 15%;
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <div class="caja_1">
+                    caja 1
+                </div>
+                <div class="caja_2">
+                    caja 2
+                </div>
+                <div class="caja_3">
+                    caja 3
+                </div>
+                <div class="caja_4">
+                    caja 4
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+    
+    
+        <footer>
+            <div class="footer_div">
+                <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+            </div>
+        </footer>
+    
+    
+        <script src="margin.js"></script>
+    </body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize_clases.css">
+    <link rel="stylesheet" href="clases.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>clases y metodos</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+
+
+
+<main>
+    <div class="teoria">
+        <h1>clases y metodos</h1>
+        <p>
+            podemos hacer muchas cosas con las clases de los elementos. "classList"
+        </p>
+
+        <div class="code_content">
+            <code>
+                <p>HTML:</p>
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion0 cood">
+<p class="xd">xd </p>
+</textarea>
+                <p>javaScript:</p>
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion1 cood">
+const xd = document.querySelector(".xd"); 
+xd.classList.add(":v");
+</textarea>
+            </code>
+            <p>
+                con "add" podremos agregar una clase a un elemento html. 
+            </p>
+        </div>
+
+        <div class="code_content">
+            <code>
+                <p>HTML:</p>
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion2 cood">
+<p class="xd">xd </p>
+</textarea>
+
+                <p>javaScript:</p>
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion3 cood">
+const xd = document.querySelector(".xd"); 
+xd.classList.remove("xd");
+</textarea>
+            </code>
+            <p>
+                con "remove" podremos quitarle una clase a un elemento.
+            </p>
+        </div>
+
+        <div class="code_content">
+            <code>
+                <p>HTML:</p>
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion4 cood">
+<p class="xd">xd </p>
+</textarea>
+                <p>javaScript:</p>
+                <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                    <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion5 cood">
+const xd = document.querySelector(".xd"); 
+xd.classList.item(0);
+</textarea>
+            </code>
+            <p>
+                con "item" nos devolvera el indice de la clase que le indiquemos en este caso [0] = "xd". 
+            </p>
+        </div>
+
+        <div class="code_content">
+            <code>
+                <p>HTML:</p>
+                <div class="content_copy">
+                    <p class="t6 texto_copiado">texto copiado</p>
+                    <i class="copiar6 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion6 cood">
+<p class="xd">xd </p> 
+</textarea>
+
+                <p>javaScript:</p>
+                <div class="content_copy">
+                    <p class="t7 texto_copiado">texto copiado</p>
+                    <i class="copiar7 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion7 cood">
+const xd = document.querySelector(".xd"); 
+xd.classList.contains("xd"); 
+//resultado: true: 
+xd.classList.contains("a"); 
+//resultado: false 
+</textarea>
+            </code>
+            <p>
+                con "contains" verificarenos si un objeto lleva una clase o no es como un "includes".
+            </p>
+        </div>
+
+        <div class="code_content">
+            <code>
+                <p>HTML:</p>
+                <div class="content_copy">
+                    <p class="t8 texto_copiado">texto copiado</p>
+                    <i class="copiar8 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion8 cood">
+<p class="xd">xd </p>
+</textarea>
+
+                <p>javaScript:</p>
+                <div class="content_copy">
+                    <p class="t9 texto_copiado">texto copiado</p>
+                    <i class="copiar9 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion9 cood">
+const xd = document.querySelector(".xd"); 
+xd.classList.replace("xd","a");
+</textarea>
+            </code>
+            <p>
+                esto nos servira para reemplazar una clase por otra.
+            </p>
+            <p>
+                en el primer parametro ponemos la clase que queramos remplazar y en la segunda pondremos la clase que queramos agregar.
+            </p>
+        </div>
+
+        <div class="code_content">
+            <code>
+                <p>HTML:</p>
+                <div class="content_copy">
+                    <p class="t10 texto_copiado">texto copiado</p>
+                    <i class="copiar10 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion10 cood">
+<p class="xd">xd </p>
+</textarea>
+
+                <p>javaScript:</p>
+                <div class="content_copy">
+                    <p class="t11 texto_copiado">texto copiado</p>
+                    <i class="copiar11 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion11 cood">
+const xd = document.querySelector(".xd"); 
+xd.classList.toggle("a");
+</textarea>
+            </code>
+            <p>
+                con "toggle" verificaremos si el elemento tiene una clase y si no la tiene la agregara y si la tiene la eliminara.
+            </p>
+        </div>
+    </div>
+</main>
+
+
+
+
+<footer>
+    <div class="footer_div">
+        <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+    </div>
+</footer>
+
+
+<script src="clases.js"></script>
+</body>
+</html>

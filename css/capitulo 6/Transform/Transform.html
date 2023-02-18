@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="Transform.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>Transform</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+
+    <main>
+        <div class="teoria">
+            <h1>Transform</h1>
+            <p>
+                esta propiedad transforma al elemento de distintas formas que mas adelante veremos como , con mas adelante me refiero a ahora.
+            </p>
+
+
+            <h2>translate</h2>
+            <p>
+                "translate" es una propiedad que nos permitira posisionar/mover a un elemento. <br>
+                translate tiene 2 parametros: <br>
+                translate(de izquierda a derecha , de arriba a abajo); <br>
+                translate(150px , 120px); <br>
+                a este se le puede dar valores negativos para poder mover a izquierda y a arriba.
+            </p>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion0 cood">
+<div class="translate_content1">
+    <b>:D</b>
+</div>
+<div class="translate_content2">
+    <b>:D</b>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion1 cood">
+.translate_content1{
+    width: 120px;
+    height: 120px;
+    background-color: #000;
+    border-radius: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px groove #5fcdee;
+
+
+    transform: translate(110px,80px);
+}
+.translate_content1 b{
+    color: #fff;
+}
+
+.translate_content2{
+    width: 120px;
+    height: 120px;
+    background-color: #000;
+    border-radius: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px groove #5fcdee;
+
+
+    transform: translate(-30px,-140px);
+}
+.translate_content2 b{
+    color: #fff;
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <div class="translate_content1">
+                    <b>:D</b>
+                </div>
+                <div class="translate_content2">
+                    <b>:D</b>
+                </div>
+            </div>
+
+            <h2>scale</h2>
+            <p>
+                esta propiedad hace que un elemento sea mas grande con mas grande me refiero a que ira escalando a su tamaño que tiene por ejemplo si la caja tiene 120px width y 120px height a la hora de usar scale el width sera de 240 y el height sera de 240px y si ponemos scale(3) el width sera de 480px y el height sera de 480px y asi ira escalando segun como queramos. <br>
+                con scale tambien podemos volver mas pequeños a los elementos por ejemplo si la caja mide 120px de width y 120px de height al poner scale(0.5) se restara la mitad y la caja medira 60 de width y 60px de height. <br>
+                scale tiene dos parametros que son scaleX y scaleY , pero para resumir el codigo no los usaremos. <br>
+                pseudocodigo: <br>
+                scale(escala de la altura , escala del ancho); <br>
+                scale(2 , .4);
+            </p>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion2 cood">
+<div class="scale_content1">
+    <b>:D</b>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion3 cood">
+.contenedor_scale{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.scale_content1{
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    border-radius: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px groove #5fcdee;
+
+    transform: scale(2 , .4);
+}
+.scale_content1 b{
+    color: #fff;
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <div class="contenedor_scale">
+                    <div class="scale_content1">
+                        <b>:D</b>
+                    </div>
+                </div>
+            </div>
+            
+
+            <h2>skew</h2>
+            <p>
+                "skew" es una transformación que permite inclinar un elemento en dos dimensiones (horizontal y vertical). Esta propiedad se utiliza para distorsionar el elemento de manera que uno de sus lados se convierta en más largo o más corto que el otro. <br>
+                "skew" especifica la inclinación. Los valores pueden ser positivos o negativos ,
+                este tiene las coordenadas X y Y puedes jugar con estos elementos
+            </p>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion4 cood">
+<div class="skew_content">
+    <b>:D</b>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                    <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion5 cood">
+.skew_content{
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    border-radius: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px groove #5fcdee;
+
+    transform: skew(45deg,15deg);
+}
+.skew_content b{
+    color: #fff;
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <div class="skew_content">
+                    <b>:D</b>
+                </div>
+            </div>
+
+
+            <h2><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path#:~:text=The%20clip%2Dpath%20CSS%20property,while%20those%20outside%20are%20hidden." target="_blank">Clip Path</a></h2>
+            <p>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path#:~:text=The%20clip%2Dpath%20CSS%20property,while%20those%20outside%20are%20hidden." target="_blank">Clip Path</a> es un una propiedad que nos servira para dar formas a los elementos. hay un sitio web que nos facilitara su uso <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path#:~:text=The%20clip%2Dpath%20CSS%20property,while%20those%20outside%20are%20hidden." target="_blank">click aqui</a>
+            </p>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t6 texto_copiado">texto copiado</p>
+                    <i class="copiar6 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion6 cood">
+<div class="clip_content">
+    <p>
+        :D
+    </p>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t7 texto_copiado">texto copiado</p>
+                    <i class="copiar7 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion7 cood">
+.clip_content{
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    border-radius: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px groove #5fcdee;
+
+
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+.clip_content p{
+    color: #fff;
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <div class="clip_content">
+                    <p>
+                        :D
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+        <footer>
+            <div class="footer_div">
+                <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+            </div>
+        </footer>
+    
+    
+        <script src="Transform.js"></script>
+    </body>
+</html>

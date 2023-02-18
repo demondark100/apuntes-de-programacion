@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="operadoresLogicos.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>operadores logicos.</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <main>
+      <div class="teoria">
+        <h1>operadores logicos</h1>
+
+        <h2>booleanos</h2>
+        <p>
+          antes de continuar debemos saber que son los booleanos estos se dividen en solo dos.
+        </p>
+        <ol>
+          <li>true: verdadero</li>
+          <li>false: false</li>
+        </ol>
+        <p>
+          estos nos serviran mucho por ejemplo: <br>
+          5 es mayor que 2 = true/verdadero. <br>
+          2 es menor que 0 = false/falso. 
+        </p>
+        <h2>volvemos con operadores logicos</h2>
+        <p>
+          los operadores logicos son muy importantes en especial para las condicionales en total tenemos 3 operadores logicos que son:
+        </p>
+        <ol>
+          <li><b>and:</b> estos son como decir "y" por ejemplo lava los platos y tiende la ropa.</li>
+          <li><b>or:</b> esto es como decir limpia tu cuarto o limpia la sala.</li>
+          <li><b>not:</b> esto es lo contrario por ejemplo el contrario de true es false y asi.</li>
+        </ol>
+
+        <p>
+          estos se representan de las siguientes formas . de paso daremos un consepto mas practico.
+        </p>
+        <ol>
+          <li>and = &: se ejecuta cuando las dos condiciones devuelve true de lo contrario no se ejecutara.</li>
+          <li>or = |: se ejecuta cuando los dos o solo uno devuelve true.</li>
+          <li>not: hara lo contrario por ejemplo si una variable es true con not hara que la variable sea false.</li>
+        </ol>
+        <h2>ejercicios</h2>
+        <h2>and</h2>
+        <p>
+          hacer un programa que simule ser una mama que manda a comprar dos cosas arroz y papas si no se compra ambos volver a mandar al hijo a la tienda.
+        </p>
+        <h3>se cumple la condicion</h3>
+        <div class="code_content">
+          <code>
+            <div class="content_copy">
+               <p class="t0 texto_copiado">texto copiado</p>
+              <i class="copiar0 fa-solid fa-copy"></i>
+            </div>
+<textarea readonly class="codificacion codificacion0 cood">
+productos = {
+  "compra_1": "arroz",
+  "compra_2": "papas"
+}
+
+if prductos["compra_1"] == "arroz" and prductos["compra_2"] == "papas":
+  print("gracias por comprar el mandado");
+else:
+  print("vuelve a la tienda a comprar lo que pedi.");
+</textarea>
+          </code>
+        </div>
+        <div class="consola">
+          gracias por comprar el mandado
+          <div id="palito"></div>
+        </div>
+        <h3>no se cumple la condicion</h3>
+        <div class="code_content">
+          <code>
+            <div class="content_copy">
+               <p class="t1 texto_copiado">texto copiado</p>
+              <i class="copiar1 fa-solid fa-copy"></i>
+            </div>
+<textarea readonly class="codificacion codificacion1 cood">
+productos = {
+  "compra_1": "arroz",
+  "compra_2": "papas lays"
+}
+
+if prductos["compra_1"] == "arroz" and prductos["compra_2"] == "papas":
+  print("gracias por comprar el mandado");
+else:
+  print("vuelve a la tienda a comprar lo que pedi.");
+
+</textarea>
+          </code>
+        </div>
+        <div class="consola">
+          vuelve a la tienda a comprar lo que pedi.
+          <div id="palito"></div>
+        </div>
+
+        <h2>or</h2>
+        <p>
+          hacer un programa que simule ser un adolecente que desea ir a una fiesta pero no podra ir en caso que: <br>
+          no limpie su cuarto o lave los platos , si hace uno de los dos deberes podra ir a la fiesta pero si no cumple ninguno de sus deberes no ira a ninguna fiesta.
+        </p>
+        
+        <h3>se cumple la condicion</h3>
+        <div class="code_content">
+          <code>
+            <div class="content_copy">
+               <p class="t2 texto_copiado">texto copiado</p>
+              <i class="copiar2 fa-solid fa-copy"></i>
+            </div>
+<textarea readonly class="codificacion codificacion2 cood">
+deberes = {
+  "deber_1": "limpiar cuarto",
+  "deber_2": "no lavare los platos :v"
+}
+if deberes["deber_1"] == "limpiar cuarto" or deberes["deber_2"] == "lavar platos":
+  primt("bueno ve a la fiesta pero cuando regreses tendras que hacer el deber que te falta.");
+else:
+  print("no iras a ningun lado no hiciste nada.")
+</textarea>
+          </code>
+        </div>
+        <div class="consola">
+          bueno ve a la fiesta pero cuando regreses tendras que hacer el deber que te falta.
+          <div id="palito"></div>
+        </div>
+
+        <h3>no se cumple la condicion</h3>
+        <div class="code_content">
+          <code>
+            <div class="content_copy">
+               <p class="t3 texto_copiado">texto copiado</p>
+              <i class="copiar3 fa-solid fa-copy"></i>
+            </div>
+<textarea readonly class="codificacion codificacion3 cood">
+deberes = {
+  "deber_1": "no limpiare el cuarto que flojera",
+  "deber_2": "no lavare los platos :v"
+}
+if deberes["deber_1"] == "limpiar cuarto" or deberes["deber_2"] == "lavar platos":
+  primt("bueno ve a la fiesta pero cuando regreses tendras que hacer el deber que te falta.");
+else:
+  print("no iras a ningun lado no hiciste nada.")
+</textarea>
+          </code>
+        </div>
+        <div class="consola">
+          no iras a ningun lado no hiciste nada.
+          <div id="palito"></div>
+        </div>
+
+        <h2>not</h2>
+        <p>
+          bueno not solo es la contraria de true y false no se me ocurre ningun problema estoy pendejo XD.
+        </p>
+
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer_div">
+          <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+      </div>
+  </footer>
+
+
+  <script src="operadoresLogicos.js"></script>
+</body>
+</html>

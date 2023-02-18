@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="flexWrap.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>flex wrap</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+    <main>
+        <div class="teoria">
+            <h1>flex wrap</h1>
+            <p>
+                esta propiedad nos permite que las cajas conserven el ancho exacto que nosotros indicamos ahora veras a lo que me refiero.
+            </p>
+            <h2>sin wrap</h2>
+            <p>
+                como te das cuenta a medida que pongas la resolucion mas pequeña las cajas se iran haciendo mas pequeñas perdiendo la medida original que nosotros dimos.
+            </p>
+            <a class="resultado" href="wrap1/wrap1.html">sin wrap</a>
+
+            <h2>con wrap</h2>
+            <p>
+                ahora veras como es que las cajas se matienen con su misma medida por mas que la resolucion se haga mas pequeña.
+            </p>
+            <a class="resultado" href="wrap2/wrap2.html">con wrap</a>
+
+
+            <h2>uso de wrap</h2>
+            <p>
+                wrap tiene las siguientes propiedades. <br> <br>
+                flex-wrap: wrap; con esto decimos que se active esta propiedad <br>
+                flex-wrap: nowrap; con esto decimos que se desactive esta propiedad.
+            </p>
+
+            <h2>nowarp</h2>
+            <p>
+                nowrap siempre viene por defecto a la hora de trabajar con flexbox. <br>
+                flex-wrap: nowrap;
+            </p>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion0 cood">
+<div class="wrap_content1">
+    <div>
+        caja1.
+    </div>
+    <div>
+        caja2.
+    </div>
+    <div>
+        caja 3.
+    </div>
+    <div>
+        caja 4.
+    </div>
+    <div>
+        caja5.
+    </div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <p>
+                en un caso real no seria necesario poner "flex-wrap: nowrap;" debido a que esta propiedad esta por defecto.
+            </p>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion1 cood">
+.wrap_content1{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.wrap_content1 div{
+    background-color: #3681e4;
+    margin: 15px;
+    width: 200px;
+    height: 200px;
+    color: #fff;
+}
+</textarea>
+                </code>
+            </div>
+            <a class="resultado" href="wrap3/wrap3,.html">resultado</a>
+
+            <h2>wrap</h2>
+            <p>
+                "wrap" a diferencia de nowrap si se debe activar recuerda que es para que las cajas del contenedor mantengan las medidas que nosotros le dimos.
+            </p>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion2 cood">
+<div class="content_wrap">
+    <div>
+        caja 1.
+    </div>
+    <div>
+        caja 2.
+    </div>
+    <div>
+        caja 3.
+    </div>
+    <div>
+        caja 4.
+    </div>
+    <div>
+        caja 5.
+    </div>
+    <div>
+        caja 6.
+    </div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion3 cood">
+.content_wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content_wrap div{
+    background-color: aqua;
+    margin: 15px;
+    width: 200px;
+    height: 200px;
+}
+</textarea>
+                </code>
+            </div>
+            <a class="resultado" href="wrap4/wrap4.html">resultado</a>
+
+            <h2>flex-flow</h2>
+            <p>
+                tenemos una forma de abreviarlo en una sola linea de codigo. <br> <b>
+                    "flex-flow: row nowrap;". <br>
+                    parametro 1 = fila/columna. <br>
+                    parametro 2 = wrap/ nowrap
+                </b>
+            </p>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion4 cood">
+<div class="content_cajas">
+    <div>
+        caja 1.
+    </div>
+    <div>
+        caja 2.
+    </div>
+    <div>
+        caja 3.
+    </div>
+    <div>
+        caja 4.
+    </div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                    <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion5 cood">
+.content_cajas{
+    display: flex;
+    flex-flow: row-reverse wrap;
+}
+.content_cajas div{
+    background-color: #000;
+    color: #fff;
+    width: 200px;
+    height: 200px;
+    margin: 15px;
+}
+</textarea>
+                </code>
+            </div>
+            <a class="resultado" href="wrap5/wrap5.html">resultado</a>
+
+
+            <h2>wrap-reverse</h2>
+            <p>
+                esta propiedad es igual que wrap pero en reversa osea que en vez de ir abajo a medida que las resoluciones se hagan pequeñas se iran para ariiba.
+            </p>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t6 texto_copiado">texto copiado</p>
+                    <i class="copiar6 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion6 cood">
+<div class="wrap_content">
+    <div>
+        caja 1.
+    </div>
+    <div>
+        caja 2.
+    </div>
+    <div>
+        caja 3.
+    </div>
+    <div>
+        caja 4.
+    </div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t7 texto_copiado">texto copiado</p>
+                    <i class="copiar7 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion7 cood">
+.wrap_content{
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+.wrap_content div{
+    background-color: #233cca;
+    width: 200px;
+    height: 200px;
+    margin: 15px;
+}
+.wrap_content div:nth-child(1){
+    background-color: #ff2323;
+}
+.wrap_content div:nth-child(4){
+    background-color: #40ffa6;
+}
+</textarea>
+                </code>
+            </div>
+
+            <a class="resultado" href="wrap6/wrap6.html">resultado</a>
+
+
+            <a class="siguiente" href="../alineacion flex/alineacion.html">alineacion en flex =></a>
+
+        </div>
+    </main>
+    
+    
+        <footer>
+            <div class="footer_div">
+                <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+            </div>
+        </footer>
+    
+    
+        <script src="flexWrap.js"></script>
+    </body>
+</html>

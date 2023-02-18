@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="Objeto Navigator.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Objeto Navigator</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+<main>
+    <div class="teoria">
+        <h1>Objeto Navigator</h1>
+        <p>veamos lo estandar osea lo mas utilizado de navigator.</p>
+        
+        <!-- navigator estandar -->
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion0 cood">
+navigator.appCodeName;
+navigator.appName;
+navigator.appVersion;
+navigator.connection;
+navigator.geolocation;
+navigator.hardwareConcurrency;
+navigator.language;
+navigator.languages;
+navigator.mimeTypes;
+navigator.onLine;
+navigator.userAgent;
+navigator.cookieEnabled;
+navigator.permissions;
+navigator.platform;
+navigator.plugins;
+navigator.product;
+navigator.serviceWorker;
+</textarea>
+            </code>
+        </div>
+
+        <h2>appCodeName y appName</h2>
+        <div class="code_content">
+            <p>"appCodeName" nos servira para saber el nombre del navegador pero no siempre es asertado.</p>
+            <p>"appName" nos devolvera el nombre oficial del navegador.</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion1 cood">
+console.log(navigator.appCodeName);
+    // resultado:
+    // Mozilla.
+console.log(navigator.appName);
+    // resultado:
+    // Netscape.
+</textarea>
+            </code>
+        </div>
+
+        <h2>connection</h2>
+        <div class="code_content">
+            <p>esto nos servira para saber si estamos conectados o no.</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion2 cood">
+console.log(navigator.connection);
+</textarea>
+            </code>
+        </div>
+
+        <h2>geolocation</h2>
+        <div class="code_content">
+            <p>"geolocation" es para saber la localizacion ya trabajamos con esa api.</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion3 cood">
+console.log(navigator.geolocation);
+</textarea>
+            </code>
+        </div>
+
+        <h2>hardwareConcurrency</h2>
+        <div class="code_content">
+            <p>"hardwareConcurrency" nos devuelve la cantidad de nucleos de procesador logico que hay.</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion4 cood">
+console.log(navigator.hardwareConcurrency);
+    // resultado:
+    // 2
+    // en mi caso solo hay 2.
+</textarea>
+            </code>
+        </div>
+
+        <h2>language y languages</h2>
+        <div class="code_content">
+            <p>"language" nos devolvera el idioma que el usuario eligio o el que trae por defecto en este caso "ES" de español.</p>
+            <p>"languages" nos devolvera un arreglo con la cantidad de lenguages que el usuario entienda en este caso solo español.</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                    <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion5 cood">
+console.log(navigator.language);
+    // resultado:
+    // es-ES
+console.log(navigator.languages);
+    // resultado:
+    // ['es-ES']0: "es-ES" 
+    // length: 1
+</textarea>
+            </code>
+        </div>
+
+        <h2>mimeTypes</h2>
+        <div class="code_content">
+            <p>esto nos devolvera lo que se envia en los encabezados.</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t6 texto_copiado">texto copiado</p>
+                    <i class="copiar6 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion6 cood">
+console.log(navigator.mimeTypes);
+</textarea>
+            </code>
+        </div>
+
+        <h2>online</h2>
+        <div class="code_content">
+            <p>esto nos devolvera si el sitio web esta online o no.</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t7 texto_copiado">texto copiado</p>
+                    <i class="copiar7 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion7 cood">
+console.log(navigator.onLine);
+    // rresultado:
+    // en este caso true.
+</textarea>
+            </code>
+        </div>
+
+        <h2>userAgent</h2>
+        <div class="code_content">
+            <p>"userAgent" nos devolvera la informacion del navegador y no siempre nos dara la respuesta correcta.</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t8 texto_copiado">texto copiado</p>
+                    <i class="copiar8 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion8 cood">
+console.log(navigator.userAgent);
+    // resultado:
+    
+    // Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
+</textarea>
+            </code>
+        </div>
+
+        <h2>cookieEnabled</h2>
+        <div class="code_content">
+            <p>"cookieEnabled" nos dira si las cookies estan activadas y si podemos trabajar con ellas.</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t9 texto_copiado">texto copiado</p>
+                    <i class="copiar9 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion9 cood">
+console.log(navigator.cookieEnabled);
+    // resultado:
+    // true.
+</textarea>
+            </code>
+        </div>
+
+        <h2>permissions</h2>
+        <div class="code_content">
+            <p>"permissions" es un objeto que nos permite acceder a los permisos del navegador como microfono,camara,etc.</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t10 texto_copiado">texto copiado</p>
+                    <i class="copiar10 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion10 cood">
+console.log(navigator.permissions);
+</textarea>
+            </code>
+        </div>
+
+        <h2>platform</h2>
+        <div class="code_content">
+            <p>esto nos dira en que plataforma/sistema operativo estamos en este caso estamos en windows.</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t11 texto_copiado">texto copiado</p>
+                    <i class="copiar11 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion11 cood">
+console.log(navigator.platform);
+    // resultado:
+    // Win32
+</textarea>
+            </code>
+        </div>
+
+        <h2>plugins</h2>
+        <div class="code_content">
+            <p>"plugins" nos mostrra los plugins instalados en el navegador.</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t12 texto_copiado">texto copiado</p>
+                    <i class="copiar12 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion12 cood">
+console.log(navigator.plugins);
+</textarea>
+            </code>
+        </div>
+
+        <h2>product</h2>
+        <div class="code_content">
+            <p>"product" se usa por problemas de compatibilidad.</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t13 texto_copiado">texto copiado</p>
+                    <i class="copiar13 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion13 cood">
+console.log(navigator.product);
+    // resultado:
+    // Gecko
+</textarea>
+            </code>
+        </div>
+
+        <h2>serviceWorker</h2>
+        <div class="code_content">
+            <p>"serviceWorker" trabaja de forma muy distinta a worker ya que este se puede ejecutar mientras el sitio web esta cerrado,etc.</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t14 texto_copiado">texto copiado</p>
+                    <i class="copiar14 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion14 cood">
+console.log(navigator.serviceWorker);
+</textarea>
+            </code>
+        </div>
+
+    </div>
+</main>
+
+
+    <footer>
+        <div class="footer_div">
+            <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+        </div>
+    </footer>
+    
+    
+        <script src="Objeto Navigator.js"></script>
+    </body>
+</html>

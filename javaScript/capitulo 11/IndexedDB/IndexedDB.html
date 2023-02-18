@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="IndexedDB..css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>IndexedDB</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+<main>
+    <div class="teoria">
+        <h1>IndexedDB</h1>
+        <h2>CRUD:</h2>
+        <p>C: <b>create</b></p>
+        <p>R: <b>read</b></p>
+        <p>U: <b>update</b></p>
+        <p>D: <b>delete</b></p>
+        <p>
+            "crud" son las 4 operaciones basicas que debe tener toda base de datos.
+        </p>
+
+        <div class="code_content">
+            <code>
+                <h2>metodo open</h2>
+                <p>con "open" abriremos una base de datos si ya esta creada pero si no esta creada creara una base de datos</p>
+                <p>recomendacion siempre crear la variable con ek nombre "IDBRequest" para evitar ptoblemas o evitar usar window.indexedDB</p>
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion0 cood">
+const IDBRequest = indexedDB.open("nombres");
+
+//en el parametro debemos el nombre que queramos en este caso sera nombres.
+</textarea>
+            </code>
+        </div>
+
+        <div class="code_content">
+            <h2>upgradeneeded</h2>
+            <p>esto comprobara si esta creado si no lo esta lo creara</p>
+            <p>no copees este codigo porque solo es para saber para que sirve.</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion1 cood">
+IDBRequest.addEventListener("upgradeneeded",()=>{
+    console.log("se creo correctamente");
+})
+</textarea>
+            </code>
+        </div>
+
+        <div class="code_content">
+            <h2>crear almacen.</h2>
+            <code>
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion2 cood">
+IDBRequest.addEventListener("upgradeneeded",()=>{
+    const db = IDBRequest.result;
+
+    // aqui solo estamos solicitando abrir la base de datos.
+    // la varible db hace referencia a base de datos.
+    db.createObjectStore("mi base de datos 😎😎😎",{
+        autoIncrement: true
+
+        // con "autoIncrement" decimos que se incremente automaticamente la tabla y que se ponha en un registro unico como si fuese un id por ejemplo si ponemos un nombre se guardara en un numero unico y asi se ira incementando los numeros de forma automatica.
+    })
+
+    // aqui estamos creando el almacenamiento.
+    // parametro 1 ponemos como se llamara el almacenamiento en este caso "nombres"
+    // parametro 2 ponemos la configuracion del almaacenamiento.
+
+})
+</textarea>
+            </code>
+            <p>
+                aparate de "autoIncrement" tenemos a "keyPath" el cual asocia por nombres.
+            </p>
+        </div>
+
+        <div class="code_content">
+            <h2>success</h2>
+            <p>esto metodo nos dira si todo salio correctamente.</p>
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion3 cood">
+IDBRequest.addEventListener("success",()=>{
+    console.log("todo salio correctamente");
+})
+
+// este metodo se ejecutara a travez de un evento.
+</textarea>
+        </div>
+
+        <div class="code_content">
+            <h2>metodo error</h2>
+            <p>esto se ejecutara cuando no se pueda abrir la base de datos.</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion4 cood">
+IDBRequest.addEventListener("error",()=>{
+    console.log("hubo un error al abrir la base de datos.")
+})
+
+// este metodo tambien se ejecuta a travez de eventos.
+</textarea>
+            </code>
+        </div>
+
+        <div class="code_content">
+            <h2>funcion crear objetos.</h2>
+            <p>
+                ahora con esto trabajaremos con el c.r.u.d.
+            </p>
+            <code>
+                <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                    <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion5 cood">
+const addObjetos = objetos =>{
+    const db = IDBRequest.result
+    const IDBtransaction = db.transaction("nombres","readwrite")
+        
+    // aqui abriremos una operacion para que nos deje hacer lo que queramos.
+    // parametro 1 donde queremos abrir? en este caso en nombres.
+    // parametro 2 que queremos hacer? readwrite(leer o escribir) o readonly(solo leer)
+        
+    const objectStore = IDBtransaction.objectStore("nombres");
+        
+    // aqui le decimos que se ejecutara en el objectStore nombres.
+        
+    objectStore.add(objetos)
+        
+    // y aqui solo estamos agregando los nombres en la base de datos.
+        
+    IDBtransaction.addEventListener("complete",()=>{
+        console.log("se agrego correctamente")
+        
+        // este mensaje se mostrara cuando seya terminado de agregar.
+    })
+}
+</textarea>
+            </code>
+        </div>
+
+
+
+    <div class="code_content">
+        <p>ahora para leer el objeto</p>
+        <code>
+                <div class="content_copy">
+                    <p class="t6 texto_copiado">texto copiado</p>
+                    <i class="copiar6 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion6 cood">
+const leerObjeto = objeto =>{
+    const db = IDBRequest.result;
+    const IDBtransaction = db.transaction("nombres","readonly");
+    const objectStore = IDBtransaction.objectStore("nombres");
+    const cursor = objectStore.openCursor();
+    cursor.addEventListener("success",()=>{
+        if (cursor.result) {
+            console.log(cursor.result.value);
+            cursor.result.openCursor()
+        }
+    })
+}
+</textarea>
+        </code>
+    </div>
+
+
+    <div class="code_content">
+        <p>modificacion de objetos</p>
+        <code>
+                <div class="content_copy">
+                    <p class="t7 texto_copiado">texto copiado</p>
+                    <i class="copiar7 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion7 cood">
+const modificarObjetos = (key,objeto) =>{
+    const db = IDBRequest.result
+    const IDBtransaction = db.transaction("nombres","readwrite")
+    const objectStore = IDBtransaction.objectStore("nombres");
+    objectStore.put(objeto,key)
+        
+    // aqui cambiamos al "add" por put y ponemos los dos parametros lo demas es igual
+    
+    IDBtransaction.addEventListener("complete",()=>{
+        console.log("objeto modificado correctamente");
+    })
+}
+modificarObjetos(2,{nombre:"otro name"})
+</textarea>
+        </code>
+    </div>
+
+    <div class="code_content">
+        <p>eliminar objetos.</p>
+        <code>
+                <div class="content_copy">
+                    <p class="t8 texto_copiado">texto copiado</p>
+                    <i class="copiar8 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion8 cood">
+const eliminarObjetos = key =>{
+    const db = IDBRequest.result
+    const IDBtransaction = db.transaction("nombres","readwrite")
+    const objectStore = IDBtransaction.objectStore("nombres");
+    objectStore.delete(key)
+    
+        // aqui ya no ponemos "add" ni "put" ponemos "delete" y el parametro key.
+    
+    IDBtransaction.addEventListener("complete",()=>{
+        console.log("objeto eliminado correctamente");
+    })
+}
+</textarea>
+        </code>
+    </div>
+    <div class="code_content">
+        <p>ahora todo el codigo.</p>
+        <code>
+                <div class="content_copy">
+                    <p class="t9 texto_copiado">texto copiado</p>
+                    <i class="copiar9 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion9 cood">
+const IDBRequest = indexedDB.open("nombres");
+
+IDBRequest.addEventListener("upgradeneeded",()=>{
+    const db = IDBRequest.result;
+    db.createObjectStore("mi base de datos 😎😎😎",{
+        autoIncrement: true
+    })
+})
+    
+IDBRequest.addEventListener("success",()=>{
+    console.log("todo salio correctamente");
+})
+    
+IDBRequest.addEventListener("error",()=>{
+    console.log("hubo un error al abrir la base de datos.")
+})
+
+const addObjetos = objetos =>{
+    const db = IDBRequest.result
+    const IDBtransaction = db.transaction("nombres","readwrite")
+    const objectStore = IDBtransaction.objectStore("nombres");
+    objectStore.add(objetos)
+    IDBtransaction.addEventListener("complete",()=>{
+        console.log("se agrego correctamente")
+    })
+}
+    
+const leerObjeto = () =>{
+    const db = IDBRequest.result;
+    const IDBtransaction = db.transaction("nombres","readonly");
+    const objectStore = IDBtransaction.objectStore("nombres");
+    const cursor = objectStore.openCursor();
+    cursor.addEventListener("success",()=>{
+        if (cursor.result) {
+            console.log(cursor.result.value);
+            cursor.result.openCursor()
+        }
+    })
+}
+
+const modificarObjetos = (key,objeto) =>{
+    const db = IDBRequest.result
+    const IDBtransaction = db.transaction("nombres","readwrite")
+    const objectStore = IDBtransaction.objectStore("nombres");
+    objectStore.put(objeto,key)
+    IDBtransaction.addEventListener("complete",()=>{
+        console.log("objeto modificado correctamente");
+    })
+}
+modificarObjetos(2,{nombre:"otro name"})
+
+const eliminarObjetos = key =>{
+    const db = IDBRequest.result
+    const IDBtransaction = db.transaction("nombres","readwrite")
+    const objectStore = IDBtransaction.objectStore("nombres");
+    objectStore.delete(key)
+    IDBtransaction.addEventListener("complete",()=>{
+        console.log("objeto eliminado correctamente");
+    })
+}
+</textarea>
+            </code>
+        </div>
+    </div>
+</main>
+
+
+
+<footer>
+    <div class="footer_div">
+        <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+    </div>
+</footer>
+
+
+<script src="IndexedDB..js"></script>
+</body>
+</html>

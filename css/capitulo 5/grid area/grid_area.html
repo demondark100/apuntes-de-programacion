@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="grid_area.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>grid area</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+    <main>
+        <div class="teoria">
+            <h1>grid area</h1>
+
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion0 cood">
+<div class="grid_content">
+    <div class="grid_item grid_header">
+        <nav>
+            <ul>
+                <li><a href="#">xd</a></li>
+                <li><a href="#">no click</a></li>
+                <li><a href="#">tengo hambre</a></li>
+                <li><a href="#">it`s hot</a></li>
+                <li><a href="#">mi no enterder ingles</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="grid_item grid_main">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum voluptates deleniti magnam saepe iste et nemo? Perferendis quos laborum optio quasi deserunt itaque. Sequi eos accusamus iste. Aut, officia quas.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam aspernatur, temporibus ipsum consequuntur accusamus quo laborum! Excepturi repellendus ullam ab adipisci deleniti, veritatis quam vero. Omnis voluptatibus ratione eaque at!
+        </p>
+    </div>
+    <div class="grid_item grid_aside">
+        <b>
+            publicidad.
+        </b>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae aut laboriosam magnam consequatur quaerat incidunt molestiae eveniet dolor, odio aperiam consectetur eaque velit, facere quisquam animi nam quos nostrum. Culpa.
+        </p>
+    </div>
+    <div class="grid_item grid_footer">
+        <p>
+            nunca se que poner aqui xd.
+        </p>
+    </div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion1 cood">
+.grid_content{
+    background-color: #000;
+    margin: 10px;
+    display: grid;
+    grid-template-rows: repeat(auto-fill,1fr);
+    border: 2px solid #000;
+    height: 90%;
+
+
+    grid-template-areas: 
+    "header header header"
+    "aside main main"
+    "aside main main"
+    "footer footer footer"
+    ;
+}
+
+.grid_header{
+    background-color: #91ff38;
+    grid-area: header;
+}
+.grid_main{
+    background-color: #ff650c;
+    grid-area: main;
+    padding: 15px;
+}
+.grid_aside{
+    background-color: #34afe7;
+    grid-area: aside;
+    padding: 15px;
+}
+.grid_footer{
+    background-color: #69ff2e;
+    grid-area: footer;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                "grid-template-areas" asignaremos / vrearemos las areas para los elementos. <br>
+                "grid-area" es para asignarle un area a un elemento.
+            </p>
+            <div class="webside">
+                <div class="grid_content">
+                    <div class="grid_item grid_header">
+                        <nav>
+                            <ul>
+                                <li><a href="#">xd</a></li>
+                                <li><a href="#">no click</a></li>
+                                <li><a href="#">tengo hambre</a></li>
+                                <li><a href="#">it`s hot</a></li>
+                                <li><a href="#">mi no enterder ingles</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="grid_item grid_main">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum voluptates deleniti magnam saepe iste et nemo? Perferendis quos laborum optio quasi deserunt itaque. Sequi eos accusamus iste. Aut, officia quas.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam aspernatur, temporibus ipsum consequuntur accusamus quo laborum! Excepturi repellendus ullam ab adipisci deleniti, veritatis quam vero. Omnis voluptatibus ratione eaque at!
+                        </p>
+                    </div>
+                    <div class="grid_item grid_aside">
+                        <b>
+                            publicidad.
+                        </b>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae aut laboriosam magnam consequatur quaerat incidunt molestiae eveniet dolor, odio aperiam consectetur eaque velit, facere quisquam animi nam quos nostrum. Culpa.
+                        </p>
+                    </div>
+                    <div class="grid_item grid_footer">
+                        <p>
+                            nunca se que poner aqui xd.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <a class="siguiente" href="../nombre_grid/nombre_grid.html">nombrar grid lineas=></a>
+
+
+        </div>
+    </main>
+    
+        <footer>
+            <div class="footer_div">
+                <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+            </div>
+        </footer>
+    
+    
+        <script src="grid_area.js"></script>
+    </body>
+</html>

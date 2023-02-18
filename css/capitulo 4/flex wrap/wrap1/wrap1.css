@@ -1,0 +1,12 @@
+.content{
+    display: flex;
+}
+.content div{
+    width: 180px;
+    height: 180px;
+    background-color: #59ff4a;
+    margin: 18px;
+}
+p{
+    font-size: 1.2rem;
+}

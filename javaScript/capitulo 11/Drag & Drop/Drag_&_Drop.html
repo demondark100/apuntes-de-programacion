@@ -1,0 +1,154 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="Drag_&_Drop.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title> Drag & Drop</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+
+<main>
+    <div class="teoria">
+        <h1>Drag y Drop</h1>
+        <p>
+            Drag y Drop es el arrastre y desplazamiento de los elementos , todos los objetos tienen drag osea que si arrastras cualquier objeto el ebjeto sentira el drag a la hora de desplazarlo.
+        </p>
+        <div class="code_content">
+            <h2>dragstart</h2>
+            <p>esto es el inicio del arrastre.</p>
+            <h2>drag</h2>
+            <p>esto es el desplazamiento.</p>
+            <h2>dragend</h2>
+            <p>esto es cuando el desplazamiento finaliza</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion0 cood">
+const circulo = document.querySelector(".circulo"); 
+circulo.addEventListener("dragstart",()=>console.log(1)) 
+circulo.addEventListener("drag",()=>console.log(2)) 
+circulo.addEventListener("dragend",()=>console.log(3))               
+</textarea>
+            </code>
+        </div>
+        <p>desplaza el circulo y veras como aparece 1,2,3 posdata manten el click en el circulo por un momento para que funcione.</p>
+        <div class="content">
+            <div class="circulo"></div>
+            <div class="cuadrado"></div>
+            <b class="arraster_1"></b>
+            <b class="desplazamiento_1"></b>
+            <b class="final_1"></b>
+        </div> 
+        
+        <div class="code_content">
+                <h2>dragenter</h2>
+                <p>esto verifica que el elemento este entrando</p>
+                <h2>dragover</h2>
+                <p>este verifica que se mueva dentro del elemento osea que el elemento que arrastramos siga dentro del otro elemento</p>
+                <h2>drop</h2>
+                <p>verifica cuando se suelta el elemento que estamos arrastrando</p>
+                <h2>dragleave</h2>
+                <p>esto verifica cuando el elemento se va osea se sale del elemento</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion1 cood">
+const cuadrado_2 = document.querySelector(".cuadrado_2") 
+cuadrado_2.addEventListener("dragenter",()=>console.log(1)) 
+cuadrado_2.addEventListener("dragover",(e)=>{ 
+    e.preventDefault();
+    console.log(2)
+}) 
+cuadrado_2.addEventListener("drop",()=>console.log(3)) 
+cuadrado_2.addEventListener("dragleave",()=>console.log(4))                 
+</textarea>
+            </code>
+        </div>
+        <p>
+            abre la consola con F12 , arrastra el circulo hacia el rectangulo , mueve el circulo de adentro a afuera del rectangulo y suelta el circulo dentro del rectangulo.
+        </p>
+        <div class="content_2">
+            <div class="circulo_2"></div>
+            <div class="cuadrado_2"></div>
+        </div> 
+
+        <div class="code_content">
+            <h2>setData</h2>
+            <h2>getData</h2>
+            <p>
+                con esto transferiremos los datos en este caso transferiremos el nombre de la clase del contenido.
+            </p>
+                <code>
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion2 cood">
+const circulo_3 = document.querySelector(".circulo_3");
+circulo_3.addEventListener("dragstart",(e)=>{
+    e.dataTransfer.setData("class",e.target.className)
+    let mostrar = e.dataTransfer.getData("class")
+    console.log(mostrar)
+})                 
+</textarea>
+                </code>
+        </div>
+        <div class="content_3">
+            <div class="circulo_3"></div>
+            <div class="cuadrado_3"></div>
+        </div> 
+    </div>
+</main>
+
+
+
+
+
+<footer>
+    <div class="footer_div">
+        <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+    </div>
+</footer>
+
+
+<script src="Drag_&_Drop.js"></script>
+</body>
+</html>

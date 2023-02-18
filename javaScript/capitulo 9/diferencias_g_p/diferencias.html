@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="diferencias.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>diferencias get y post</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+
+
+
+<main>
+    <div class="teoria">
+        <h1>diferencia get y post</h1>
+        <a href="https://pc-solucion.es/wp-content/uploads/2018/06/deferencias-entre-metodo-post-y-get.jpg">click aqui para ver las diferencias entre get y post.</a>
+        <div class="code_content">
+            <h2>ajax</h2>
+            <code>
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion0 cood">
+let peticion = new XMLHttpRequest 
+peticion.addEventListener("load",()=>{ 
+    let trabajar;
+    if(peticion.status == 200 ||
+        peticion.status == 201) trabajar = peticion.response
+    else trabajar = "no se encontro la peticion"
+    console.log(JSON.parse(trabajar))
+    
+    //aqui estamos validando los estados para que se muestren los resultados segun sea.
+        
+}) 
+peticion.open("POST","https://reqres.in/api/users") 
+peticion.setRequestHeader("Content-type","application/json;charset=UTF8") 
+    
+    //con "setRequestHeader" estamos enviando los nuevos datos al servidor.
+
+peticion.send(JSON.stringify({ 
+    "name": "no se",
+    "lastname": "tampoco se"
+}))       
+</textarea>
+
+            </code>
+        </div>
+    </div>
+</main>
+
+
+
+
+<footer>
+    <div class="footer_div">
+        <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+    </div>
+</footer>
+
+
+<script src="diferencias.js"></script>
+</body>
+</html>

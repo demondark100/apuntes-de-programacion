@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="flujo_e.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>eventos flujo</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+
+
+<main>
+    <div class="teoria">
+        <h1>flujo de eventos</h1>
+        <p>con esto veremos cual es el flujo de los eventos.</p>
+        <div class="code_content">
+            <code>
+                <p>HTML:</p>
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion0 cood">
+<div class="content_1"> 
+    <div class="content_2">
+        <button class="boton"> click </button>
+    </div>
+</div> 
+</textarea>
+                <p>css:</p>
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion1 cood">
+.content_1{ 
+    width: 250px;
+    height: 110px;
+    background-color: #0f0;
+}
+.content_2{
+    background-color: #f00;
+    width: 150px;
+    height: 85px;
+    margin: auto;
+}
+.boton{
+    background-color: #00f;
+    color: #fff;
+}
+</textarea>
+
+                <p>javaScript:</p>
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion2 cood">
+const content_1 = document.querySelector(".content_1");
+const content_2 = document.querySelector(".content_2");
+const boton = document.querySelector(".boton");
+content_1.addEventListener("click",()=>{
+    alert("content_1");
+});
+content_2.addEventListener("click",()=>{
+    alert("content_2");
+});
+boton.addEventListener("click",()=>{
+    alert("click");
+});
+</textarea>
+            </code>
+        </div>
+
+        <p>resultado</p>
+        <p>para ver resultados hacer click en "click"</p>
+
+        <div class="content_1">
+            <div class="content_2">
+                <button class="boton">click</button>
+            </div>
+        </div>
+
+
+        <div class="code_content">
+            <p>javaScript:</p>
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+
+            <code>
+<textarea readonly class="codificacion codificacion3 cood">
+const content_1 = document.querySelector(".content_1");
+const content_2 = document.querySelector(".content_2");
+const boton = document.querySelector(".boton");
+content_1.addEventListener("click",()=>{
+    alert("content_1");
+});
+content_2.addEventListener("click",()=>{
+    alert("content_2");
+},true);
+boton.addEventListener("click",()=>{
+    alert("click");
+});
+</textarea>
+                <p>
+                    con "true" manejaremos el flujo de los eventos en este caso "content_2" se ejecutara primero
+                </p>
+            </code>
+        </div>
+
+        <p>
+            resultado:
+        </p>
+        <p>para ver resultados hacer click en "click"</p>
+        <div class="content_3">
+            <div class="content_4">
+                <button class="boton_2">click</button>
+            </div>
+        </div>
+
+
+        <div class="code_content">
+            <p>javaScript:</p>
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+
+            <code>
+<textarea readonly class="codificacion codificacion4 cood">
+const content_1 = document.querySelector(".content_1");
+const content_2 = document.querySelector(".content_2");
+const boton = document.querySelector(".boton");
+content_1.addEventListener("click",()=>{
+    alert("content_1");
+});
+content_2.addEventListener("click",()=>{
+    alert("content_2");
+});
+boton.addEventListener("click",(e)=>{
+    alert("click");
+    e.stopPropagation();
+});
+</textarea>
+            </code>
+            <p>
+                con "stopPropagation()" vamos a detener la propagacion de los eventos.
+            </p>
+        </div>
+        <p>resultado:</p>
+        <p>para ver resultados hacer click en "click"</p>
+        <div class="content_5">
+            <div class="content_6">
+                <button class="boton_3">click</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<footer>
+    <div class="footer_div">
+        <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+    </div>
+</footer>
+
+
+<script src="flujo_e.js"></script>
+</body>
+</html>

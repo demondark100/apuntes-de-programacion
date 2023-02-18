@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="cajas.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>cajas</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+
+    <main>
+        <div class="teoria">
+            <h1>cajas</h1>
+            <p>
+                en html tenemos dos tipos de caja las que son en linea y las que son en bloque.
+            </p>
+            <h2>bloque</h2>
+            <p>
+                las cajas en bloque son los mas importantes debido a que se pueden hacer mas cosas que las cajas en linea. <br>
+                las cajas en bloque ocupan todo el espacio del sitio web mientras que las de linea no. <br>
+                ejemplo.
+            </p>
+            <p>
+                como nos damos cuenta la caja en bloque ocupara todo el ancho del sitio web.
+            </p>
+
+            <div class="webside">
+                <div class="caja_bloque">
+                    elemento en bloque
+                </div>
+            </div>
+            <p>
+                los bloques se adaptan al ancho de su contenedor como veras a continuacion.
+            </p>
+            <div class="webside">
+                <div class="padre">
+                    <div class="hijo">
+                        h2
+                    </div>
+                </div>
+            </div>
+
+            <h2>linea</h2>
+            <p>
+                estos no ocuparan todo el ancho del sitio web sino que ocuparan el ango del elemento html.
+            </p>
+            <div class="webside">
+                <div class="bloque">
+                    p
+                </div>
+                <div class="linea">
+                    b
+                </div>
+            </div>
+
+            <p>
+                en los ejemplos el "h2" y el "p" ocupan todo el ancho y el "b" no pero con css podemos cambiar eso por ejemplo que el b se comporte como bloque y que el h2 y p  se comporten como linea. <br> <br>
+                ejemplo.
+            </p>
+            <h2>html</h2>
+            <p>
+                para entender mejor has click derecho en cualquier elemento y dale en inspeccionar despues pasa el mouse encima de cada elemento pero desde la consola y veras como te muestra que elemento esta en bloque y que elemento esta en linea.
+            </p>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion0 cood">
+<h2>bloque</h2>
+<h3>bloque</h3>
+<b>linea</b>
+<b>linea</b>
+<p>bloque</p>
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <h2>bloque</h2>
+                <h3>bloque</h3>
+                <b>linea</b>
+                <b>linea</b>
+                <p>bloque</p>
+            </div>
+
+            <h2>display</h2>
+            <p>
+                esta propiedad nos sirve para cambiar el comportamiento de los elementos como queramos. <br> 
+                tenemos: <br>
+                display: block; = bloque. <br>
+                display: inline; = linea. <br>
+                ejemplo
+            </p>
+
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion1 cood">
+<h2>bloque</h2>
+<h3>bloque</h3>
+<b>linea</b>
+<b>linea</b>
+<p>bloque</p>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion0 cood">
+h2{
+    display: inline;
+}
+h3{
+    display: inline;
+}
+p{
+    display: inline;
+}
+b{
+    display: block;
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <h2 class="ejemplo__">bloque</h2>
+                <h3 class="ejemplo__">bloque</h3>
+                <b class="ejemplo__i">linea</b>
+                <b class="ejemplo__i">linea</b>
+                <p class="ejemplo__">bloque</p>
+            </div>
+
+            <p>
+                recuerdan cuando dije que en los elementos en linea no se podian dar muchas propiedades y con los de bloque si se podian dar mas propiedades bueno es hora de ponerlo a prueba. <br> <br>
+                propiedad de caja numero 1: <br> 
+                <b>width</b> y <b>height</b>:  <br>
+                width = el ancho de las cajas. <br>
+                height = la altura de las cajas. <br>
+                ejemplo.
+            </p>
+
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion4 cood">
+<b>
+    esto es un elemento en linea no se puede modificar el ancho y la altura.
+</b>
+<p>
+    este es un elemento en bloque si se puede modificar el ancho y la altura.
+</p>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                    <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion5 cood">
+b{
+    background-color: red;
+    color: white;
+    width: 150px;
+    height: 150px;
+}
+p{
+    background-color: blue;
+    color: white;
+    width: 150px;
+    height: 110px;
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside comprobar_elementos">
+                <b>
+                    esto es un elemento en linea no se puede modificar el ancho y la altura.
+                </b>
+                <p>
+                    este es un elemento en bloque si se puede modificar el ancho y la altura.
+                </p>
+            </div>
+
+            <p>
+                para finalizar con esta parte podemos hacer que un elemento en linea pueda recibir las propiedades de un elemento de bloque
+            </p>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                    <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion5 cood">
+<b class="noRecibe">
+    esto no recibira las propiedades.
+</b>
+<b class="recibe">
+    esto si recibira las propiedades.
+</b>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t6 texto_copiado">texto copiado</p>
+                    <i class="copiar6 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion6 cood">
+.noRecibe{
+    background-color: red;
+    color: white;
+    width: 155px;
+    height: 110px;
+}
+.recibe{
+    display: inline-block;
+    background-color: green;
+    color: wheat;
+    width: 125px;
+    height: 110px;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                "display: inline-block;" es para que un elemento en linea pueda recibir las propiedades de un elemento en bloque.
+            </p>
+            <div class="webside">
+                <b class="noRecibe">
+                    esto no recibira las propiedades.
+                </b>
+                <b class="recibe">
+                    esto si recibira las propiedades.
+                </b>
+            </div>
+
+        </div>
+    </main>
+    
+        <footer>
+            <div class="footer_div">
+                <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+            </div>
+        </footer>
+    
+    
+        <script src="cajas.js"></script>
+    </body>
+</html>

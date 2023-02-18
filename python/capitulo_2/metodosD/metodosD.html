@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="metodosD.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>Metodos de diccionarios.</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+    <main>
+    	<div class="teoria">
+    		<h1>metodos de diccionarios</h1>
+    		<p>
+    			los diccionarios tambien tienen metodo que podemos usar bueno empecemos.
+    		</p>
+
+
+    		<h2>keys</h2>
+    		<p>
+    			este metodo nos sirve para ver los nombres clave por ejemplo si tenemos este diccionario: "nombre": "Nami". <br>
+    			pues keys nos mostrara el nombre clave "nombre". <br>
+    			este metodo es iterable bueno mas adelante sabras a que me refiero con eso.
+    		</p>
+    		 <h3>ejemplo de uso</h3>
+            <div class="code_content">
+              <code>
+                <div class="content_copy">
+                   <p class="t0 texto_copiado">texto copiado</p>
+                  <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion0 cood">
+diccionario = {
+  "musica": "Pull Me Under",
+  "genero": "rock",
+  "artista": "Dream Theater"
+}
+
+print(diccionario.keys())
+</textarea>
+              </code>
+            </div>
+            <div class="consola">
+            	dict_keys(['musica', 'genero', 'artista'])
+              <div id="palito"></div>
+            </div>
+
+
+
+            <h2>get</h2>
+            <p>
+				esto es para acceder al valor de un diccionario es como decir variable["valor"], 
+				la diferencia es que si con variable["valor"] no encuentra nada saldra un error y dejara de ejecutarse el programa cosa que con get no pasa debido a que nos retornara "none".        	
+            </p>
+             <h3>sintaxis</h3>
+            <div class="code_content">
+              <code>
+<textarea readonly class="codificacion cood">
+variable.get("nombre del valor que queremos obtener");
+</textarea>
+              </code>
+            </div>
+            <h3>ejemplo de uso</h3>
+            <div class="code_content">
+              <code>
+                <div class="content_copy">
+                   <p class="t1 texto_copiado">texto copiado</p>
+                  <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion1 cood">
+diccionario = {
+  "musica": "Pull Me Under",
+  "genero": "rock",
+  "artista": "Dream Theater"
+}
+
+print(diccionario.get("genero"))
+</textarea>
+              </code>
+            </div>
+            <div class="consola">
+            	rock
+              <div id="palito"></div>
+            </div>
+
+
+            <h2>clear</h2>
+            <p>
+            	esto nos servira para borrar todo el diccionario.
+            </p>
+            <h3>ejemplo de uso</h3>
+            <div class="code_content">
+              <code>
+                <div class="content_copy">
+                   <p class="t2 texto_copiado">texto copiado</p>
+                  <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion2 cood">
+diccionario = {
+  "musica": "Pull Me Under",
+  "genero": "rock",
+  "artista": "Dream Theater"
+}
+
+print(diccionario.clear())
+</textarea>
+              </code>
+            </div>
+            <div class="consola">
+            	None
+              <div id="palito"></div>
+            </div>
+
+
+
+            <h2>pop</h2>
+            <p>
+            	esto nos servira para eliminar un elemento del diccionario.
+            </p>
+            <h3>ejemplo de uso</h3>
+            <div class="code_content">
+              <code>
+                <div class="content_copy">
+                   <p class="t3 texto_copiado">texto copiado</p>
+                  <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion3 cood">
+diccionario = {
+  "musica": "Pull Me Under",
+  "genero": "rock",
+  "artista": "Dream Theater"
+}
+
+diccionario.pop("genero")
+
+print(diccionario)
+</textarea>
+              </code>
+            </div>
+            <div class="consola">
+            	{'musica': 'Pull Me Under', 'artista': 'Dream Theater'}
+              <div id="palito"></div>
+            </div>
+
+
+
+            <h2>items</h2>
+            <p>
+            	El método items () junto con el ciclo for permite iterar de manera simultánea sobre los pares key-value de un diccionario Usando la función incorporada del o el método pop es posible eliminar uno o varios pares key-value de un diccionario
+            </p>
+            <h3>ejemplo de uso</h3>
+            <div class="code_content">
+              <code>
+                <div class="content_copy">
+                   <p class="t4 texto_copiado">texto copiado</p>
+                  <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion4 cood">
+diccionario = {
+  "musica": "Pull Me Under",
+  "genero": "rock",
+  "artista": "Dream Theater"
+}
+
+mostrar = diccionario.items()
+
+print(mostrar)
+print(diccionario)
+</textarea>
+              </code>
+            </div>
+            <div class="consola">
+				dict_items([('musica', 'Pull Me Under'), ('genero', 'rock'), ('artista', 'Dream 
+				Theater')]) <br>
+				{'musica': 'Pull Me Under', 'genero': 'rock', 'artista': 'Dream Theater'} 
+              <div id="palito"></div>
+            </div>
+
+
+    	</div>
+    </main>
+
+    <footer>
+      <div class="footer_div">
+          <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+      </div>
+  </footer>
+
+
+  <script src="metodosD.js"></script>
+</body>
+</html>

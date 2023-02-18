@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="timers.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>timers</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+<main>
+    <div class="teoria">
+        <h1>timers</h1>
+        <div class="code_content">
+            <code>
+                <p>
+                    pseudocodigo 1:
+                </p>
+<textarea readonly class="codificacion cood">
+establecerTiempo(()=>{ 
+    alert("hola mundo");
+}, tiempo en milisegundos)
+</textarea>
+            </code>
+        </div>
+
+        <div class="code_content">
+            <p>
+                pseudocodigo 2:
+            </p>
+            <code>
+<textarea readonly class="codificacion cood">
+funcion nombre(){ 
+    alert("hola mundo");
+} 
+establecerTiempo(nombre, tiempo en milisegundos) 
+</textarea>
+            </code>
+        </div>
+
+        <div class="code_content">
+            <p>javaScript 1:</p>
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+
+            <code>
+<textarea readonly class="codificacion codificacion0 cood">
+setTimeout(() => { 
+    alert("hola mundo");
+}, 2000);
+</textarea>
+            </code>
+        </div>
+        <p>resultado:</p>
+        <p>has click en "mostrar" y aparecera "hola mundo" en 2 segundos"</p>
+        <div class="boton_content">
+            <button class="mostrar_1">mostrar</button>
+            <div class="resultado_1"></div>
+        </div>
+
+        <div class="code_content">
+            <p>javaScript:</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion1 cood">
+function saludar(){ 
+    document.write("hola mundo");
+}
+setTimeout(saludar,2000)
+</textarea>
+            </code>
+            <p>
+                "setTimeout" nos sirve para ejecutar un evento en un tiempo predeterminado solo una vez.
+            </p>
+        </div>
+
+        <p>resultado:</p>
+        <p>has click en "mostrar" y aparecera "hola mundo" en 2 segundos"</p>
+        <div class="boton_content">
+            <button class="mostrar_2">mostrar</button>
+            <div class="resultado_2"></div>
+        </div>
+
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion2 cood">
+let tiempo = setTimeout(() => { 
+    document.write("xd")
+}, 2000);
+clearTimeout(tiempo)
+</textarea>
+            </code>
+            <p>
+                "clearTimeout" servira para detener el evento antes de que se ejecute.
+            </p>
+        </div>
+
+        <p>setInterval</p>
+
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion3 cood">
+setInterval(() => { 
+    alert("hola mundo");
+}, 2000);
+</textarea>
+            </code>
+            <p>
+                "setInterval" es un evento que se ejecutara muchas veces.
+            </p>
+        </div>
+
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion4 cood">
+const intervalo = setInterval(() => { 
+    alert("hola mundo");
+}, 2000); 
+clearInterval(intervalo)
+</textarea>
+            </code>
+            <p>
+                "clearInterval" detendra el bucle.
+            </p>
+        </div>
+    </div>
+</main>
+
+
+
+
+<footer>
+    <div class="footer_div">
+        <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+    </div>
+</footer>
+
+
+<script src="timers.js"></script>
+</body>
+</html>

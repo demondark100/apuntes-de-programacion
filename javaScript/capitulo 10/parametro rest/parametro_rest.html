@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="parametro_rest.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>parametro rest</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+<main>
+    <div class="teoria">
+        <h1>parametro rest</h1>
+        <p>los parametros rest son parametros que son indefinidos los cuales se convertiran en arreglos.</p>
+        <p>
+            ejemplo:
+        </p>
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion0 cood">
+const funcionIndefinida = (...rest) =>{ 
+    console.log(rest)
+} 
+funcionIndefinida(5,8,3,"mas parametros")                 
+</textarea>
+            </code>
+        </div>
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion1 cood">
+function masParametros(...rest){ 
+    console.log(rest)
+} 
+masParametros(5,8,12,25,"muchos parametros indefinidos")         
+</textarea>
+            </code>
+        </div>
+        <p>
+            aqui un ejemplo de como nos puede servir los parametros rest.
+        </p>
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion2 cood">
+const numeros = (...num) =>{ 
+    let resultado = 0; 
+    for (let i = 0; i < num.length; i++){ 
+        resultado += num[i]
+    } 
+    console.log(resultado) 
+} 
+numeros(5,25) 
+//esta funcion sumara todos los parametros que pongamos puedes poner los parametros que quieras en esta funcion.           
+</textarea>
+            </code>
+        </div>
+        <p>
+            los parametros rest siempre deben ser el ultimo parametro de todos.
+        </p>
+        <p>
+            ejemplo:
+        </p>
+        <h2>error</h2>
+        <div class="code_content">
+            <code>
+
+                <p>funcio tracicional</p>
+<textarea readonly class="codificacion cood">
+function error_1(...rst,a){ 
+    console.log(`${rst} ${a}`)
+} 
+error_1(8,10)       
+</textarea>
+                <p>funcion flecha</p>
+<textarea readonly class="codificacion cood">
+const error_2 =(...rst,a) =>{ 
+    console.log(`${rst} ${a}`)
+} 
+error_1(8,10)                 
+</textarea>
+            </code>
+        </div>
+
+        <h2>correcto</h2>
+
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion3 cood">
+function correcto_1(a,...rst){ 
+    console.log(`${a} - ${rst}`)
+} 
+correcto_1(8,10)     
+
+
+
+const correcto_2 = (a,...rst) =>{ 
+    console.log(`${a} - ${rst}`)
+} 
+correcto_2(8,10) 
+</textarea>
+</code>
+        </div>
+        <p>
+            esto pasa proque los parametros rest son ilimitados/indefinidos por eso siempre deben ir al final.
+        </p>
+    </div>
+</main>
+
+
+
+<footer>
+    <div class="footer_div">
+        <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+    </div>
+</footer>
+
+
+<script src="parametro_rest.js"></script>
+</body>
+</html>

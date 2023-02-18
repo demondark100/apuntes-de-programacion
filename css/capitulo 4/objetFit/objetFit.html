@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="objetFit.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>objet fit</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+    <main>
+        <div class="teoria">
+            <h1>objet fit</h1>
+            <p>
+                estas propiedades nos permitiran controlar los estilos de las imagenes para centrarlas , ajustarlas bien , etc.
+            </p>
+
+            <h2 class="elegir">elige una imagen</h2>
+            <div class="content_imgs">
+                <div class="elegir_imagen">
+                    <button class="btn_img imagen1">Yotsuba</button>
+                    <button class="btn_img imagen2">Miku</button>
+                    <button class="btn_img imagen3">Nino</button>
+                </div>
+                <div class="imageness">
+                    <img class="img_over img_over1" src="https://i.pinimg.com/originals/55/d0/29/55d02905b888ffbf8967484aa7875e34.jpg" alt="yotsuba" title="yotsuba">
+                    <img class="img_over img_over2" src="https://pm1.narvii.com/7858/b1ce484056913bc7484e401d0ce7c1e4ee727a81r1-736-736v2_uhq.jpg" alt="miku" title="miku">
+                    <img class="img_over img_over3" src="https://i.pinimg.com/originals/53/9e/7d/539e7deaa1c884043b565b2cf529b042.jpg" alt="nino" title="nino">
+                </div>
+            </div>
+
+
+            <h2>contain</h2>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion0 cood">
+<div class="contain">
+    <img src="https://i.pinimg.com/originals/55/d0/29/55d02905b888ffbf8967484aa7875e34.jpg" alt="imagen">
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion1 cood">
+.contain{
+    margin: auto;
+    width: 85%;
+    height: 400px;
+    border: 2px solid blue;
+    display: flex;
+}
+.contain img{
+    width: 100%;
+    object-fit: contain;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                "contain" hace que la imagen se ponga a su resolucion real por mas que el contenedor sea demasiado grande
+            </p>
+            <h2>sin contain</h2>
+            <div class="webside">
+                <div class="contain_">
+                    <img alt="escoje una imagen" class="mostrar_img imagen__0">
+                </div>
+            </div>
+            <h2>con contain</h2>
+            <div class="webside">
+                <div class="contain">
+                    <img alt="escoje una imagen" class="mostrar_img imagen__1">
+                </div>
+            </div>
+
+
+            <h2>cover</h2>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion2 cood">
+<div class="cover">
+    <img src="https://pm1.narvii.com/7858/b1ce484056913bc7484e401d0ce7c1e4ee727a81r1-736-736v2_uhq.jpg" alt="imagen">
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion3 cood">
+.cover{
+    margin: auto;
+    width: 85%;
+    height: 400px;
+    border: 2px solid blue;
+    display: flex;
+}
+.cover img{
+    width: 100%;
+    object-fit: cover;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                "cover" ajuata a la imagen al tamaño de su contenedor recortandola para que se pueda ver bien.
+            </p>
+
+            <h2>sin cover</h2>
+            <div class="webside">
+                <div class="cover_">
+                    <img alt="escoje una imagen" class="mostrar_img imagen__2">
+                </div>
+            </div>
+
+            <h2>con cover</h2>
+            <div class="webside">
+                <div class="cover">
+                    <img alt="escoje una imagen" class="mostrar_img imagen__3">
+                </div>
+            </div>
+
+
+            <h2>none</h2>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion4 cood">
+<dir class="none">
+    <img src="https://i.pinimg.com/originals/53/9e/7d/539e7deaa1c884043b565b2cf529b042.jpg" alt="imagen">
+</dir>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                    <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion5 cood">
+.none{
+    margin: auto;
+    width: 85%;
+    height: 400px;
+    border: 2px solid blue;
+    display: flex;
+}
+.none img{
+    width: 100%;
+    object-fit: none;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                "none" ajusta a la imagen pero con su resolucion a escala real osea que si la imagen mide 200x400 se ajustara a su resolucion real. 
+            </p>
+            <h2>sin none</h2>
+            <div class="webside">
+                <div class="none_">
+                    <img alt="escoje una imagen" class="mostrar_img imagen__4">
+                </div>
+            </div>
+            <h2>con none</h2>
+            <div class="webside">
+                <div class="none">
+                    <img alt="escoje una imagen" class="mostrar_img imagen__5">
+                </div>
+            </div>
+
+
+            <h2>object-position</h2>
+            <p>
+                esto es para posisionar una imagen de arriba,abajo,derecha,izquierda.
+            </p>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t6 texto_copiado">texto copiado</p>
+                    <i class="copiar6 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion6 cood">
+<div class="position">
+    <img src="https://i.pinimg.com/originals/55/d0/29/55d02905b888ffbf8967484aa7875e34.jpg" alt="imagen">
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t7 texto_copiado">texto copiado</p>
+                    <i class="copiar7 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion7 cood">
+.position{
+    margin: auto;
+    width: 85%;
+    height: 400px;
+    border: 2px solid blue;
+    display: flex;
+}
+.position img{
+    width: 100%;
+    object-fit: cover;
+    object-position: right;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                puedes ponerle cualquier propiedad. <br>
+                top , right , bottom , left tambien puedes usar los em ejemplo "-15em" etc.
+            </p>
+            <div class="webside">
+                <div class="position">
+                    <img alt="escoje una imagen" class="mostrar_img imagen__6">
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+        <footer>
+            <div class="footer_div">
+                <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+            </div>
+        </footer>
+    
+    
+        <script src="objetFit.js"></script>
+    </body>
+</html>

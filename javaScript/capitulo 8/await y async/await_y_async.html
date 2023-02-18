@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="await_y_async.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>await y async</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+
+
+<main>
+    <div class="teoria">
+        <h1>await y async</h1>
+        <p>
+            un poco de contexto: <br>
+            no siempre recibimos una respuesta rapida de los servidores por eso es que llegaron
+            await y async para solucionar esto ejemplo del problema que trae no usar await y async.
+        </p>
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion0 cood">
+function info(numeros) { 
+    return new Promise((resolve,reject)=>{ 
+        setTimeout(() => { 
+            resolve(numeros)
+        }, Math.random()*500); 
+    }) 
+} 
+info("1").then(mostrar=>{console.log(mostrar)}); 
+info("2").then(mostrar=>{console.log(mostrar)}); 
+info("3").then(mostrar=>{console.log(mostrar)}); 
+info("4").then(mostrar=>{console.log(mostrar)}); 
+info("5").then(mostrar=>{console.log(mostrar)}); 
+</textarea>
+                <p>
+                    con esto solo estamos simulando el tiempo de respuesta de un servidor.  
+                </p>
+            </code>
+            <p>
+                en teoria deberia devolver los numeros en orden sin embargo los devuelve de 
+                forma aleatoria cosa que no deberia suceder.
+            </p>
+            <p>
+                por eso tenemos a "await y async" para que sea completamente asincrono el tiempo 
+                de respuesta del servidor.
+            </p>
+        </div>
+
+        <div class="code_content">
+            <p>hay dos formas de integrarlos.</p>
+            <code>
+                <p>funcion tradicional</p>
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion1 cood">
+async function mostrar_1(){ 
+    await hacer algo
+} 
+</textarea>
+                <p>funcion flecha</p>
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion2 cood">
+const mostrar_2 = async()=>{
+    await hacer algo
+}
+</textarea>
+            </code>
+        </div>
+        <p>
+            con async y await:
+        </p>
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion3 cood">
+function info(numeros) { 
+    return new Promise((resolve,reject)=>{ 
+        setTimeout(() => { 
+            resolve(numeros)
+        }, Math.random()*500); 
+    }) 
+} 
+const mostrar=async()=>{ 
+    let numero_1 = await info("1");
+    let numero_2 = await info("2");
+    let numero_3 = await info("3");
+    let numero_4 = await info("4");
+    let numero_5 = await info("5");
+    console.log(numero_1);
+    console.log(numero_2);
+    console.log(numero_3);
+    console.log(numero_4);
+    console.log(numero_5);
+}
+mostrar()
+</textarea>
+            </code>
+            <p>
+                de esta manera mostrara los datos de forma correcta osea 
+                de forma asincrona ya no se mostraran los datos de manera 
+                aleatoria.
+            </p>
+        </div>
+    </div>
+</main>
+
+
+
+
+
+<footer>
+    <div class="footer_div">
+        <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+    </div>
+</footer>
+
+
+<script src="await_y_async.js"></script>
+</body>
+</html>

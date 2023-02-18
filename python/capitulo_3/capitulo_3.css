@@ -1,0 +1,180 @@
+body{
+  font-family: sans-serif;
+  background-image: url("https://wallpapersmug.com/download/750x1334/ee041b/computer-screen-code-program.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+a{
+  text-decoration: none;
+}
+header{
+  background-color: #363636ee;
+  box-sizing: border-box;
+  padding: 3px;
+  height: 35px;
+}
+
+h1{
+  text-align: center;
+  color: #e7e4ff;
+}
+
+.header_content{
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer_text_1{
+  font-size:  18px;
+  color: #fefeff88;
+}
+.footer_text_2{
+  font-size: 18px;
+  color: #fefeff88;
+}
+footer{
+  margin-top: auto;
+  background-color: #211a1a;
+}
+h2{
+  color: #e7e4ff;
+  text-align: center;
+  font-size: 28px;
+}
+
+.img_logo{
+  margin-top: -2px;
+  width: 35px;
+}
+
+.menu{
+  color: #9eb6ff;
+  margin: 8px;
+}
+.menu:hover{
+  color: #f1ffb5;
+}
+.menu_nav{
+  list-style: none;
+  display: block;
+  box-sizing: border-box;
+  margin-left: -500%;
+  margin-top: -15px;
+}
+
+
+.li_nav{
+  margin-top: 15px;
+  width: 155px;
+}
+
+.code_content{
+  background-color: #000000;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 8px;
+}
+
+.li_nav a{
+  color: #e7e4ff;
+  font-size: 15px;
+}
+.li_nav a:hover{
+  color: #f1ffb3;
+}
+
+.mover{
+  margin-top: -20px;
+  background-color: #363636ee;
+  margin-left:-45px;
+  font-size: 15px;
+  transition-duration: .5s;
+}
+.mover .li_nav{
+  text-align: center;
+  width: 100%;
+}
+.mover_content{
+  margin-top: 118px;
+}
+code{
+  font-size: 15px;
+}
+
+p{
+  font-size: 16px;
+}
+
+@media(min-width: 820px){
+  body{
+      background-image: url("https://fondosmil.com/fondo/52521.jpg");
+  }
+  .menu{
+      margin-left: -50000%;
+  }
+  h2{
+      font-size: 40px;
+  }
+  header{
+      height: 60px;
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+  }
+  .img_logo{
+      margin-top: 1px;
+      width: 60px;
+  }
+  .menu_nav{
+      margin-top: 1px;
+      display: flex;
+      margin-left: 50px;
+      font-size: 25px;
+  }
+  .menu_nav a{
+      color: #fefeff88;
+  }
+  .li_nav a{
+      font-size: 25px;
+      color: #e7e4ff;
+  }
+}
+
+.capitulo_1 {
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  
+  padding: 10px;
+  width: 65%;
+  max-width: 950px;
+}
+a{
+  margin-top: 10px;
+  font-size: 20px;
+}
+.capitulo_1 a{
+  display: flex;
+  color: #f1ffb3;
+}
+.capitulo_1 a:hover{
+  background-color: #21d527dd;
+  color: #211a1a;
+}
+
+
+
+@media(min-width:820px){
+  .capitulo_1{
+      padding: 20px;
+  }
+  .capitulo_1 a{
+      font-size: 35px;
+  }
+}

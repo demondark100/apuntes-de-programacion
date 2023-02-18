@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="metodosL.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>Metodos de listas.</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <main>
+        <div class="teoria">
+            <h1>metodos de listas</h1>
+            <p>
+                al igual que las cadenas los metodos tambien tienen su metodos propieos , estos tambien reciben la funcion dir(solo es un recordatorio).
+            </p>
+
+            <h2>len</h2>
+            <p>
+                len nos dira la cantidad de elementos que hay en nuestro lista/arreglo , recuerda que len tiene dos formas de ejecutarse: len() o __len__.
+            </p>
+
+            <h2>ejemplo de uso</h2>
+            <div class="code_content">
+              <code>
+                <div class="content_copy">
+                   <p class="t0 texto_copiado">texto copiado</p>
+                  <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion0 cood">
+musicas = [
+  "labios rotos",
+  "fondo profundo",
+  "musica ligera",
+  "hasta que pase el temblor"
+]
+print(len(musicas));
+print(musicas.__len__());
+</textarea>
+              </code>
+            </div>
+            <div class="consola">
+                4 <br>
+                4
+              <div id="palito"></div>
+            </div>
+
+
+
+            <h2>append</h2>
+            <p>
+                este metodo nos sirve para agregar mas elementos a un arreglo.
+            </p>
+            <h3>sintaxis</h3>
+            <div class="code_content">
+              <code>
+<textarea readonly class="codificacion cood">
+variable.append("que elemento deseamos agregar");
+</textarea>
+              </code>
+            </div>
+            <h3></h3>
+            <div class="code_content">
+              <code>
+                <div class="content_copy">
+                   <p class="t1 texto_copiado">texto copiado</p>
+                  <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion1 cood">
+comida = [
+  "frutas",
+  "verduras",
+  "carnes",
+  "vegetales"
+]
+
+comida.append("golosinas");
+print(comida)
+</textarea>
+              </code>
+            </div>
+            <div class="consola">
+                ['frutas', 'verduras', 'carnes', 'vegetales', 'golosinas']
+              <div id="palito"></div>
+            </div>
+
+
+
+            <h2>insert</h2>
+            <p>
+                esto nos permite insertar un elemento en la posision del arreglo que le indiquemos.
+            </p>
+            <h3>sintaxis</h3>
+            <div class="code_content">
+              <code>
+<textarea readonly class="codificacion cood">
+variable.insert(posision,"que queremos agregar");
+</textarea>
+              </code>
+            </div>
+
+            <h3></h3>
+            <div class="code_content">
+              <code>
+                <div class="content_copy">
+                   <p class="t2 texto_copiado">texto copiado</p>
+                  <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion2 cood">
+comida = [
+  "frutas",
+  "verduras",
+  "carnes",
+  "vegetales"
+]
+
+comida.insert(1,"golosinas");
+print(comida)
+</textarea>
+              </code>
+            </div>
+            <div class="consola">
+                ['frutas', 'golosinas', 'verduras', 'carnes', 'vegetales']
+                <div id="palito"></div>
+            </div>
+
+
+
+            <h2>extend</h2>
+            <p>
+                esto nos permite agregas mas de dos elementos cosa que "append" no hace
+            </p>
+            <h3>sintaxis</h3>
+            <div class="code_content">
+              <code>
+<textarea readonly class="codificacion cood">
+variable.extend(["agregar","agregar"])
+</textarea>
+              </code>
+            </div>
+
+
+            <h3>ejemplo de uso</h3>
+            <div class="code_content">
+              <code>
+                <div class="content_copy">
+                   <p class="t3 texto_copiado">texto copiado</p>
+                  <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion3 cood">
+juegos = [
+  "left 4 dead",
+  "gta",
+  "red dead",
+  "resident evis"
+]
+
+juegos.extend(["call of duty","genshin impact","pubg"]);
+print(juegos)
+</textarea>
+              </code>
+            </div>
+            <div class="consola">
+                ['left 4 dead', 'gta', 'red dead', 'resident evis', 'call of duty', 'genshin impact', 'pubg']
+              <div id="palito"></div>
+            </div>
+
+
+
+            <h2>pop</h2>
+            <p>
+                esto eliminara un elemento para hacer eso debemos indicar la posisio del elemento que queremos eliminar , y si queremos eliminar el ultimo elemento podemos poner -1 , -2 para el antepenultimo y asi sucesivamente.
+            </p>
+            <h3>sintaxis</h3>
+            <div class="code_content">
+              <code>
+<textarea readonly class="codificacion cood">
+variable.pop(posision del elemento que queremos eliminar);
+</textarea>
+              </code>
+            </div>
+
+            <h3></h3>
+            <div class="code_content">
+              <code>
+                <div class="content_copy">
+                   <p class="t4 texto_copiado">texto copiado</p>
+                  <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion4 cood">
+juegos = [
+  "left 4 dead",
+  "gta",
+  "red dead",
+  "resident evis"
+]
+
+juegos.pop(2)
+juegos.pop(-1)
+print(juegos)
+</textarea>
+              </code>
+            </div>
+            <div class="consola">
+                ['left 4 dead', 'gta']
+              <div id="palito"></div>
+            </div>
+
+
+            <h2>remove</h2>
+            <p>
+                esto es igual a pop solo que en vez de pasarle la posision le ponemos el nombre del elemento que queremos remover.
+            </p>
+            <h3>sintaxis</h3>
+            <div class="code_content">
+              <code>
+<textarea readonly class="codificacion cood">
+variable.remove("remover elemento");
+</textarea>
+              </code>
+            </div>
+
+            <h3>èjemplo de uso</h3>
+            <div class="code_content">
+              <code>
+                <div class="content_copy">
+                   <p class="t5 texto_copiado">texto copiado</p>
+                  <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion5 cood">
+juegos = [
+  "left 4 dead",
+  "gta",
+  "red dead",
+  "resident evis"
+]
+
+juegos.remove("red dead")
+print(juegos)
+</textarea>
+              </code>
+            </div>
+            <div class="consola">
+                ['left 4 dead', 'gta', 'resident evis']
+              <div id="palito"></div>
+            </div>
+
+
+            <h2>clear</h2>
+            <p>
+                esto eliminara todo de una lista no dejara nada.
+            </p>
+            <h3></h3>
+            <div class="code_content">
+              <code>
+                <div class="content_copy">
+                   <p class="t6 texto_copiado">texto copiado</p>
+                  <i class="copiar6 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion6 cood">
+juegos = [
+  "left 4 dead",
+  "gta",
+  "red dead",
+  "resident evis"
+]
+juegos.clear()
+print(juegos)
+</textarea>
+              </code>
+            </div>
+            <div class="consola">
+                []
+              <div id="palito"></div>
+            </div>
+
+
+
+            <h2>sort</h2>
+            <p>
+                esto ordenara todo la lista de forma alfabetica y numerica por ejemplo tenemos una lista ["musica","acustica"] a la hora de usar sort el arreglo se ordenara de forma alfabetica ["acustica","musica"] , es igual con los numeros inicia desde 0 1 2 3 4 y asi sucesivamente.
+            </p>
+            <p>
+                tambien tenemos sort reverse que ordenara de misma manera solo que lo pondra al revez
+            </p>
+            <h3>ejemplo de uso</h3>
+            <div class="code_content">
+              <code>
+                <div class="content_copy">
+                   <p class="t7 texto_copiado">texto copiado</p>
+                  <i class="copiar7 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion7 cood">
+juegos = [
+  "left 4 dead",
+  "gta",
+  "red dead",
+  "resident evis"
+]
+juegos.sort()
+juegos.sort(reverse=True)
+print(juegos)
+</textarea>
+              </code>
+            </div>
+            <div class="consola">
+                ['gta', 'left 4 dead', 'red dead', 'resident evis']
+              <div id="palito"></div>
+            </div>
+
+
+
+            <h2>reverse</h2>
+            <p>
+                esto a diferencia de sort reverse no ordenara nada solo pondra a los elemtos tal como estan pero al reves.
+            </p>
+            <h3>ejemplo de uso</h3>
+            <div class="code_content">
+              <code>
+                <div class="content_copy">
+                   <p class="t8 texto_copiado">texto copiado</p>
+                  <i class="copiar8 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion8 cood">
+juegos = [
+  "left 4 dead",
+  "gta",
+  "red dead",
+  "resident evis"
+]
+juegos.reverse()
+print(juegos)
+</textarea>
+              </code>
+            </div>
+            <div class="consola">
+                ['resident evis', 'red dead', 'gta', 'left 4 dead']
+              <div id="palito"></div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+      <div class="footer_div">
+          <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+      </div>
+  </footer>
+
+
+  <script src="metodosL.js"></script>
+</body>
+</html>

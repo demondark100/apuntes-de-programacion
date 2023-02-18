@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="ajax.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>AJAX</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+
+<main>
+    <div class="teoria">
+        <h1>AJAX</h1>
+        <p>
+            para esto abriremos un archivo txt y un servidor local usando: 
+            <a href="https://www.apachefriends.org/" target="blank">xampp</a> esto para 
+            poder enviar y recibir peticiones y ademas porque es compatible con una gran
+            cantidad de sistemas operativos.
+        </p>
+        <p>
+            una vez instalado abrimos las 2 primeras opciones y luego nuestros archivos donde
+            trabajaremos lo ponemos en una carpeta llamada "htdocs" puedes buscarlo en tu buscador
+            de tu sistema operativo.
+        </p>
+        <div class="code_content">
+            <code>
+                <p>
+                    javaScript:
+                </p>
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion0 cood">
+sintaxis de objeto "XMLHttpRequest";
+
+const peticion = new XMLHttpRequest;
+</textarea>
+                con "XMLHttpRequest" podemos enviar peticiones "GET" , "POST" , etc.
+            </code>
+        </div>
+        <div class="code_content">
+            <p>
+                archivo txt:
+            </p>
+            <p>
+                nombre del archivo txt "datos.txt"
+            </p>
+            <code>
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion1 cood">
+{ 
+    "musica": "fiesta pagana",
+    "genero": "rock"
+}
+</textarea>
+            </code>
+        </div>
+
+        <div class="code_content">
+            <h2>abrir archivo y metodo:</h2>
+            <p>
+                pseudocodigo:
+            </p>
+            <code>
+<textarea readonly class="codificacion cood">
+const peticion = new XMLHttpRequest;
+
+peticion.abrir("metodo","url archivo o sitio web");                         
+</textarea>
+            </code>
+            <p>
+                javaScript;
+            </p>
+            <code>
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion2 cood">
+const peticion = new XMLHttpRequest;
+peticion.open("GET","datos.txt");                        
+</textarea>
+            </code>
+            <p>
+                con "open" abriremos el archivo o url para poder enviar o recibir datos. 
+            </p>
+        </div>
+
+        <div class="code_content">
+            <h2>enviar datos:</h2>
+            <p>
+                pseudocodigo:
+            </p>
+            <code>
+<textarea readonly class="codificacion cood">
+const peticion = new XMLHttpRequest;
+peticion.abrir("metodo","url archivo o sitio web"); 
+peticion.enviar()  
+</textarea>
+            </code>
+            <p>
+                javaScript:
+            </p>
+            <code>
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion3 cood">
+const peticion = new XMLHttpRequest;
+peticion.open("GET","datos.txt"); 
+peticion.send()
+</textarea>
+            </code>
+            <p>
+                con "send()" podemos enviar los datos.
+            </p>
+        </div>
+
+        <div class="code_content">
+            <h2>metodos de ajax</h2>
+            <code>
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion4 cood">
+const peticion = new XMLHttpRequest; 
+
+peticion.addEventListener("readystatechange",()=>{
+    console.log(peticion.readyState);
+    console.log(peticion.response)
+    console.log(peticion.status)
+}) 
+peticion.open("GET","datos.txt") 
+peticion.send() 
+</textarea>
+            </code>
+        </div>
+
+        <div class="code_content">
+            <code>
+                <p>
+                    con "readystatechange" abriremos el evento para poder trabajar con los datos.
+                </p>
+            </code>
+        </div>
+        
+        <div class="code_content">
+            <p>
+                con "readyState" veremos los estados.
+            </p>
+            <code>
+                <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                    <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion5 cood">
+estado 1: la solicitud se creo correctamente. 
+estado 2: la solicitud se envio correctamente. 
+estado 3: la solicitud se esta procesando. 
+estado 4: todo esta listo y ya se puede usar el resultado.
+</textarea>
+            </code>
+        </div>
+
+        <div class="code_content">
+            <p>                
+                con "response" mostraremos el resultado en este caso: <br>
+            </p>
+            <code>
+                <div class="content_copy">
+                    <p class="t6 texto_copiado">texto copiado</p>
+                    <i class="copiar6 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion6 cood">
+{ 
+    "musica": "fiesta pagana",
+    "genero": "rock"
+}                        
+</textarea>
+            </code>
+        </div>
+
+        <div class="code_content">
+            <code>
+                con "status" veremos el estado del sitio un ejemplo claro 404 y asi.
+            </code>
+        </div>
+
+        <p>ejemplo</p>
+
+        <div class="code_content">
+            <h2>readystatechange</h2>
+            <code>
+                <div class="content_copy">
+                    <p class="t7 texto_copiado">texto copiado</p>
+                    <i class="copiar7 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion7 cood">
+const peticion = new XMLHttpRequest 
+peticion.addEventListener("readystatechange",()=>{ 
+    if(peticion.readyState == 4 && 
+        peticion.status == 200 
+    ){  
+        console.log(peticion.response)
+    } 
+}) 
+    peticion.open("GET","datos.txt") 
+    peticion.send()                        
+</textarea>
+            </code>
+        </div>
+        <p>
+            como nos damos cuenta con "readyState" tendremos que hacer muuchas
+            validaciones pero se puede evitar con "load".
+        </p>
+
+        <div class="code_content">
+            <h2>load</h2>
+            <code>
+                <div class="content_copy">
+                    <p class="t8 texto_copiado">texto copiado</p>
+                    <i class="copiar8 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion8 cood">
+const peticion = new XMLHttpRequest 
+peticion.addEventListener("load",()=>{ 
+    console.log(peticion.response)
+}) 
+peticion.open("GET","datos.txt") 
+peticion.send()  
+</textarea>
+            </code>
+            <p>
+                nos mostrara el mismo resultado solo que nos evitamos las 
+                validaciones y es mas rapido.
+            </p>
+        </div>
+    </div>
+</main>
+
+
+
+
+
+<footer>
+    <div class="footer_div">
+        <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+    </div>
+</footer>
+
+
+<script src="ajax.js"></script>
+</body>
+</html>

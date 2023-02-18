@@ -1,0 +1,11 @@
+.content_wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content_wrap div{
+    background-color: aqua;
+    margin: 15px;
+    width: 200px;
+    height: 200px;
+}

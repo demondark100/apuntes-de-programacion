@@ -1,0 +1,16 @@
+.wrap_content{
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+.wrap_content div{
+    background-color: #233cca;
+    width: 200px;
+    height: 200px;
+    margin: 15px;
+}
+.wrap_content div:nth-child(1){
+    background-color: #ff2323;
+}
+.wrap_content div:nth-child(4){
+    background-color: #40ffa6;
+}

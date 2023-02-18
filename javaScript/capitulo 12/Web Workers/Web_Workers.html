@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="Web_Workers.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Web Workers</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+<main>
+    <div class="teoria">
+        <h1>Web Workers</h1>
+        <p>
+            esto nos ayudara a poder hacer de una mejor forma mas de una accion aqui una forma grafica del como funciona.
+        </p>
+        <img class="web_worker_img" src="https://web-dev.imgix.net/image/tcFciHGuF3MxnTr1y5ue01OGLBn2/eN5kePr9U0aZMgCyekhJ.png?auto=format" alt="web worker">
+
+        <h2>Dedicated worker:</h2>
+
+        <p>
+            con "worker" ejecutaremos otro archivo pero en segundo plano sin afectar a la actividad principal.
+        </p>
+
+        <!-- mostrar segundo archivo -->
+        <div class="code_content">
+            <p>
+                1: Crear un nuevo archivo javaScript en este caso se llamara worker.js
+            </p>
+            <h2>archivo principal</h2>
+            <code>
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion0 cood">
+const worker = new Worker("worker.js");
+
+    // esto recibira como parametro el 
+    // nombre del archivo que trabajara en
+    // segundo plano. 
+
+console.log(worker);
+</textarea>
+            </code>
+            <h2>archivo worker.js</h2>
+            <p>
+                aqui ejecutaremos lo que queramos apreta f12 para ver resultados.
+            </p>
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion1 cood">
+console.log("hola mundo");
+</textarea>
+        </div>
+            
+        <!-- ejemplo de uso -->
+        <h2>ahora un ejemplo de su uso.</h2>
+
+        <!-- html -->
+        <div class="code_content">
+            <p>html:</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion2 cood">
+<button class="button">ejecutar bucle</button>
+<input type="text">
+</textarea>
+            </code>
+        </div>
+
+
+        <p>sin worker:</p>
+        <div class="code_content">
+            <p>javaScript</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion3 cood">
+const ejecutarBucle = () =>{
+    let i = 0;
+    while(i < 5000){
+        i++;
+        console.log(1);
+    }
+}
+const button = document.querySelector(".button")
+button.addEventListener("click",()=>{
+    ejecutarBucle();
+});
+</textarea>
+            </code>
+        </div>
+
+        <p>resultado:</p>
+        <p>
+            si apretas el boton veras que no se puede escribir en el input por un momento ya que no podemos hacer mas de una accion.
+        </p>
+        <div class="content_bucle">
+            <button class="button">ejecutar bucle</button>
+            <input type="text">
+        </div>
+
+
+        <h2>con worker:</h2>
+        <p>
+            el worker esta limitado ya que no tiene al objeto window como base por eso esque recibe parametros.
+        </p>
+
+
+        <!-- javaScript principal -->
+        <div class="code_content">
+            <p>javaScript principal</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion4 cood">
+const worker = new Worker("worker.js");
+
+const button = document.querySelector(".button")
+button.addEventListener("click",()=>{
+    worker.postMessage(true)
+})
+</textarea>
+            </code>
+        </div>
+
+        <!-- archivo worker -->
+        <div class="code_content">
+            <p>archivo worker</p>
+            <code>
+                <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                    <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion5 cood">
+const ejecutarBucle_1 = () =>{
+    let i = 0;
+    while(i < 5000){
+        i++;
+        console.log(1);
+    }
+}
+addEventListener("message",()=>ejecutarBucle_1());
+</textarea>
+            </code>
+        </div>
+
+        <p>resultado:</p>
+        <p>
+            a diferencia del otro aqui si podremos escribir en el input ya que gracias al worker podemos hacer mas de una cosa.
+        </p>
+        <div class="content_bucle">
+            <button class="button_1">ejecutar bucle</button>
+            <input type="text">
+        </div>
+
+        <h2>recibir mensaje</h2>
+        <p>
+            data:
+        </p>
+        <p>
+            con data podemos enviar un mensaje el cual sera el parametro del "postMessage" ejemplo.
+        </p>
+
+        <p>html:</p>
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t6 texto_copiado">texto copiado</p>
+                    <i class="copiar6 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion6 cood">
+<button class="button_2">mostrar mensaje</button>
+</textarea>
+            </code>
+        </div>
+        
+        <h2>javaScript principal:</h2>
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t7 texto_copiado">texto copiado</p>
+                    <i class="copiar7 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion7 cood">
+const worker = new Worker("worker.js");
+const button_2 = document.querySelector(".button_2");
+button_2.addEventListener("click",()=>{
+    worker.postMessage("este es un mensaje para mostrar");
+
+    // esto en "postMessage" ponemos como paramtro
+    // el mensaje que queremos para mostrarlo con data.
+})
+</textarea>
+            </code>
+        </div>
+
+        <h2>archivo worker:</h2>
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t8 texto_copiado">texto copiado</p>
+                    <i class="copiar8 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion8 cood">
+addEventListener("message",e=>{
+    console.log(e.data)
+})
+</textarea>
+            </code>
+        </div>
+
+        <p>
+            ejercicio para enviar y recibir mensaje.
+        </p>
+
+        <p>html:</p>
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t9 texto_copiado">texto copiado</p>
+                    <i class="copiar9 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion9 cood">
+<button class="mensjaes">emviar y recibir mensaje.</button>
+</textarea>
+            </code>
+        </div>
+        <p>javaScript principal</p>
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t10 texto_copiado">texto copiado</p>
+                    <i class="copiar10 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion10 cood">
+const worker = new Worker("worker.js");
+const mensjaes = document.querySelector(".mensjaes");
+mensjaes.addEventListener("click",()=>{
+    worker.postMessage("Jerk");
+})
+worker.addEventListener("message",e=>{
+    console.log(e.data);
+})
+</textarea>
+            </code>
+        </div>
+        <p>archivo worker</p>
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t11 texto_copiado">texto copiado</p>
+                    <i class="copiar11 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion11 cood">
+addEventListener("message", e =>{
+    console.log(e.data);
+    postMessage("Oliver Tree")
+})
+</textarea>
+            </code>
+        </div>
+
+        <h2>terminar un worker.</h2>
+        <p>
+            con "terminate" podremos finalizar un worker lo explicaremos mejor en codigo.
+        </p>
+        
+        <p>html</p>
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t12 texto_copiado">texto copiado</p>
+                    <i class="copiar12 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion11 cood">
+<button class="terminar">terminar worker</button>
+</textarea>
+            </code>
+        </div>
+
+        <p>javaScript principal</p>
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t12 texto_copiado">texto copiado</p>
+                    <i class="copiar12 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion12 cood">
+const worker = new Worker("worker.js");
+const terminar = document.querySelector(".terminar");
+terminar.addEventListener("click",()=>{
+    worker.postMessage("se iniciara");
+})
+worker.addEventListener("message",e=>{
+    console.log(e.data);
+    worker.terminate();
+    
+    
+    // aqui si quitamos "terminate" podremos hacer click 
+    // infinitas veces y se seguiran mostrando los 
+    // mensajes de que se envian y reciben pero al poner 
+    // "terminate" solo podemos ejecutar el 
+    // evento una sola vez.
+})
+</textarea>
+            </code>
+        </div>
+
+        <p>archivo worker:</p>
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t13 texto_copiado">texto copiado</p>
+                    <i class="copiar13 fa-solid fa-copy"></i>
+                </div>
+
+<textarea readonly class="codificacion codificacion13 cood">
+addEventListener("message", e =>{
+    if (e.data.length > 4) {
+        console.log(e.data);
+        postMessage("se terminara")
+    }
+})
+</textarea>
+            </code>
+        </div>
+
+    </div>
+</main>
+
+
+    <footer>
+        <div class="footer_div">
+            <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+        </div>
+    </footer>
+    
+    
+        <script src="Web_Workers.js"></script>
+    </body>
+</html>

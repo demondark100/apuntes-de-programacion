@@ -1,0 +1,129 @@
+body{
+    background-image: url("https://www.itl.cat/pngfile/big/111-1114097_download-wallpaper-circle.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+}
+h1{
+    color: #f7f8d4;
+    font-size: 22px;
+    text-align: center;
+    margin-top: 8%;
+}
+.content{
+    background-color: #040a2299;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+.form_content{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 75%;
+}
+.form_content input::placeholder{
+    font-size: 15px;
+    color: #848982;
+}
+.form_content button{
+    font-size: 15px;
+    border: none;
+    outline: none;
+    max-width: 450px;
+    height: 25px;
+    color: #000;
+    width: 50%;
+    margin: auto;
+    background-color: #24d95d;
+}
+.form_content input{
+    border: none;
+    font-size: 15px;
+    outline: none;
+    height: 25px;
+    max-width: 800px;
+    background-color: #0000009e;
+    color: #d1ffc1;
+    border-bottom: 2px solid #24d95d;
+    border-left: 2px solid #24d95d;
+}
+input:hover{
+    background-color: #02521d88;
+    border: none;
+    border-top: 2px solid #24d95d;
+    border-right: 2px solid #24d95d;
+}
+input:hover::placeholder{
+    color: #2e8bc9;
+}
+
+.form_content button{
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+
+.colores{
+    color: #f00;
+    text-align: center;
+    font-size: 15px;
+}
+.colores_2{
+    color:#0f0;
+    font-size: 15px;
+}
+.indicaciones{
+    font-size: 15px;
+    color: #2fbbce;
+    margin-left: 2%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@media(min-width: 850px){
+    body{
+        background-image: url("https://educationboon.com/wp-content/uploads/2019/09/bajavascripthack_shutterstock_720388555.jpg");
+    }
+    h1{
+        font-size: 30px;
+    }
+    .content{
+        width: 40%;
+        min-height: 450px;
+        max-width: 550px;
+    }
+    .form_content{
+        width: 100%;
+    }
+    .form_content input{
+        height: 35px;
+        font-size: 25px;
+        width: 85%;
+        margin: auto;
+    }
+    .form_content input::placeholder{
+        font-size: 22px;
+    }
+    .form_content button{
+        font-size: 22px;
+        height: 35px;
+    }
+    .colores{
+        font-size: 20px;
+    }
+    .indicaciones{
+        font-size: 20px;
+        margin-left: 7%;
+    }
+}
+
+.regresar{
+    font-size: 2em;
+    color: #fffebe;
+    text-decoration: none;
+}

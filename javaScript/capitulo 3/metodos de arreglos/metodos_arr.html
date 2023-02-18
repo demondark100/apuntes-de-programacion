@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize_arr.css">
+    <link rel="stylesheet" href="metodos_arr.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>metodos de arreglos</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+
+
+<main>
+    <div class="teoria">
+        <h1>metodos de arreglos</h1>
+        <p>
+            los metodos de arreglos nos facilitaran las cosas.
+        </p>
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion0 cood">
+let frutas = ["manzana","pera","naranja"];
+let frutas2 = frutas.pop();
+console.log(frutas);
+console.log(frutas2)
+//resultado frutas: ["manzana","pera"];
+//resultado frutas2: "naranja";
+</textarea>
+                <p>
+                    esto nos servira para quitar el ultimo elemento de un arreglo.
+                </p>
+            </code>
+        </div>
+
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion1 cood">
+let frutas = ["manzana","pera","naranja"];
+let frutas2 = frutas.shift();
+console.log(frutas);
+console.log(frutas2);
+//resultado frutas: ["pera","naranja"];
+//resultado frutas2: "manzana";
+</textarea>
+            </code>
+            <p>
+                esto nos servira para quitar el primer elemento de un arreglo
+            </p>
+        </div>
+
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion2 cood">
+let frutas = ["manzana","naranja"];
+frutas.push("pera");
+console.log(frutas)
+//resultado: [ 
+    //"manzana",
+    //"naranja",
+    //"pera"
+//];
+</textarea>
+            </code>
+            <p>
+                esto nos servira para agregar elementos al final de un arreglo
+            </p>
+        </div>
+
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion3 cood">
+let frutas = [ 
+    "naranja",
+    "pera"
+];
+frutas.unshift("manzana")
+console.log(frutas)
+//resultado: [ 
+    //"manzana",
+    //"naranja",
+    //"pera"
+//]
+</textarea>
+            </code>
+            <p>
+                esto nos servira para agregar elementos al principio de un arreglo
+            </p>
+        </div>
+
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t4 texto_copiado">texto copiado</p>
+                    <i class="copiar4 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion4 cood">
+let abecedario = [ 
+    "a",
+    "b",
+    "c",
+    "d"
+];
+console.log(abecedario.reverse());
+//resultado: [ 
+    //"d",
+    //"c",
+    //"b",
+    //"a"
+//];
+</textarea>
+            </code>
+            <p>esto nos servira para poner en reversa un arreglo</p>
+        </div>
+
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t5 texto_copiado">texto copiado</p>
+                    <i class="copiar5 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion5 cood">
+let frutas = [ 
+    "manzana",
+    "pera",
+    "naranja",
+    "sandia",
+    "mango"
+];
+
+
+//pseudocodigo: 
+//crear_variable = variable.metodo ( 
+//parametro 1 desde que posision inicia , 
+//parametro 2 cuantos elementos quieres eliminar o remmplazar , 
+//paremtro 3 con que quieres reemplazar a ese elemento seleccionado )
+
+
+//javaScript: 
+
+let frutas2 = frutas.splice(1,1,"fresa")
+
+console.log(frutas);
+console.log(frutas2);
+
+//resultado frutas: [ 
+    //"manzana",
+    //"fresa",
+    //"naranja",
+    //"sandia",
+    //"mango"
+//];
+//resultado frutas2: "pera"
+</textarea>
+            </code>
+            <p>
+                esto nos servira para reemplazar o eliminar un elemento desde la pssision que queramos.
+            </p>
+        </div>
+
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t6 texto_copiado">texto copiado</p>
+                    <i class="copiar6 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion6 cood">
+let numeros = [5,4,3,8,7,3,0];
+console.log(numeros.sort());
+//resultado: [ 
+    //0,
+    //3,
+    //3,
+    //4,
+    //5,
+    //7,
+    //8
+//];
+</textarea>
+            </code>
+            <p>
+                esto nos servira para ordenar los datos de un arreglo pueden ser numericos o alfabeticos.
+            </p>
+        </div>
+
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t7 texto_copiado">texto copiado</p>
+                    <i class="copiar7 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion7 cood">
+//pseudocodigo: 
+//crear_variable = variable.metodo ( 
+//parametro 1 desde que posision iniciara , 
+//parametro 2 hasta que posision recortaras , el conteo iniciara desde todo el arreglo y la ultima parte no la cortara )
+
+//javaScript:
+
+let frutas = [ 
+    "manzana",
+    "pera",
+    "naranja",
+    "mango",
+    "sandia",
+    "piña"
+];
+let frutas2 = frutas.slice(1,3);
+console.log(frutas2);
+//resultado frutas2: [ 
+    //"pera",
+    //"naranja"
+//];
+</textarea>
+            </code>
+            <p>
+                esto nos servira para crear un subarreglo es como substring
+            </p>
+        </div>
+
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t8 texto_copiado">texto copiado</p>
+                    <i class="copiar8 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion8 cood">
+let frutas = [ 
+    "manzana",
+    "naranja",
+    "pera",
+    "durazno",
+    "piña"
+];
+console.log(frutas.join(" - "))
+//resultado = "manzana - naranja - pera - durazno - piña";
+</textarea>
+            </code>
+            <p>
+                esto nos servira para convertir un arreglo en una cadena de texto y nos da la posibilidad de modificar con que queremos hacer el espacio
+            </p>
+        </div>
+
+        <div class="code_content">
+            <code>
+                <div class="content_copy">
+                    <p class="t9 texto_copiado">texto copiado</p>
+                    <i class="copiar9 fa-solid fa-copy"></i>
+                </div>
+<textarea readonly class="codificacion codificacion9 cood">
+let frutas = [ 
+    "manzana",
+    "naranja",
+    "piña",
+    "mango"
+]; 
+frutas.forEach(i=>{ 
+    console.log(i); 
+});
+</textarea>
+                </code>
+                <p>
+                    esto nos servira para recorrer un arreglo de una forma mas sensilla
+                </p>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer_div">
+        <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+    </div>
+</footer>
+
+
+
+
+<script src="metodos_arr.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="variables.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>variables</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+    <main>
+        <div class="teoria">
+            <h1>variables</h1>
+            <p>
+                las variables nos sirve para guardas estilos en css. <br> <br>
+                pseudocodigo crear variable: <br>
+                --un-rojo: #f00; <br> <br>
+                pseudocodigo llamar variable: <br>
+                var(--un-rojo);
+            </p>
+
+            <h2>variables globales</h2>
+            <p>
+                las variables globales nos permitira usar la variable en cualquier elemento que queramos. <br>
+                para usarlas es necesario crear un "root".
+            </p>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion0 cood">
+<div class="variable_global">
+
+</div>
+<div class="un_parrafo1">
+    <p>
+        un parrafo cualquiera XD.
+    </p>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion1 cood">
+/* esto es el :root siempre se debe crear asi para usar variales globales */
+
+:root{
+    --un-rojo: #f00;
+}
+
+
+.variable_global{
+    width: 45%;
+    height: 45%;
+    background-color: var(--un-rojo);
+}
+.un_parrafo1{
+    margin-top: 15px;
+    background-color: #000;
+    padding: 15px;
+}
+.un_parrafo1 p {
+    color: var(--un-rojo);
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <div class="variable_global">
+
+                </div>
+                <div class="un_parrafo1">
+                    <p>
+                        un parrafo cualquiera XD.
+                    </p>
+                </div>
+            </div>
+
+
+
+            <h2>variable locales</h2>
+            <p>
+                estas a diferencia de las variables globales no necesitan de "root" pero estos solo se aplicaran para el elemento que le indiquemos por ejemplo si creamos la variable para un "p" esa variable solo funcionara con los "p" y no con los otros elementos debido a que es una variable local.
+            </p>
+
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t2 texto_copiado">texto copiado</p>
+                    <i class="copiar2 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion2 cood">
+<p>
+    esto cambiara.
+</p>
+<p>
+    tambien cambiara.
+</p>
+<div>
+    no cambiara :c
+</div>
+<b>
+    no cambiara.
+</b>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t3 texto_copiado">texto copiado</p>
+                    <i class="copiar3 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion3 cood">
+body{
+    background-color: #000000ea;
+}
+p{
+    --un-verde: #0f0;
+}
+p{
+    color: var(--un-verde);
+}
+div{
+    background-color: var(--un-verde);
+}
+b{
+    background-color: var(--un-verde);
+}
+</textarea>
+                </code>
+            </div>
+            <div class="webside">
+                <div class="contenedor">
+                    <p class="p_1">
+                        esto cambiara.
+                    </p>
+                    <p class="p_2">
+                        tambien cambiara.
+                    </p>
+                    <div class="p_3">
+                        no cambiara :c
+                    </div>
+                    <b class="p_4">
+                        no cambiara.
+                    </b>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+        <footer>
+            <div class="footer_div">
+                <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+            </div>
+        </footer>
+    
+    
+        <script src="variables.js"></script>
+    </body>
+</html>

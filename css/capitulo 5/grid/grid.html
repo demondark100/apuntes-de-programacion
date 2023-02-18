@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="grid.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <title>grid</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_content">
+            <div class="logo_container">
+                <img class="img_logo" src="https://i.pinimg.com/originals/a1/34/d6/a134d69b63d77dfe1309030d165e2abf.png" alt="desarrollo">
+            </div>
+            <div class="nav_container">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>    
+        </div>
+        <div class="nav_content">
+            <nav class="header_nav">
+                <ul class="menu_nav">
+                    <li class="li_nav li_nav-1"><a class="redirecciom_1" target="_blank" href="https://www.facebook.com/shadowkillerxe">contactame</a></li>
+                    <li class="li_nav li_nav-1"><a class="redirecciom_2" href="https://github.com/demondark100" target="_blank">github</a></li>
+                    <li class="li_nav li_nav-"><a class="redirecciom_3" href="https://codepen.io/your-work" target="_blank">proyectos</a></li>
+                    <li class="li_nav li_nav-4"><a href="../../../javaScript index.html">inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+    <main>
+        <div class="teoria">
+            <h1>grid</h1>
+            <p>
+                grid es muy similar a flex con la diferencia que se pueden crear filas , columnas como nosotros queramos. 
+            </p>
+
+            <h2><a href="../../capitulo 4/flexbox/flexbox.html">flex</a>.</h2>
+            <img src="https://cdn-media-1.freecodecamp.org/images/HHwxqz2N4bNksz9YwcMBAtD0z9TTCxeNXNBS" alt="flex" title="flex">
+            <h2>grid</h2>
+            <h2>grid container.</h2>
+            <p>esto es todo el contenedor de las filas y columnas.</p>
+            <div class="webside">
+                <div class="cuadrado_grid">
+                    <div class="columnas">
+                        columnas.
+                    </div>
+                    <div class="filas">
+                        filas.
+                    </div>
+                </div>
+            </div>
+            <p>
+                a la hora de poner un elemento con "display: grid;" se comportara como un bloque y se haran las celdas en el grid intem/hijo el cual nosotros podemos modificar como queramos.
+            </p>
+            <img src="https://www.guineapigcagesstore.com/Shared/Images/Product/Standard-Grid/standard-grid.jpg" alt="grid" title="grid">
+
+
+            <h2>display grid.</h2>
+            <p>
+                con esto indicaremos que el contenedor se vuelva grid los cambios al igual que <a href="../../capitulo 4/flexbox/flexbox.html">flex</a> se notaran en los elementos hijos.
+            </p>
+            <h2>html</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t0 texto_copiado">texto copiado</p>
+                    <i class="copiar0 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion0 cood">
+<div class="grid_content">
+    <div>.</div>
+    <div>.</div>
+    <div>.</div>
+    <div>.</div>
+    <div>.</div>
+    <div>.</div>
+</div>
+</textarea>
+                </code>
+            </div>
+            <h2>css</h2>
+            <div class="code_content">
+                <div class="content_copy">
+                    <p class="t1 texto_copiado">texto copiado</p>
+                    <i class="copiar1 fa-solid fa-copy"></i>
+                </div>
+                <code>
+<textarea readonly class="codificacion codificacion1 cood">
+.grid_content{
+    display: grid;
+}
+.grid_content div{
+    border: 2px solid #000;
+}
+</textarea>
+                </code>
+            </div>
+            <p>
+                al pomner display grid se crearan por defecto columnas pero podemos definir cuantas columnas y cuantas filas queremos.
+            </p>
+            <div class="webside">
+                <div class="grid_content">
+                    <div>.</div>
+                    <div>.</div>
+                    <div>.</div>
+                    <div>.</div>
+                    <div>.</div>
+                    <div>.</div>
+                </div>
+            </div>
+
+            <a class="siguiente" href="../grid_template/grid_template.html">grid template=></a>
+
+        </div>
+    </main>
+    
+        <footer>
+            <div class="footer_div">
+                <p class="footer_text_1">hecho por: <a class="footer_text_2" href="#">@el_tio_dan</a></p>
+            </div>
+        </footer>
+    
+    
+        <script src="grid.js"></script>
+    </body>
+</html>
