@@ -1,1 +1,1 @@
-esto solo es un pequeño apunte de todo lo que voy aprendiendo 
+esto solo es un pequeño apunte de todo lo que voy aprendiendo probablemente lo modifique o lo reescriba con react y librerias de estilos como highthight.js para hacer mas legible el codigo de ejemplo que pongo en cada parte de los apuntes.
