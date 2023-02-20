@@ -79,3 +79,4 @@ function recorrer() {
     }
 }
 recorrer()
+alert("esto se nodifico");
